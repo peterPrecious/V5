@@ -1,0 +1,79 @@
+﻿<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Draggable - Default functionality</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="//code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+
+
+    <style>
+      #draggable { width: 150px; height: 150px; padding: 0.5em; }
+    </style>
+    <script>
+      $(function () {
+        $("#draggable").draggable();
+        $("#divOuter").draggable();
+      });
+    </script>
+  </head>
+
+  <body>
+
+      <div id="draggable" class="ui-widget-content">
+        <p>Drag me around</p>
+      </div>
+
+
+
+
+    <!-- This is a general purpose window with embedded shell -->
+    <div id="divOuter" class="ui-widget-content" style="background-color: white">
+      <table cellspacing="0" cellpadding="0" width="50%" height="50%" border="0">
+        <tr>
+          <td valign="top" height="23"><img height="23" src="/V5/Images/Shell/HolderTop_Left.gif" width="23"></td>
+          <td align="middle" background="/V5/Images/Shell/HolderTop_Bg.gif" height="23"></td>
+          <td valign="top" height="23"><img height="23" src="/V5/Images/Shell/HolderTop_Right.gif" width="23"></td>
+        </tr>
+        <tr>
+          <td valign="top" width="10" background="/V5/Images/Shell/HolderLeft_Spacer.gif" rowspan="2"></td>
+          <td valign="top" align="left" width="100%">
+            <div class="div" id="divInner" style="padding: 10px; background-color: #FFFFFF;">
+            </div>
+            <iframe class="div" id="ifrInner" name="ifrInner" width="100%" height="100%" border="0" frameborder="0"></iframe>
+          </td>
+          <td width="10" valign="top" background="/V5/Images/Shell/HolderRight_Spacer.gif" rowspan="2" align="center"><a href="javascript:closeWindow()"><img border="0" src="../Images/Icons/Xmark.jpg" width="12" height="15"></a></td>
+        </tr>
+        <tr>
+          <td align="middle" width="100%" height="50"><input type="button" onclick="closeWindow()" value="Close" name="B3" class="button"></td>
+        </tr>
+        <tr>
+          <td valign="top" height="23"><img src="/V5/Images/Shell/HolderBottom_Left.gif" width="23" height="23"></td>
+          <td align="center" background="/V5/Images/Shell/HolderBottom_Bg.gif" height="23">&nbsp;</td>
+          <td valign="top" height="23"><img src="/V5/Images/Shell/HolderBottom_Right.gif" width="23" height="23"></td>
+        </tr>
+      </table>
+    </div>
+    <!--#include virtual = "V5/Inc/Shell_Lo.asp"-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

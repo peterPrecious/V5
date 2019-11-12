@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+<body>
+  <script>
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var oldDate = "Sep 11, 2018";
+    var d = new Date(oldDate);
+    var newDate = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
+    var newDate2 = d.getDate() + "-" + (monthNames[d.getMonth()]) + "-" + d.getFullYear();
+    alert(newDate);
+    alert(newDate2);
+  </script>
+
+</body>
+</html>

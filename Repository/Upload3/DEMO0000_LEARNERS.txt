@@ -1,0 +1,4 @@
+Learner ID	Group	First Name	Last Name	Email Address	Password	Programs	Memo	Jobs	Reports To
+123456		Sam	Spade	sam@spade.com		P1234EN			
+123457		Sally	Spade	sally@spade.com			HO|Marketing		
+									

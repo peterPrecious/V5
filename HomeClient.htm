@@ -1,0 +1,309 @@
+<html>
+
+<head>
+  <title>:: Client Analyzer</title>
+  <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+  <meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+  <script language="JavaScript">
+
+    function checkOS() {
+      if(navigator.userAgent.indexOf('Linux') != -1)
+        { var OpSys = "lin"; }
+      else if(navigator.userAgent.indexOf('Win') != -1)
+        { var OpSys = "win"; }
+      else if(navigator.userAgent.indexOf('Mac') != -1)
+        { var OpSys = "mac"; }
+      else { var OpSys = "other"; }
+      return OpSys;    
+    }
+    
+    function NamedPair(URL, pair) {   // get the right side of a named pair
+      var i = URL.indexOf(pair);      // get the starting position of the named pair
+      var j = pair.length;            // get the length of the pair
+      var k = i + j;                  // get start of right side
+      i = URL.substring(k)            // get the substring
+      j = i.indexOf("&")              // next pair starting position?
+      if (j == -1)                    // if not then send back full string
+        {return (i)} 
+      else                            // else just send up to next "&"
+        {return (i.substring(0, j))}
+    } 
+  
+    // Global variables  
+    var bver;   
+    
+    // Used to extract returnUrl from the incoming URL and determine next page
+    var ReturnURL, ReturnPage;
+    
+    // Used for determining Flash
+    var ns,ie;
+    var platform    = navigator.appVersion.indexOf('Mac') != -1 ? "mac" : "pc";
+    var browser     = navigator.appName.indexOf('Netscape') != -1 ? (ns=1) : (ie=1);
+    var flashversion= 0;
+    
+    // Used to get OS name
+  
+    var OpSys       = checkOS();
+  
+    beginRollover   = false;  // This handles a bug in Nav4.0x that executes the code too quickly.
+  
+    // convert all characters to lowercase to simplify testing 
+    
+    var agt         = navigator.userAgent.toLowerCase(); 
+  
+    // Browser version *** Note: On IE5, these return 4, so use is_ie5up to detect IE5
+     
+    var is_major    = parseInt(navigator.appVersion); 
+    var is_minor    = parseFloat(navigator.appVersion); 
+  
+    var is_konq = false;
+    var kqPos   = agt.indexOf('konqueror');
+    if (kqPos !=-1) {                 
+      is_konq  = true;
+      is_minor = parseFloat(agt.substring(kqPos+10,agt.indexOf(';',kqPos)));
+      is_major = parseInt(is_minor);
+    }                                 
+  
+    var is_safari = ((agt.indexOf('safari')!=-1)&&(agt.indexOf('mac')!=-1))?true:false;
+    var is_khtml  = (is_safari || is_konq);
+  
+    var is_gecko = ((!is_khtml)&&(navigator.product)&&(navigator.product.toLowerCase()=="gecko"))?true:false;
+    var is_gver  = 0;
+    if (is_gecko) is_gver=navigator.productSub;
+  
+    var is_fb  = ((agt.indexOf('mozilla/5')!=-1) && (agt.indexOf('spoofer')==-1) &&
+                  (agt.indexOf('compatible')==-1) && (agt.indexOf('opera')==-1)  &&
+                  (agt.indexOf('webtv')==-1) && (agt.indexOf('hotjava')==-1)     &&
+                  (is_gecko) && (navigator.vendor=="Firebird"));
+
+    var is_ch  = ((agt.indexOf('mozilla/5')!=-1) && (agt.indexOf('spoofer')==-1) &&
+                  (agt.indexOf('compatible')==-1) && (agt.indexOf('opera')==-1)  &&
+                  (agt.indexOf('webtv')==-1) && (agt.indexOf('hotjava')==-1)     &&
+                  (is_gecko) && (navigator.vendor=="Google Inc."));
+
+    var is_fx  = ((agt.indexOf('mozilla/5')!=-1) && (agt.indexOf('spoofer')==-1) &&
+                  (agt.indexOf('compatible')==-1) && (agt.indexOf('opera')==-1)  &&
+                  (agt.indexOf('webtv')==-1) && (agt.indexOf('hotjava')==-1)     &&
+                  (is_gecko) && ((navigator.vendor=="Firefox")||(agt.indexOf('firefox')!=-1)));
+
+    var is_moz = ((agt.indexOf('mozilla/5')!=-1) && (agt.indexOf('spoofer')==-1) &&
+                  (agt.indexOf('compatible')==-1) && (agt.indexOf('opera')==-1)  &&
+                  (agt.indexOf('webtv')==-1) && (agt.indexOf('hotjava')==-1)     &&
+                  (is_gecko) && (!is_fb) && (!is_fx) &&
+                  ((navigator.vendor=="")||(navigator.vendor=="Mozilla")||(navigator.vendor=="Debian")));
+
+    if ((is_moz)||(is_fb)||(is_fx)) {  // 032504 - dmr
+       var is_moz_ver = (navigator.vendorSub)?navigator.vendorSub:0;
+       if(is_fx&&!is_moz_ver) {
+           is_moz_ver = agt.indexOf('firefox/');
+           is_moz_ver = agt.substring(is_moz_ver+8);
+           is_moz_ver = parseFloat(is_moz_ver);
+       }
+       if(!(is_moz_ver)) {
+           is_moz_ver = agt.indexOf('rv:');
+           is_moz_ver = agt.substring(is_moz_ver+3);
+           is_paren   = is_moz_ver.indexOf(')');
+           is_moz_ver = is_moz_ver.substring(0,is_paren);
+       }
+       is_minor = is_moz_ver;
+       is_major = parseInt(is_moz_ver);
+   }
+    var is_fb_ver = is_moz_ver;
+    var is_fx_ver = is_moz_ver;
+    var is_ch_ver = is_moz_ver;
+  
+    var is_nav      = ((agt.indexOf('mozilla')!=-1) && (agt.indexOf('spoofer')==-1) 
+                   && (agt.indexOf('compatible') == -1) && (agt.indexOf('opera')==-1) 
+                   && (agt.indexOf('webtv')==-1));
+    var is_nav2     = (is_nav && (is_major == 2));
+    var is_nav3     = (is_nav && (is_major == 3));
+    var is_nav4     = (is_nav && (is_major == 4));
+    var is_nav6     = (is_nav && (is_major == 5) && !((agt.indexOf('netscape/7')!=-1)||(agt.indexOf('netscape/8')!=-1)));
+    var is_nav7     = (is_nav && (agt.indexOf('netscape/7')!=-1));
+    var is_nav8     = (is_nav && (agt.indexOf('netscape/8')!=-1));
+  
+    var is_ie       = (agt.indexOf("msie") != -1); 
+    var is_ie3      = (is_ie && (is_major < 4)); 
+    var is_ie4      = (is_ie && (is_major == 4) && (agt.indexOf("msie 4")!=-1) ); 
+    var is_ie5      = (is_ie && (is_major == 4) && (agt.indexOf("msie 5")!=-1) ); 
+    var is_ie6      = (is_ie && (is_major == 4) && (agt.indexOf("msie 6")!=-1) ); 
+    var is_ie7      = (is_ie && (is_major == 4) && (agt.indexOf("msie 7")!=-1) ); 
+    var is_ie8      = (is_ie && (is_major == 4) && (agt.indexOf("msie 8")!=-1) ); 
+    var is_ie9      = (is_ie && (agt.indexOf("msie 9")!=-1) ); 
+
+    var btype
+  
+    // IE
+    if (is_ie3) {
+    	btype = 'ie';
+    	bver = '3'
+    }
+    else if (is_ie4) {
+    	btype = 'ie';
+    	bver = '4'
+    }
+    else if (is_ie5) {
+    	btype = 'ie';
+    	bver = '5'
+    }
+    else if (is_ie6) {
+    	btype = 'ie';
+    	bver = '6'
+    }
+    else if (is_ie7) {
+    	btype = 'ie';
+    	bver = '7'
+    }
+    else if (is_ie8) {
+    	btype = 'ie';
+    	bver = '8'
+    }   
+    else if (is_ie9) {
+    	btype = 'ie';
+    	bver = '9'
+    }   
+
+    // Netscape
+    else if (is_nav3) {
+    	btype = 'ns';
+    	bver = '3'
+    }
+    else if (is_nav4) {
+    	btype = 'ns';
+    	bver = '4'
+    }
+    else if (is_nav6 && !is_nav7) {
+    	btype = 'ns';
+    	bver = '6'
+    }
+    else if (is_nav7) {
+    	btype = 'ns';
+    	bver = '7'
+    }
+    else if (is_nav8) {
+    	btype = 'ns';
+    	bver = '8'
+    }
+    // Firefox
+    else if (is_fx) {
+    	btype = 'fx';
+    	bver = is_fx_ver
+    }
+    // Chrome
+    else if (is_ch) {
+    	btype = 'ch';
+    	bver = is_ch_ver
+    }  
+    // Comprehensive Flash detection
+  
+    theVBScript =  '<form name="vbform"><input type="hidden" name="flashdetect"><input type="hidden" name="rpdetect">\</form>\n';
+    theVBScript += '<SCRIPT LANGUAGE="VBScript">\n';
+    theVBScript += 'on error resume next\n';
+    theVBScript += 'RealPyr = "False"\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.2")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 2\n';
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.3")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 3\n';
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.4")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 4\n';
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.5")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 5\n';
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.6")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 6\n';
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.7")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 7\n';
+
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.8")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 8\n';
+
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.9")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 9\n';
+
+    theVBScript += 'Err.Clear\n';
+    theVBScript += 'Set oTest = CreateObject("ShockwaveFlash.ShockwaveFlash.10")\n';
+    theVBScript += 'If Err = 0 Then FlashInstalled = 10\n';
+
+
+
+    theVBScript += 'select case FlashInstalled\n';
+    theVBScript += '  case 2,3,4,5,6,7,8,9,10\n';
+    theVBScript += '    document.vbform.flashdetect.value = FlashInstalled\n';
+    theVBScript += '  case else\n';
+    theVBScript += '    FlashInstalled = 0\n';
+    theVBScript += '    document.vbform.flashdetect.value = FlashInstalled\n';
+    theVBScript += 'end select\n';
+    theVBScript += 'document.vbform.rpdetect.value = RealPyr\n';
+    theVBScript += '<\/SCRIPT>\n';
+  
+    if (ns || is_fx){
+        var FlashInstalled = 0;
+        nparray = navigator.plugins;
+        nparraylen = nparray.length;
+        RealPyr = 'False';
+  
+        // Search for Flash
+  
+        for (i=0;i<nparraylen;i++){
+    		npplugin = nparray[i];
+    		npname   = npplugin.name;
+    		npdesc   = npplugin.description;
+  
+    		if (npname.indexOf("Shockwave Flash 2.")  != -1) { flashversion =  2; break }
+    		if (npdesc.indexOf("Shockwave Flash 3.")  != -1) { flashversion =  3; break }
+    		if (npdesc.indexOf("Shockwave Flash 4.")  != -1) { flashversion =  4; break }
+    		if (npdesc.indexOf("Shockwave Flash 5.")  != -1) { flashversion =  5; break }
+    		if (npdesc.indexOf("Shockwave Flash 6.")  != -1) { flashversion =  6; break }
+    		if (npdesc.indexOf("Shockwave Flash 7.")  != -1) { flashversion =  7; break }
+    		if (npdesc.indexOf("Shockwave Flash 8.")  != -1) { flashversion =  8; break }
+    		if (npdesc.indexOf("Shockwave Flash 9.")  != -1) { flashversion =  9; break }
+    		if (npdesc.indexOf("Shockwave Flash 10.") != -1) { flashversion = 10; break }
+    		if (npdesc.indexOf("RealPlayer") != -1) { RealPyr = 'True'}
+  
+        }
+    
+    // Search for RealPlayer
+  
+    } else if (ie){
+    	document.write(theVBScript);
+    	flashversion = document.vbform.flashdetect.value;
+    	RealPyr = document.vbform.rpdetect.value;
+    }
+  
+    // Added by Mike to allow for IE on MAC
+    if(ie && OpSys == 'mac' ){
+      flashversion = 0;
+    }
+  
+    // get the Time Zone offset (GMT)
+    var ZoneOffset;
+    ClientDate = new Date();
+    ZoneOffset = ClientDate.getTimezoneOffset()/60;
+  
+    // get the return page from the URL
+    ReturnURL  = location.search;
+    ReturnPage = NamedPair(ReturnURL, "ReturnURL=");
+ 
+    QString = ReturnURL + '&zoneoffset=' + ZoneOffset + '&platform=' + OpSys + '&browser=' + btype + '&bver=' + bver + '&flashver=' + flashversion;
+    theVBScript =  '<SCRIPT FOR=window EVENT=onload>\n';
+  //theVBScript += '  document.location.href="' + ReturnPage + ReturnURL + QString + '"\n';
+    theVBScript += '  document.location.href="' + ReturnPage + QString + '"\n';
+    theVBScript += '<\/script>';
+  
+    document.write(theVBScript);
+   
+  </script>
+
+</body>
+
+</html>

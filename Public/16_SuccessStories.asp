@@ -1,0 +1,44 @@
+<!--#include virtual = "V5/Inc/Setup.asp"--><% vBypassSecurity = True %>
+<!--#include virtual = "V5/Inc/Initialize.asp"-->
+
+<html>
+
+<head>
+  <title>Welcom</title>
+  <link href="Resources/Public.css" type="text/css" rel="stylesheet">
+  <% If vRightClickOff Then %><script language="JavaScript" src="/V5/Inc/RightClick.js"></script><% End If %>
+  <script language="JavaScript" src="/V5/Inc/Functions.js"></script>
+  <base target="_self">
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" text="#000080" link="#000080" vlink="#000080" alink="#000080">
+
+  <table border="0" width="100%" cellspacing="0" cellpadding="10" id="table1">
+    <tr>
+      <td width="100%">
+      <h1 align="center">Success Stories<br>&nbsp;</h1>
+      <h1 class="c2">Here are a few examples of successful projects Vubiz has expedited, which demonstrate the capabilities and versatility of our team.&nbsp; For more information, or to inquire about our library of Case Studies, contact Polly Sharpe at <a href="mailto:psharpe@vubiz.com?subject=Site enquiry...">psharpe@vubiz.com</a>.</h1>
+      <h1>Canadian Centre for Occupational Health &amp; Safety (CCOHS)</h1>
+      <h1 class="c2">CCOHS is a Canadian federal government agency based in Hamilton, Ontario, and provides Canadians with unbiased, relevant information and advice that supports responsible decision-making and promotes safe and healthy working environments.<br>&nbsp;<br>CCOHS and Vubiz have worked together since 2004, developing training that provides Canadian workers, management and businesses with the health and safety education and information they need to meet their responsibilities and develop a safety culture in the workplace in an easy-to-access, electronic format. New courses are developed continuously, and to date, more than thirty courses have been released in English and French under the categories of General Health and Safety, Safe Workplaces, WHMIS Compliance, Office Environments and training specific to Managers and Supervisors.<br>&nbsp;<br>Vubiz works closely with CCOHS to support their course production process using the Vubiz self-authoring service, to manage and support the 
+      e-commerce sales function, and to deliver and support the end users of CCOHS? state-of-the-art occupational health and safety training. <br>&nbsp; </h1>
+      <h1>Profac Inc.&nbsp; (SNC?Lavalin Group)</h1>
+      <h1 class="c2">Profac is a unit of one of the world?s leading engineering and construction organizations. Profac has renewed their contract with Vubiz to the year 2010, appointing us as their exclusive Health &amp; Safety e-learning provider. <br><br>Our relationship started in 2002, sparked by a mutual interest in the growing need for occupational health and safety training in every industry sector. Vubiz helps ProFac increase efficiency and profitability through the provision of online learning opportunities for their staff and property management clientele. Vubiz builds the online training, while ProFac acts as the subject matter experts. To date we have jointly developed courseware for three specialty areas: occupational health &amp; safety, human resources (orientation) and corporate quality.<br>&nbsp;<br>We worked with ProFac to setup a special ?portal? in a way that works best with their employee base which is spread across many nations and time zones, and provide a special ?landing page? 
+      where the employees enter the service. <br>&nbsp; </h1>
+      <h1>City of Mississauga</h1>
+      <h1 class="c2">City of Mississauga is Canada's 6th largest and fastest growing major city with a population of 695,000 residents representing various cultures from around the world. The city is a major employment centre within the Greater Toronto Area, with more than 18,000 businesses, including 50 of Canada?s Fortune 500 companies.<br><br>In the summer of 2004, Vubiz partnered with the City of Mississauga on an innovative initiative called e-Learning @ the City. This project encourages and empowers City employees to manage their personal and career development. All City employees with a valid employee number have access to a wide range of online courses from any computer ? at home or at work. <br><br>Vubiz provides the following: The Learning Management System (LMS) delivered via an ASP model; a secure bulk user upload feature integrated with the City?s HRIS ? PeopleSoft system; a wide range of off-the-shelf content, including topics such as Communication, Career Development, Workplace 
+      Skills, Computer Software, Health and Safety; and custom content development. All vital feedback and statistics are available via the Vubiz LMS which show that employees are taking advantage of the learning opportunities provided.&nbsp; </h1>
+      <h1>Scotiabank</h1>
+      <h1 class="c2">Scotiabank is one of North America?s leading financial institutions and Canada?s most international bank, and is a strategic partner of Vubiz. Although Scotiabank?s reach is global, their energies are focused on individual customers, employees and shareholders, and on building a strong community presence.<br><br>In early 2006, Vubiz and Scotiabank began the job of developing the ScotiaSkills e-Learning Portal and populating it with content. Vubiz worked closely with Scotiabank to create ?ScotiaSkills?, a powerful online learning resource centre which is a full custom build project, encompassing all of Scotia?s custom requirements, while satisfying their security issues. As of January 2007, there are 100 e-Nuggets Vubiz has built and distributed ? short, focused modules on a wide range of topics ? as well as 5 longer modules on financial management. <br><br>It is an important tool to support the bank?s business customers in achieving their business goals. Bankers can email 
+      their customers specific &quot;e-nuggets&quot; (bits of learning) that address specific business strategies being discussed, and are targeted to their immediate needs at hand. The e-nuggets, covering key business topics, are offered free to the bank's business customers and have enhanced Scotiabank's capacity to deliver quality information and offer timely advice. Learner tracking and reporting is included.&nbsp; </h1>
+      <h1>Cineplex Entertainment LP</h1>
+      <h1 class="c2">Cineplex, headquartered in Toronto, owns, leases or has a joint-venture interest in 131 theatres with 1,327 screens serving approximately 60 million guests annually. It is the largest motion picture exhibitor in Canada.<br><br>Vubiz provides LMS services to Cineplex nationally. They use Vubiz off-the-shelf content that has been re-branded/edited in vuBuild (our self-authoring service) to address their specific needs. We also host and deliver their 3rd party software through our LMS. A large suite of custom reporting tools has been built to align reporting with the company?s training strategy and targets. <br><br>Specific content is assigned to learners based on their job roles. Historical data from several HR systems was imported into the Vubiz LMS to provide the client with a single tool for generating training reports. With our flexibility and experience, Vubiz was able to create custom reports and edit off-the-shelf content to create a highly custom solution for 
+      Cineplex in a very timely and cost effective manner.</h1>
+      <h1>VersaCold&nbsp; </h1>
+      <h1 class="c2">VersaCold, founded in 1946, operates 72 modern, temperature-controlled warehouses across Canada and the US, with a combined storage capacity of close to 290 million cubic feet. VersaCold offers custom freezing and food processing, as well as complete third party logistics and transportation services.<br><br>Vubiz provides VersaCold with its platform in French and English, the Vubiz LMS, vuBuild (our self-authoring service/training development tool) and a series of off-the-shelf Vubiz courses. Both parties see this as a long term relationship, providing VersaCold with a training solution for many years to come.<br><br>VersaCold works with our self-authoring service to co-brand and modify existing customer service, health &amp; safety and other programs to suit their needs. All courseware is distributed via the Vubiz servers. The VersaCold learners access their e-learning site via a link on their intranet system. User data is passed automatically to the Vubiz LMS, 
+      allowing ?authorized? learners to seamlessly access content without having to register. This automated process keeps all user information current and consistent with the company?s HRIS system.&nbsp; </h1></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

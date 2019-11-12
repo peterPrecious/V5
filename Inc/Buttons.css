@@ -1,0 +1,55 @@
+﻿.butShell
+{
+  cursor: pointer;
+  border: 0 none;
+  display: inline-block;
+  padding-right: 4px;
+  position: relative;
+}
+
+.butInput 
+{
+  cursor: pointer;
+  padding-left: 25px;
+  font-family: "Segoe UI",Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  height: 24px;
+
+}
+
+.butIcon {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  left: 5px;
+  top: 4px;
+  cursor: default;
+  display: block;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  width: 16px !important;
+  background-image: url(Buttons.png);
+}
+
+.butAdd       {background-position: 0       0 !important;}
+.butRemove    {background-position: -20px   0 !important;}    
+.butOk        {background-position: -40px   0 !important;}    
+.butCancel    {background-position: -60px   0 !important;}    
+.butPrevious  {background-position: -80px   0 !important;}    
+.butNext      {background-position: -100px  0 !important;}    
+.butSave      {background-position: -120px  0 !important;}    
+.butConfig    {background-position: -140px  0 !important;}    
+.butRefresh   {background-position: -160px  0 !important;}    
+.butEdit      {background-position: -180px  0 !important;}    
+.butUpload    {background-position: -200px  0 !important;}    
+.butDownload  {background-position: -220px  0 !important;}    
+.butOpen      {background-position: -240px  0 !important;}    
+.butAttach    {background-position: -260px  0 !important;}    
+.butPrint     {background-position: -280px  0 !important;}    
+.butSearch    {background-position: -300px  0 !important;}
+.butHelp      {background-position: -320px  0 !important;}    
+.butCart      {background-position: -340px  0 !important;}    
+.butRSS       {background-position: -360px  0 !important;}    
+.butMail      {background-position: -380px  0 !important;}    
+.butFB        {background-position: -400px  0 !important;}    
+.butTwitter   {background-position: -420px  0 !important;}

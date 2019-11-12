@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+  <script>
+    // enter the customer id that will access this content
+    // the WS will add each access to user VU_SCORMTRACKER
+    // if VU_SCORMTRACKER does not exist the WS will create the user on the first visit
+
+    var vCust = "VUBZ2274"
+
+    var oXmlHttp = new ActiveXObject("Microsoft.XMLHTTP")
+    oXmlHttp.open("POST", "/V5/Ws/wsScormTracker.asp", false)
+    oXmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    oXmlHttp.send("vCust=" + vCust)
+    var vResponse = oXmlHttp.ResponseText
+
+//  alert(vResponse)
+
+  </script>
+
+</head>
+
+
+</html>

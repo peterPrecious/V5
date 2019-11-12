@@ -1,0 +1,1 @@
+<% Response.Redirect "Logx.asp?" & Request.QueryString.Item  '...V5 bookmarking %>

@@ -1,0 +1,52 @@
+
+#divOuter
+{
+  position: absolute;
+  padding: 0px;
+  width: 700px;
+  height: 500px;
+  left: 15px;
+  background-color: #FFFFFF;
+  z-index: 99;
+}
+
+#shadow-master,
+#shadow-container
+{
+  border:1px solid red;
+  position: relative;
+  width: 300px;
+  right: 0px;
+}
+
+  #shadow-container .shadow2,
+  #shadow-container .shadow3,
+  #shadow-container .container
+  {
+    position: relative;
+    left: -23px;
+    top: -2px;
+    /* twig left/top to change shadow angle (1px - 2px); */
+  }
+
+  #shadow-container .shadow1
+  {
+    background: #F1F0F1;
+  }
+
+  #shadow-container .shadow2
+  {
+    background: #DBDADB;
+  }
+
+  #shadow-container .shadow3
+  {
+    background: #B8B6B8;
+  }
+
+  #shadow-container .container
+  {
+    background: #ffffff;
+    border: 1px solid #848284;
+    padding: 0px;
+  }

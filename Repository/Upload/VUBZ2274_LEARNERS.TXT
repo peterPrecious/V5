@@ -1,0 +1,35 @@
+Learner ID	Group	First Name	Last Name	Email Address	Password	Programs	Memo	Jobs	Reports To
+PARTNERDEMO		Partner	Guest						ORION
+186082-HXDG		Jan	Panfil			P1014EN			ORION
+PBULLOCH@VUBIZ.COM		Peter	Bulloch	pbulloch@vubiz.com					ORION
+206528-EHCC		Anita	Helser	anita@corimages.com					ORION
+206756-XXHA		LaDonna	Cooley	Seylavie@aol.com					ORION
+207010-AGXE		SHEILA	BIRCH	"BIRCH,SHEILA@CANADAPOST.CA"					ORION
+PBULLOCH		Peter	Bulloch	pbulloch@vubiz.com		P1142EN P1178EN			ORION
+207173-FGGH		Mischa	Kaplan	mischakaplan@rogers.com					ORION
+207225-AYYY		Tyler	Collie	tcollie_spo@hotmail.com		P1007EN			OSCAR19
+SQIDEMO		SQI	Demo			P1014EN P1017EN P1036EN P1039EN P1037EN P1038EN			OSCAR19
+JLYONS		John 	Lyons (Demo for SQI)			P1039EN P1036EN 			OSCAR19
+BTUCKER		Bill	Tucker (demo for Helen)	bill@smarterorg.com		P1009EN			OSCAR19
+GARTHSQI		Garth 	Bell (SQI Demo - Jim)	garth@sqi.co.za		P1014EN P1017EN P1036EN P1039EN P1037EN P1038EN			OSCAR19
+PBISSONETTE		Pete 	Bissonette	PeteB@LearningStrategies.com		P1020EN P1032EN			OSCAR19
+207920-XYYE		Linda	Ducharme	lducharme@shaw.ca					OSCAR19
+208272-GGCG		Blane	Harvey	blane.harvey@sheridanc.on.ca					OSCAR19
+208345-XYBY		Peter	Bulloch	pbulloch@netsurf.net					OSCAR19
+208530-FAAE		Edward	Padfield	tmpadfld@nbnet.nb.ca					OSCAR19
+RMCCLUHAM		Rick	McCluham			P1014EN P1017EN P1036EN P1039EN P1037EN P1038EN			OSCAR19
+DSTEVENSON		Drew	Stevenson	stevensondrew@hotmail.com		P1001EN P1002EN P1003EN P1007EN P1014EN P1015EN P5300EN P5310EN P5370EN P5330EN P5340EN P5380EN P5360EN P5390EN P5320EN P5395EN P5350EN P5399EN			OSCAR19
+209268-BAGC		Leslie	Warren	leslie@computertime.com					OSCAR19
+209424-HAFX		Yvonne	Tardiff	ytardiff@mb.sympatico.ca					OSCAR19
+LSMITH		Lisa	Smith	lisa.smith@tag4kl.org		P1009EN	Lisa Smith - CAP Lindsay		OSCAR19
+DRITCHIE		Doug	Ritchie	dritchie3@cogeco.ca		P1003EN			OSCAR19
+210406-DFCA		Chris	Kennison	samvanso2129@msn.com					OSCAR19
+CSDEMO		Demo	Customer Service Programs			P1014EN P1017EN P1036EN P1039EN P1037EN P1038EN P1010EN	for Carolyn Watt		OSCAR19
+210490-BDGE		Helen L.	Miller	hmiller6500@yahoo.ca					OSCAR19
+JROBERTS		Jim	Roberts 			P1039EN	demo for John T.		OSCAR19
+210568-EECX		asdf	asdf	mbulloch@vubiz.com					OSCAR19
+210626-EFEA		Rebecca	Paterson	rebeccap@shaw.ca		P1003EN			OSCAR19
+HUCDEMO		Gord 	Burdick	glburdick@hamiltonhydro.com		P1014EN P1017EN P1036EN P1039EN P1037EN P1038EN P1010EN P1032EN P1052EN P1053EN P1054EN P1055EN P1056EN P1057EN	Demo for George L.		OSCAR19
+210655-EGCY		Karyanne	Newton	kls_karyanne@yahoo.com					OSCAR19
+210712-AGGG		Nelson	Whitford	nwhitford@cogeco.ca					OSCAR19
+JROONEY		Jim 	Rooney	info@right-action.com		P1014EN P1017EN P1036EN P1039EN P1037EN P1038EN	Demo for John T. (SQI)		OSCAR19

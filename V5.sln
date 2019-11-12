@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V5", "V5.csproj", "{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure|Any CPU = Azure|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		stagingWeb|Any CPU = stagingWeb|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.stagingWeb|Any CPU.ActiveCfg = stagingWeb|Any CPU
+		{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}.stagingWeb|Any CPU.Build.0 = stagingWeb|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2EE45ED-9FCD-4AD2-A11C-C7FC7977DA5C}
+	EndGlobalSection
+EndGlobal

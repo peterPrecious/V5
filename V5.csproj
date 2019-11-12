@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63A0E08B-01EF-4106-B66D-D3F7BDA6B5FA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>V5</RootNamespace>
+    <AssemblyName>V5</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="archivedLearners.aspx" />
+    <Content Include="Certificate.html" />
+    <Content Include="certLogs.aspx" />
+    <Content Include="ckEditor.asp" />
+    <Content Include="CustomerDeleteAuthoringBits.asp" />
+    <Content Include="CustomerDeleteCorporate.asp" />
+    <Content Include="CustomerDeleteAuthoring.asp" />
+    <Content Include="Inc\browserFeatures.js" />
+    <Content Include="Inc\Vubi2.css" />
+    <Content Include="testLive.html" />
+    <Content Include="tls12.html" />
+    <Content Include="Logx.asp" />
+    <Content Include="Source\SeatThreshold.asp" />
+    <Content Include="tls12.asp" />
+    <None Include="Properties\PublishProfiles\stagingWeb.pubxml" />
+    <None Include="Properties\PublishProfiles\vubizcloud.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Action.asp" />
+    <Content Include="Action_ws.asp" />
+    <Content Include="Alert.asp" />
+    <Content Include="autoClose.htm" />
+    <Content Include="BadBrowserTest.asp" />
+    <Content Include="BookmarkObjects.asp" />
+    <Content Include="BrowserTest2.asp" />
+    <Content Include="BryanFathmail.asp" />
+    <Content Include="Buttons.asp" />
+    <Content Include="Catalogue.asp" />
+    <Content Include="Certificate.asp" />
+    <Content Include="CloneCerts.asp" />
+    <Content Include="Close.asp" />
+    <Content Include="CloseModule.asp" />
+    <Content Include="CloseObjects.asp" />
+    <Content Include="Default.asp" />
+    <Content Include="Document.asp" />
+    <Content Include="DocumentKMX.asp" />
+    <Content Include="Email.asp" />
+    <Content Include="ErrorPage.asp" />
+    <Content Include="Faq.asp" />
+    <Content Include="Fathmail.asp" />
+    <Content Include="FR.asp" />
+    <Content Include="Generic_Email.asp" />
+    <Content Include="Goto.asp" />
+    <Content Include="HomeClient.htm" />
+    <Content Include="Inc\AC_RunActiveContent.js" />
+    <Content Include="Inc\Adovbs.asp" />
+    <Content Include="Inc\AssessmentReset.asp" />
+    <Content Include="Inc\Banner.asp" />
+    <Content Include="Inc\Base64.asp" />
+    <Content Include="Inc\Buttons.css" />
+    <Content Include="Inc\Buttons.png" />
+    <Content Include="Inc\Calendar.js" />
+    <Content Include="Inc\Certificate.asp" />
+    <Content Include="Inc\Certificate_Test.asp" />
+    <Content Include="Inc\ChangeUrlLang.js" />
+    <Content Include="Inc\CloneIt.asp" />
+    <Content Include="Inc\ClusterProfile.asp" />
+    <Content Include="Inc\Configuration.asp" />
+    <Content Include="Inc\Conf_Regions.asp" />
+    <Content Include="Inc\Cookies.js" />
+    <Content Include="Inc\CustomCertRoutines.asp" />
+    <Content Include="Inc\Db_Actn.asp" />
+    <Content Include="Inc\Db_Actv.asp" />
+    <Content Include="Inc\Db_Arts.asp" />
+    <Content Include="Inc\Db_Caln.asp" />
+    <Content Include="Inc\Db_Catl.asp" />
+    <Content Include="Inc\Db_Chan.asp" />
+    <Content Include="Inc\Db_Clss.asp" />
+    <Content Include="Inc\Db_Clus.asp" />
+    <Content Include="Inc\Db_Comp.asp" />
+    <Content Include="Inc\Db_Cont.asp" />
+    <Content Include="Inc\Db_Crit.asp" />
+    <Content Include="Inc\Db_Cust.asp" />
+    <Content Include="Inc\Db_Dial.asp" />
+    <Content Include="Inc\Db_Docs.asp" />
+    <Content Include="Inc\Db_Ecom.asp" />
+    <Content Include="Inc\Db_EcomNew.asp" />
+    <Content Include="Inc\Db_Elog.asp" />
+    <Content Include="Inc\Db_Exam.asp" />
+    <Content Include="Inc\Db_ExamReport.asp" />
+    <Content Include="Inc\Db_Grou.asp" />
+    <Content Include="Inc\Db_Jobs.asp" />
+    <Content Include="Inc\Db_Keys.asp" />
+    <Content Include="Inc\Db_Logs.asp" />
+    <Content Include="Inc\Db_Logx.asp" />
+    <Content Include="Inc\Db_Memb.asp" />
+    <Content Include="Inc\Db_Mods.asp" />
+    <Content Include="Inc\Db_Parm.asp" />
+    <Content Include="Inc\Db_Path.asp" />
+    <Content Include="Inc\Db_Phra.asp" />
+    <Content Include="Inc\Db_Prod.asp" />
+    <Content Include="Inc\Db_Prog.asp" />
+    <Content Include="Inc\Db_QCust.asp" />
+    <Content Include="Inc\Db_Resc.asp" />
+    <Content Include="Inc\Db_ResT.asp" />
+    <Content Include="Inc\Db_Skil.asp" />
+    <Content Include="Inc\Db_Sset.asp" />
+    <Content Include="Inc\Db_Task.asp" />
+    <Content Include="Inc\Db_TskD.asp" />
+    <Content Include="Inc\Db_TskH.asp" />
+    <Content Include="Inc\Debug_Prod.asp" />
+    <Content Include="Inc\Debug_Routines.asp" />
+    <Content Include="Inc\Dial_Routines.asp" />
+    <Content Include="Inc\Document.asp" />
+    <Content Include="Inc\DocumentKMX.asp" />
+    <Content Include="Inc\Document_Test.asp" />
+    <Content Include="Inc\EcomCountry.asp" />
+    <Content Include="Inc\EcomPromo.asp" />
+    <Content Include="Inc\EcomProvince.asp" />
+    <Content Include="Inc\Ecom_Basket.asp" />
+    <Content Include="Inc\Ecom_Discounts.asp" />
+    <Content Include="Inc\Ecom_Routines.asp" />
+    <Content Include="Inc\Exam_Routines.asp" />
+    <Content Include="Inc\Fathmail.asp" />
+    <Content Include="Inc\Fathmail_Test.asp" />
+    <Content Include="Inc\Feature_Routines.asp" />
+    <Content Include="Inc\Functions.js" />
+    <Content Include="Inc\getParameter.js" />
+    <Content Include="Inc\IEupdate.js" />
+    <Content Include="Inc\Initialize.asp" />
+    <Content Include="Inc\Initialize_live.asp" />
+    <Content Include="Inc\jQuery.draggable.js" />
+    <Content Include="Inc\jQuery.js" />
+    <Content Include="Inc\jQuery.popupWindow.js" />
+    <Content Include="Inc\jQueryC.js" />
+    <Content Include="Inc\jQueryM.js" />
+    <Content Include="Inc\jQueryQR1.js" />
+    <Content Include="Inc\jQueryQR2.js" />
+    <Content Include="Inc\jQueryU.js" />
+    <Content Include="Inc\Launch.js" />
+    <Content Include="Inc\LaunchObjects.js" />
+    <Content Include="Inc\MailServer.asp" />
+    <Content Include="Inc\ModSkillSet_Setup.asp" />
+    <Content Include="Inc\MouseOver_Routines.asp" />
+    <Content Include="Inc\oFilesTest.asp" />
+    <Content Include="Inc\Password_Routines.asp" />
+    <Content Include="Inc\popupBlocker.htm" />
+    <Content Include="Inc\ProgramStatusRoutines.asp" />
+    <Content Include="Inc\QueryString.asp" />
+    <Content Include="Inc\Randomize.asp" />
+    <Content Include="Inc\RightClick.js" />
+    <Content Include="Inc\RTE.asp" />
+    <Content Include="Inc\ScormAPI.js" />
+    <Content Include="Inc\Security.asp" />
+    <Content Include="Inc\Sessions.asp" />
+    <Content Include="Inc\SessionVariables.asp" />
+    <Content Include="Inc\Setup.asp" />
+    <Content Include="Inc\Shadow.css" />
+    <Content Include="Inc\Shell_Hi.asp" />
+    <Content Include="Inc\Shell_HiLite.asp" />
+    <Content Include="Inc\Shell_HiSolo.asp" />
+    <Content Include="Inc\Shell_Lo.asp" />
+    <Content Include="Inc\Shell_LoLite.asp" />
+    <Content Include="Inc\Sort_Routine.asp" />
+    <Content Include="Inc\SwapImages.js" />
+    <Content Include="Inc\Taxes_Test.asp" />
+    <Content Include="Inc\Test.asp" />
+    <Content Include="Inc\Translation_Routines.asp" />
+    <Content Include="Inc\Urls_Routines.asp" />
+    <Content Include="Inc\Utf8.asp" />
+    <Content Include="Inc\Vubiz.css" />
+    <Content Include="Inc\VubuildReview.js" />
+    <Content Include="Inc\WebError.asp" />
+    <Content Include="Inc\WebService.js" />
+    <Content Include="Inc\wsReconnect.asp" />
+    <Content Include="Inc\Ws_Cust.asp" />
+    <Content Include="Inc\Ws_Memb.asp" />
+    <Content Include="LaunchObjects.asp" />
+    <Content Include="LaunchStaging.asp" />
+    <Content Include="LaunchVuBuild.asp" />
+    <Content Include="Login.asp" />
+    <Content Include="MailServer.asp" />
+    <Content Include="ModuleCompleted.asp" />
+    <Content Include="MousePosition.htm" />
+    <Content Include="ProgCert.asp" />
+    <Content Include="ProgramCompleted.asp" />
+    <Content Include="Redirect.asp" />
+    <Content Include="Refresh.asp" />
+    <Content Include="RefreshPage.asp" />
+    <Content Include="Restore.asp" />
+    <Content Include="ScoreModule.asp" />
+    <Content Include="ScormSubmit.htm" />
+    <Content Include="ScormTracker.htm" />
+    <Content Include="Secure.asp" />
+    <Content Include="selectText.html" />
+    <Content Include="ServerTest.asp" />
+    <Content Include="ServerVariables.asp" />
+    <Content Include="SessionRefresh_ws.asp" />
+    <Content Include="SessionRemaining_ws.asp" />
+    <Content Include="SessionTimeout.asp" />
+    <Content Include="SignOffObjects.asp" />
+    <Content Include="SiteFeedback.asp" />
+    <Content Include="Source\AccessReport.asp" />
+    <Content Include="Source\Activity.asp" />
+    <Content Include="Source\Activity_O.asp" />
+    <Content Include="Source\Activity_X.asp" />
+    <Content Include="Source\ActnAdd.asp" />
+    <Content Include="Source\ActnList.asp" />
+    <Content Include="Source\AnchorFix.asp" />
+    <Content Include="Source\ArtsEdit.asp" />
+    <Content Include="Source\ArtsMenu.asp" />
+    <Content Include="Source\ArtsView.asp" />
+    <Content Include="Source\AssessmentDump.asp" />
+    <Content Include="Source\AssessmentNew.asp" />
+    <Content Include="Source\AssessmentRenewalReport.asp" />
+    <Content Include="Source\Assess_Home.asp" />
+    <Content Include="Source\Authors.asp" />
+    <Content Include="Source\Banner.asp" />
+    <Content Include="Source\Bookmark.asp" />
+    <Content Include="Source\BrowserTest2.asp" />
+    <Content Include="Source\CalnEdit.asp" />
+    <Content Include="Source\CalnList.asp" />
+    <Content Include="Source\Catalogue.asp" />
+    <Content Include="Source\CatalogueDump.asp" />
+    <Content Include="Source\CatalogueDump_o.asp" />
+    <Content Include="Source\CatlByCustId_x.asp" />
+    <Content Include="Source\CatlEdit.asp" />
+    <Content Include="catalogueReCreate.asp" />
+    <Content Include="Source\CatlEdit_new.asp" />
+    <Content Include="Source\CatlFind.asp" />
+    <Content Include="Source\CertCompletion.asp" />
+    <Content Include="Source\Certificate.asp" />
+    <Content Include="Source\CertificateCreate.asp" />
+    <Content Include="Source\CertificateGenerate.asp" />
+    <Content Include="Source\CertificateOk.asp" />
+    <Content Include="Source\CertificateSales.asp" />
+    <Content Include="Source\CertificateSample.asp" />
+    <Content Include="Source\CertificateStart.asp" />
+    <Content Include="Source\ChannelQuickSetup.asp" />
+    <Content Include="Source\Channel_Details.asp" />
+    <Content Include="Source\Channel_Management.asp" />
+    <Content Include="Source\Channel_Report.asp" />
+    <Content Include="Source\Channel_Report_x.asp" />
+    <Content Include="Source\ClientActivityReport.asp" />
+    <Content Include="Source\ClientActivityReport_1.asp" />
+    <Content Include="Source\CloseWindow.asp" />
+    <Content Include="Source\Completion.asp" />
+    <Content Include="Source\Completion_0.asp" />
+    <Content Include="Source\Completion_1.asp" />
+    <Content Include="Source\Completion_4.asp" />
+    <Content Include="Source\Completion_5.asp" />
+    <Content Include="Source\Completion_6.asp" />
+    <Content Include="Source\Completion_7.asp" />
+    <Content Include="Source\Completion_AddScores.asp" />
+    <Content Include="Source\Completion_Footer.asp" />
+    <Content Include="Source\Completion_Learner.asp" />
+    <Content Include="Source\Completion_LearnerRights.asp" />
+    <Content Include="Source\Completion_Learners.asp" />
+    <Content Include="Source\Completion_Learners_o.asp" />
+    <Content Include="Source\Completion_Learners_x.asp" />
+    <Content Include="Source\Completion_LocationManager.asp" />
+    <Content Include="Source\Completion_LocationManager_Add.asp" />
+    <Content Include="Source\Completion_LocationManager_Del.asp" />
+    <Content Include="Source\Completion_LocationManager_Loc.asp" />
+    <Content Include="Source\Completion_LocationManager_Mod.asp" />
+    <Content Include="Source\Completion_LocationManager_Mov.asp" />
+    <Content Include="Source\Completion_LocationManager_Reg.asp" />
+    <Content Include="Source\Completion_LocationManager_Rev.asp" />
+    <Content Include="Source\Completion_LocationManager_Routines.asp" />
+    <Content Include="Source\Completion_LocationManager_Top.asp" />
+    <Content Include="Source\Completion_ReportSet.asp" />
+    <Content Include="Source\Completion_RoleManager.asp" />
+    <Content Include="Source\Completion_Routines.asp" />
+    <Content Include="Source\ContentEdit.asp" />
+    <Content Include="Source\ContentEditAll.asp" />
+    <Content Include="Source\CorporateEdit.asp" />
+    <Content Include="Source\CPR_ActivityReport.asp" />
+    <Content Include="Source\CritEdit.asp" />
+    <Content Include="Source\Customer.asp" />
+    <Content Include="Source\CustomerActivityReport.asp" />
+    <Content Include="Source\CustomerEcom.asp" />
+    <Content Include="Source\CustomerExpires.asp" />
+    <Content Include="Source\CustomerExpiryReport.asp" />
+    <Content Include="Source\CustomerExpiryReport_x.asp" />
+    <Content Include="Source\CustomerG2alert.asp" />
+    <Content Include="Source\CustomerNotes.asp" />
+    <Content Include="Source\Customers.asp" />
+    <Content Include="Source\CustomerSellerOwners.asp" />
+    <Content Include="Source\CustomerSellerOwners_x.asp" />
+    <Content Include="Source\Default.asp" />
+    <Content Include="Source\Discussion.asp" />
+    <Content Include="Source\DocumentUpload.asp" />
+    <Content Include="Source\draggable.html" />
+    <Content Include="elavon.asp" />
+    <Content Include="Source\Ecom2Basket.asp" />
+    <Content Include="Source\Ecom2BypassGroup.asp" />
+    <Content Include="Source\Ecom2BypassGroup2.asp" />
+    <Content Include="Source\Ecom2BypassProds.asp" />
+    <Content Include="Source\Ecom2BypassSingle.asp" />
+    <Content Include="Source\Ecom2Catalogue.asp" />
+    <Content Include="Source\Ecom2Checkout.asp" />
+    <Content Include="Source\Ecom2Customer.asp" />
+    <Content Include="Source\Ecom2Default.asp" />
+    <Content Include="Inc\Elavon.asp" />
+    <Content Include="Source\Ecom2GenerateId.asp" />
+    <Content Include="Source\Ecom2Module.asp" />
+    <Content Include="Source\Ecom2Modules.asp" />
+    <Content Include="Source\Ecom2MyDefault.asp" />
+    <Content Include="Source\Ecom2MyModules.asp" />
+    <Content Include="Source\Ecom2MyPrograms.asp" />
+    <Content Include="Source\Ecom2NoModules.asp" />
+    <Content Include="Source\Ecom2NoPrograms.asp" />
+    <Content Include="Source\Ecom2Policies.asp" />
+    <Content Include="Source\Ecom2PoliciesProds.asp" />
+    <Content Include="Source\Ecom2ProdsBasket.asp" />
+    <Content Include="Source\Ecom2ProdsDesc.asp" />
+    <Content Include="Source\Ecom2ProdsLeft.asp" />
+    <Content Include="Source\Ecom2ProdsRight.asp" />
+    <Content Include="Source\Ecom2Programs.asp" />
+    <Content Include="Source\Ecom2Start.asp" />
+    <Content Include="Source\Ecom3Basket.asp" />
+    <Content Include="Source\Ecom3Checkout.asp" />
+    <Content Include="Source\Ecom3DisplayIds.asp" />
+    <Content Include="Source\ElavonRePost.asp" />
+    <Content Include="Source\Ecom3GenerateId.asp" />
+    <Content Include="Source\Ecom3Programs.asp" />
+    <Content Include="Source\Ecom4DisplayId.asp" />
+    <Content Include="Source\Ecom4GenerateId.asp" />
+    <Content Include="Source\Ecom5Checkout.asp" />
+    <Content Include="Source\Ecom6aGenerateId.asp" />
+    <Content Include="Source\Ecom6Checkout.asp" />
+    <Content Include="Source\Ecom6GenerateId.asp" />
+    <Content Include="Source\Ecom7GenerateId.asp" />
+    <Content Include="Source\EcomAdjustG1.asp" />
+    <Content Include="Source\EcomAdjustG2.asp" />
+    <Content Include="Source\EcomCdReport.asp" />
+    <Content Include="Source\EcomDisplayId.asp" />
+    <Content Include="Source\EcomDisplayIds.asp" />
+    <Content Include="Source\EcomEdit.asp" />
+    <Content Include="Source\EcomEmail.asp" />
+    <Content Include="Source\EcomError.asp" />
+    <Content Include="Source\EcomExcel.asp" />
+    <Content Include="Source\EcomExtend.asp" />
+    <Content Include="Source\EcomGenerateId.asp" />
+    <Content Include="Source\EcomHistory.asp" />
+    <Content Include="Source\EcomMemo.asp" />
+    <Content Include="Source\EcomMemoOk.asp" />
+    <Content Include="Source\EcomPatience.asp" />
+    <Content Include="Source\EcomProductsReport.asp" />
+    <Content Include="Source\EcomReport.asp" />
+    <Content Include="Source\EcomReport0.asp" />
+    <Content Include="Source\EcomReport1.asp" />
+    <Content Include="Source\EcomReport1X.asp" />
+    <Content Include="Source\EcomReport2.asp" />
+    <Content Include="Source\EcomReport2X.asp" />
+    <Content Include="Source\EcomReport3.asp" />
+    <Content Include="Source\EcomReport3X.asp" />
+    <Content Include="Source\EcomReport3_original.asp" />
+    <Content Include="Source\EcomReport4.asp" />
+    <Content Include="Source\EcomReport4X.asp" />
+    <Content Include="Source\EcomReportCard.asp" />
+    <Content Include="Source\EcomReportCard1.asp" />
+    <Content Include="Source\EcomReportCard2.asp" />
+    <Content Include="Source\EcomReportX.asp" />
+    <Content Include="Source\EmailAlert.asp" />
+    <Content Include="Source\EmailAlertBody.asp" />
+    <Content Include="Source\EmailAlertOk.asp" />
+    <Content Include="Source\EmailRegisterTemplate.asp" />
+    <Content Include="Source\EmailRegisterTemplate.htm" />
+    <Content Include="Source\EmailValidate.asp" />
+    <Content Include="Source\Error.asp" />
+    <Content Include="Source\Error_Test.asp" />
+    <Content Include="Source\Exam.asp" />
+    <Content Include="Source\ExamCheat.asp" />
+    <Content Include="Source\ExamComplete.asp" />
+    <Content Include="Source\ExamEdit.asp" />
+    <Content Include="Source\ExamGrade.asp" />
+    <Content Include="Source\ExamList.asp" />
+    <Content Include="Source\ExamMenu.asp" />
+    <Content Include="Source\ExamOfflineCert.asp" />
+    <Content Include="Source\ExamReportReview.asp" />
+    <Content Include="Source\ExamSave.asp" />
+    <Content Include="Source\ExamStart.asp" />
+    <Content Include="Source\ExamSummary.asp" />
+    <Content Include="Source\ExamView.asp" />
+    <Content Include="Source\Excel.asp" />
+    <Content Include="Source\Excel_test.asp" />
+    <Content Include="Source\Feature.asp" />
+    <Content Include="Source\GrouEdit.asp" />
+    <Content Include="Source\Home.asp" />
+    <Content Include="Source\HomePageLayout.asp" />
+    <Content Include="Source\HomeProfile.asp" />
+    <Content Include="Source\Home_fontNo.asp" />
+    <Content Include="Source\Home_with bookmarking.asp" />
+    <Content Include="Source\HtmlPage.html" />
+    <Content Include="Source\HtmlPage2.html" />
+    <Content Include="Source\iFrame.asp" />
+    <Content Include="Source\Info.asp" />
+    <Content Include="Source\IssueIds.asp" />
+    <Content Include="Source\IssueIdsByEmail New.asp" />
+    <Content Include="Source\IssueIdsByEmail.asp" />
+    <Content Include="Source\IssueIdsByPubicEmail.asp" />
+    <Content Include="Source\IssueIdsList.asp" />
+    <Content Include="Source\IssueIdsOk.asp" />
+    <Content Include="Source\IssueUrls.asp" />
+    <Content Include="Source\JobsCategories.asp" />
+    <Content Include="Source\JobsEdit.asp" />
+    <Content Include="Source\JobSkills.asp" />
+    <Content Include="Source\LearnerReportCard.asp" />
+    <Content Include="Source\LearnerReportCard1.asp" />
+    <Content Include="Source\LearnerReportCard2.asp" />
+    <Content Include="Source\LearnerReportCard_Functions.asp" />
+    <Content Include="Source\LearnerReportCard_ws.asp" />
+    <Content Include="Source\LearnerReportCard_X.asp" />
+    <Content Include="Source\LearnerReportCard_XX.asp" />
+    <Content Include="Source\LMSsync.asp" />
+    <Content Include="Source\LogReport0.asp" />
+    <Content Include="Source\LogReport0X.asp" />
+    <Content Include="Source\LogReport1.asp" />
+    <Content Include="Source\LogReport1_x.asp" />
+    <Content Include="Source\LogReport2.asp" />
+    <Content Include="Source\LogReport2_x.asp" />
+    <Content Include="Source\LogReport3.asp" />
+    <Content Include="Source\LogReport3_x.asp" />
+    <Content Include="Source\LogReport4.asp" />
+    <Content Include="Source\LogReport4_x.asp" />
+    <Content Include="Source\LogReport5.asp" />
+    <Content Include="Source\LogReport5AO.asp" />
+    <Content Include="Source\LogReport5AX.asp" />
+    <Content Include="Source\LogReport5SO.asp" />
+    <Content Include="Source\LogReport5SX.asp" />
+    <Content Include="Source\LogReport5S_x.asp" />
+    <Content Include="Source\LogsEdit.asp" />
+    <Content Include="Source\LogsExamReset.asp" />
+    <Content Include="Source\LogsHistoryTransfer.asp" />
+    <Content Include="Source\LogsTransferById.asp" />
+    <Content Include="Source\LogsTransferByNo.asp" />
+    <Content Include="Source\ManageAdmins.asp" />
+    <Content Include="Source\ManageAuthors.asp" />
+    <Content Include="Source\Menu.asp" />
+    <Content Include="Source\Menu_disableLink.asp" />
+    <Content Include="Source\ModSkillSet.asp" />
+    <Content Include="Source\Module.asp" />
+    <Content Include="Source\ModuleDescription.asp" />
+    <Content Include="Source\Modules.asp" />
+    <Content Include="Source\ModuleStatusRoutines.asp" />
+    <Content Include="Source\MyClasses.asp" />
+    <Content Include="Source\MyContent.asp" />
+    <Content Include="Source\MyWorld.asp" />
+    <Content Include="Source\MyWorld2.asp" />
+    <Content Include="Source\MyWorld2Code.asp" />
+    <Content Include="Source\MyWorld2CodeRoutines.asp" />
+    <Content Include="Source\MyWorld2Code_ws.asp" />
+    <Content Include="Source\MyWorld2Filters.asp" />
+    <Content Include="Source\MyWorld2Help_EN.asp" />
+    <Content Include="Source\MyWorld2Help_FR.asp" />
+    <Content Include="Source\MyWorld2Redirect.asp" />
+    <Content Include="Source\MyWorldCode.asp" />
+    <Content Include="Source\MyWorldCodeRoutines.asp" />
+    <Content Include="Source\MyWorldCode_ws.asp" />
+    <Content Include="Source\MyWorldFilters.asp" />
+    <Content Include="Source\MyWorldHelp_EN.asp" />
+    <Content Include="Source\MyWorldHelp_FR.asp" />
+    <Content Include="Source\MyWorldRedirect.asp" />
+    <Content Include="Source\Patience.asp" />
+    <Content Include="Source\PostVuAssessScores.asp" />
+    <Content Include="Source\Program.asp" />
+    <Content Include="Source\Programs.asp" />
+    <Content Include="Source\ProgramsAssigned.asp" />
+    <Content Include="Source\ProgramsAssigned_O.asp" />
+    <Content Include="Source\ProgramsAssigned_X.asp" />
+    <Content Include="Source\ProgramUpdate.asp" />
+    <Content Include="Source\QuickExamList.asp" />
+    <Content Include="Source\Restore.asp" />
+    <Content Include="Source\RTE_CreateSession.asp" />
+    <Content Include="Source\RTE_Ecom.asp" />
+    <Content Include="Source\RTE_History.asp" />
+    <Content Include="Source\RTE_History_F.asp" />
+    <Content Include="Source\RTE_History_O.asp" />
+    <Content Include="Source\RTE_History_ws.asp" />
+    <Content Include="Source\RTE_History_X.asp" />
+    <Content Include="Source\RTE_History_ZZZ.asp" />
+    <Content Include="Source\RTE_ModsDesc.asp" />
+    <Content Include="Source\RTE_ModsStat.asp" />
+    <Content Include="Source\RTE_ModuleStatusRoutines.asp" />
+    <Content Include="Source\RTE_MyContent.asp" />
+    <Content Include="Source\RTE_ProgDesc.asp" />
+    <Content Include="Source\RTE_Routines.asp" />
+    <Content Include="Source\RTE_Sync.asp" />
+    <Content Include="Source\Scheduler.asp" />
+    <Content Include="Source\Scores_X.asp" />
+    <Content Include="Source\SessionControl.asp" />
+    <Content Include="Source\Sessions.asp" />
+    <Content Include="Source\SignIn.asp" />
+    <Content Include="Source\SignInErr.asp" />
+    <Content Include="Source\SignOff.asp" />
+    <Content Include="Source\SignOffOK.asp" />
+    <Content Include="Source\SignOff_Test.asp" />
+    <Content Include="Source\SkilEdit.asp" />
+    <Content Include="Source\SkillsAssessment.asp" />
+    <Content Include="Source\SkillsGapAnalysis.asp" />
+    <Content Include="Source\SnapshotAll.asp" />
+    <Content Include="Source\SnapshotExam.asp" />
+    <Content Include="Source\SnapshotExam_O.asp" />
+    <Content Include="Source\SnapshotExam_X.asp" />
+    <Content Include="Source\Sponsors.asp" />
+    <Content Include="Source\StatusModules.asp" />
+    <Content Include="Source\TabsLive.asp" />
+    <Content Include="Source\TaskEdit1.asp" />
+    <Content Include="Source\TaskEdit2.asp" />
+    <Content Include="Source\TaskEdit3.asp" />
+    <Content Include="Source\TaskEdit4.asp" />
+    <Content Include="Source\TaskPassword.asp" />
+    <Content Include="Source\TaskPasswordClear.asp" />
+    <Content Include="Source\TaskPasswordStart.asp" />
+    <Content Include="Source\TaskView.asp" />
+    <Content Include="Source\Test.asp" />
+    <Content Include="Source\TestDates.asp" />
+    <Content Include="Source\TestEdit.asp" />
+    <Content Include="Source\TestGrade.asp" />
+    <Content Include="Source\TestMenu.asp" />
+    <Content Include="Source\TestSave.asp" />
+    <Content Include="Source\TestView.asp" />
+    <Content Include="Source\TimeOut.asp" />
+    <Content Include="Source\TimeOutOk.asp" />
+    <Content Include="Source\TimeOutOk_prev.asp" />
+    <Content Include="Source\Upload.asp" />
+    <Content Include="Source\Upload_Basic.asp" />
+    <Content Include="Source\Upload_Basic_Ok.asp" />
+    <Content Include="Source\Upload_Basic_Verify.asp" />
+    <Content Include="Source\User.asp" />
+    <Content Include="Source\UserAdmin.asp" />
+    <Content Include="Source\UserDemo.asp" />
+    <Content Include="Source\UserGroup.asp" />
+    <Content Include="Source\UserGroupX.asp" />
+    <Content Include="Source\Users.asp" />
+    <Content Include="Source\UsersBulkInput.asp" />
+    <Content Include="Source\UsersBulkInputOK.asp" />
+    <Content Include="Source\UsersBulkInputVerify.asp" />
+    <Content Include="Source\UsersOnsite.asp" />
+    <Content Include="Source\Users_O.asp" />
+    <Content Include="Source\Users_ws.asp" />
+    <Content Include="Source\Users_X.asp" />
+    <Content Include="Source\User_Group3filters.asp" />
+    <Content Include="Start.asp" />
+    <Content Include="SurveyResults.asp" />
+    <Content Include="TestMenu.asp" />
+    <Content Include="Translate.asp" />
+    <Content Include="TranslationEngine1.asp" />
+    <Content Include="TranslationEngine2.asp" />
+    <Content Include="Upload.asp" />
+    <Content Include="VuAssessConfig.asp" />
+    <Content Include="vuNews.asp" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="archivedLearners.aspx.cs">
+      <DependentUpon>archivedLearners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="archivedLearners.aspx.designer.cs">
+      <DependentUpon>archivedLearners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="certLogs.aspx.cs">
+      <DependentUpon>certLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="certLogs.aspx.designer.cs">
+      <DependentUpon>certLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Azure|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'stagingWeb|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2458</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/V5</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

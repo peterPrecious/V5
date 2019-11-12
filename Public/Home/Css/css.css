@@ -1,0 +1,336 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-image: url('../Images/background.jpg');
+	background-repeat: repeat-x;
+	background-position-y:top%
+
+	}
+
+
+/********************************* MAIN NAVIGATION LINK STYLES *******************************/
+#navcontainer {
+	width: 134px;
+	padding-right: 0px;
+	margin-left: 0px;
+
+}
+
+#navcontainer ul
+{
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: left;
+
+
+}
+
+#navcontainer a
+{
+display: block;
+padding: 3px 5px 3px 3px;
+width: 144px;
+border-bottom: 1px solid #eee;
+}
+
+#navcontainer a:link, #navlist a:visited
+{
+color: #2167B8;
+text-decoration: none;
+}
+
+#navcontainer a:hover
+{
+	color: #2167B8;
+	background-repeat: repeat-y;
+	background-position: top;
+	background-color: #DEDEDE;
+
+
+
+}
+
+.selected{
+	background-color: #1A4E8A;
+	color: #FFFFFF;
+
+}
+
+#navlist {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+
+/************** FONT STYLES FOR LOGIN BUTTON **************************/
+
+ .button100   {border: 3px ridge #BED5F9; FONT-SIZE: 10.0pt; FONT-WEIGHT: bold; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica; COLOR: #FFFFFF; PADDING: 0; BACKGROUND-COLOR: #1A4E8A; border-top-style:ridge; border-right-style:ridge; border-bottom-style:ridge; border-left-style:ridge; border-top-width:3px; border-right-width:3px; border-bottom-width:3px; border-left-width:3px; WIDTH: 100; HEIGHT: 26}
+
+
+/************** FONT STYLES FOR MAIN CONTENT AND RIGHT SIDE CONTENT **************************/
+
+.middleFont {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11.5px;
+	color: #FFFFFF;
+	line-height: 2em;
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: left;
+	font-style: normal;
+	word-spacing: 2px;
+}
+
+.rightFont {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11.5px;
+	color: #2167B8;
+	line-height: 2em;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-align: left;
+	font-style: normal;
+	word-spacing: 2px;
+}
+
+.rightFont_FR {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11.5x;
+	color: #2167B8;
+	line-height: 1.5em;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-align: left;
+	font-style: normal;
+	word-spacing: 2px;
+}
+
+
+
+.go a {
+	display: block;
+	height: 15px;
+	width: 75px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #336699;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 9px;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+h3 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+/******************** HORIZONTAL LANGUAGE LINKS **********************/
+#navcontainer2 ul
+{
+	padding-left: 0;
+	margin-left: 0;
+	background-color: #036;
+	color: White;
+	float: right;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 10px;
+
+}
+
+#navcontainer2 ul li { display: inline; }
+
+#navcontainer2 ul li a
+{
+padding: 0.2em 1em;
+background-color: #CCCCCC;
+color: #000000;
+text-decoration: none;
+float: left;
+border-right: 1px solid #fff;
+}
+
+#navcontainer2 ul li a:hover
+{
+background-color: #369;
+color: #fff;
+}
+
+#navcontainer2 ul li a:visited
+{
+background-color: #CCCCCC;
+color: #000000;
+}
+
+
+/**************** STYLE FOR LOGIN LINK ONLY ***************/
+
+#navcontainer3 {
+	width: 134px;
+	padding-right: 0px;
+
+}
+
+#navcontainer3 ul
+{
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: left;
+
+
+}
+
+#navcontainer3 a
+{
+	background-color: #1A4E8A;
+	display: block;
+	padding: 7px 5px;
+	width: 144px;
+	border-bottom: 1px solid #eee;
+	color:#FFFFFF;
+	text-decoration: none;
+
+}
+
+#navcontainer3 a:link, #navlist
+{
+color: #FFFFFF;
+text-decoration: none;
+}
+
+#navcontainer3 a:hover a:visited a:active
+{
+	color: #FFFFFF;
+	background-color: #285C98;
+	background-repeat: repeat-y;
+	background-position: top;
+	text-decoration: none;
+
+
+
+}
+
+/************************** OLD CLIENT LOGIN STYLE, NO LONGER NEEDED ****************************
+
+#clientLogin {
+	width: 144px;
+	top: 20px;
+	text-align: center;
+	padding-left: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 55%;
+	font-weight: bold;
+	line-height: 10px;
+	}
+
+.formField {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	background-color: #FFFFFF;
+	border: 1px solid #006699;
+	}
+	
+**************************************************************************************************/
+.frameBG {
+	background-color: #FFFFFF;
+	background-image: url('../Images/white.jpg');
+
+}
+
+
+
+/************************ EXISITING SITE'S STYLES ************************************************/
+
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #3977b6; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+H1 A {
+	COLOR: #3977b6
+}
+H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #3977b6; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+H2 A {
+	COLOR: #3977b6
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+H3 A {
+	COLOR: #000080
+}
+H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+H4 A {
+	COLOR: #000080
+}
+H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #ff0000; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+H5 A {
+	COLOR: #ff0000
+}
+H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #ff0000; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+H6 A {
+	COLOR: #ff0000
+}
+TH {
+	FONT-WEIGHT: bold; FONT-SIZE: 8.5pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+BODY {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+P {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #3977b6; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c1 A {
+	COLOR: #3977b6
+}
+.c2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #3977b6; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c2 A {
+	COLOR: #3977b6
+}
+.c3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c3 A {
+	COLOR: #000080
+}
+.c4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #000080; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c4 A {
+	COLOR: #000080
+}
+.c5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #ff0000; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c5 A {
+	COLOR: #ff0000
+}
+.c6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 8.5pt; COLOR: #ff0000; FONT-FAMILY: Verdana,Geneva,Arial,Helvetica
+}
+.c6 A {
+	COLOR: #ff0000
+}

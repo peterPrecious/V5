@@ -1,0 +1,181 @@
+html {
+  font-size: 75%;
+}
+
+body, div, table, tr, th, td, textarea, input, span, p, li, h1, h2, h3, h4, h5, h6, .c1, .c2, hr, select,
+.button, .button040, .button070, .button085, .button100, .button150 {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  width: 500px;
+  height: 100px;
+}
+
+a {
+  color: navy;
+  font-weight: 500;
+}
+
+h1, .c1 {
+  font-size: 120%;
+}
+
+h2, .c2, .c5, .c6, .buttonAlert {
+  font-size: 110%;
+  font-weight: 400;
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+}
+
+.c1, .c5, .c6 {
+  font-weight: 600;
+}
+
+h5, h6, .c5, .c6, .buttonAlert {
+  color: red;
+}
+
+.tableBorder {
+  border: 1px solid #DDEEF9;
+  border-collapse: collapse;
+}
+
+.topline {
+  border-top: 1px solid #000000;
+}
+
+.underlineOff {
+  border-bottom: 0px;
+}
+
+.underline {
+  border-bottom: 1px solid #BDD9FB;
+}
+
+.underlineGreen {
+  border-bottom: 1px solid #008000;
+}
+
+.underlineBlack {
+  border-bottom: 1px solid #000000;
+}
+
+.underlineRed {
+  border-bottom: 1px solid #FF0000;
+}
+
+.overline {
+  border-top: 1px solid #BDD9FB;
+}
+
+.overlineGreen {
+  border-top: 1px solid #008000;
+}
+
+.rowshade {
+  background-color: #DDEEF9;
+}
+
+.debug, .orange {
+  color: orange;
+}
+
+.black {
+  color: #000000;
+}
+
+.red {
+  color: #FF0000;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.grey {
+  color: #CCCCCC;
+}
+
+.green {
+  color: #008000;
+}
+
+.bgYellow {
+  background-color: yellow;
+}
+
+.button, .button040, .button070, .button085, .button100, .button150, .button200 {
+  color: navy;
+  border: 1px solid navy;
+  background-color: #FFFFFF;
+}
+
+.button040 {
+  width: 40px;
+}
+
+.button070 {
+  width: 70px;
+}
+
+.button085 {
+  width: 85px;
+}
+
+.button100 {
+  width: 100px;
+}
+
+.button150 {
+  width: 150px;
+}
+
+.button200 {
+  width: 200px;
+}
+
+.div {
+  display: none;
+  margin: 0px;
+}
+
+.expandable {
+  width: 100px;
+  font-style: italic;
+}
+
+.less {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  -o-text-overflow: ellipsis;
+}
+
+.processingCurtain {
+  background-color: white;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+.processingIcon {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}
+
+.notice {
+  background-color: lightyellow;
+}

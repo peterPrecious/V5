@@ -1,0 +1,506 @@
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    <script src="/V5/Inc/jQuery.js"></script>
+    <script src="/V5/Inc/jQuery.draggable.js"></script>
+    <script src="/V5/Inc/jQueryC.js"></script>
+    <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
+    <script src="/V5/Inc/Functions.js"></script>
+
+    <script>
+
+
+
+      // store row no where last window was opened (-1 mean no open window)
+      var lastRowNo = -1;
+
+      // underline a row when launching an action item
+      function underLineRed(rowNo) {
+        $("#R_" + rowNo)[0].className = "underLineRed"; //set new red line
+        lastRowNo = rowNo; // store new row so it can be removed
+      }
+
+      function underLineOff() {
+        if (lastRowNo != -1) {
+          $("#R_" + lastRowNo)[0].className = "underLineOff";
+          lastRowNo = -1;
+        }
+      }
+
+      function jTitle(vTitle, vImage) {
+        var vParm = "title=" + vTitle + '&image=/V5/Images/Titles/' + vImage;
+        AC_FL_RunContent('codebase', '//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0', 'name', 'flashVars', 'width', '265', 'height', '85', 'align', 'middle', 'id', 'flashVars', 'src', '/V5/Images/Titles/VuTitles', 'FlashVars', vParm, 'quality', 'high', 'bgcolor', '#ffffff', 'allowscriptaccess', 'sameDomain', 'allowfullscreen', 'false', 'pluginspage', '///go/getflashplayer', 'movie', '/V5/Images/Titles/VuTitles');
+      }
+
+      // this contains the Y axis of the click where we position the divOuter
+      var pageY = 20;
+
+
+      $(function () {
+
+
+        $("#divNotes").hide();
+
+
+        // default focus to either Restart or Next (not Back)
+
+        // make the div draggable
+        $("#divOuter").draggable();
+
+        // Disable caching of AJAX responses
+        $.ajaxSetup({ cache: false });
+
+        // Set divNotes to state last save
+        $("#divNotes").css("display", $.cookie("History_LAKE1124_divNotes_cssDisplay"));
+
+        // determine vertical offset after scrolling so we can position the info window at pageY
+        function determinePageY() {
+          if (self.pageYOffset) {
+            pageY = self.pageYOffset;  // modern browsers
+          } else if (document.documentElement && document.documentElement.scrollTop) {
+            pageY = document.documentElement.scrollTop; // Explorer 6 Strict
+          } else if (document.body) {
+            pageY = document.body.scrollTop; // all other Explorers
+          };
+          pageY = pageY + 20;
+        }
+
+        window.onscroll = function () {
+          determinePageY();
+        }
+
+        //  when page gets focus (after it's lost it, ie if !bodyFocus - set to false when window is launched
+        $(window).focus(
+          function () {
+            if (!parent.bodyFocus) {
+              parent.bodyFocus = true;
+              location.reload();
+            }
+          }
+        );
+      });
+
+
+      // generic div/window  for all functions
+      function openWindow(rowNo, parm1, parm2, parm3, parm4, parm5) {
+        closeWindow();                                  // close previous / reset window        
+        underLineRed(rowNo);                            // underline current line
+        divOff("flash")                                 // turn off since we cannot render on top of it
+
+        if (reNumeric.test(parm3) == null) {
+          pageY = parm3;                    // RTE_ModsStats launches a cert and we want to have it rendered at the same Y position as the original click, so if we get a value in parm3 we use that for the click/y top position
+        }
+
+        $("#divOuter")[0].style.width = 700 + "px";          // defaine default width (modified for session editor)
+        $("#divOuter")[0].style.height = 500 + "px";         // defaine default height (modified for session editor)
+
+        switch (parm1) {
+          case "Mods": $("#divInner").load("Module.asp?vMods_Id=" + parm2); divOn("divInner"); break;                                                                       // program description
+          case "P": $("#divInner").load("RTE_ProgDesc.asp?vProgId=" + parm2); divOn("divInner"); break;                                                                       // program description
+          case "M": $("#divInner").load("RTE_ModsDesc.asp?vModsId=" + parm3); divOn("divInner"); break;                                                                       // module description
+          case "S": $("#divInner").load("RTE_ModsStat.asp?vProgNo=" + parm2 + "&vModsId=" + parm3 + "&vProgId=" + parm4); divOn("divInner"); break;                           // status
+          case "Sync": $("#divInner").load("RTE_Sync.asp?vSessionId=" + parm2 + "&vMembId=" + parm3 + "&vProgId=" + parm4 + "&vModsId=" + parm5); divOn("divInner"); break;     // sync                                               
+          case "Ecom": $("#divInner").load("RTE_Ecom.asp?vProgId=" + parm2 + "&vMembNo=" + parm3); divOn("divInner"); break;
+          case "Cert": $("iframe")[0].src = parm2; divOn("ifrInner"); break;                                                                                                     // certificate service
+          case "Edit":                                                                                                                                                           // session editor service
+            $("iframe")[0].src = "/Gold/vuSCORMAdmin/SessionQuickEdit.aspx?MembNo=1252603&SessionID=" + parm2 + "&memberID=" + parm3 + "&moduleID=" + parm4 + "&programID=" + parm5;
+            divOn("ifrInner");
+            $("#divOuter")[0].style.width = 320 + "px";
+            $("#divOuter")[0].style.height = 530 + "px";
+            $("#actionAlert").show();
+            break;
+          case "Hist":                                                                                                                                                           // session editor service
+            $("iframe")[0].src = "/Gold/vuSCORMAdmin/Default.aspx?MembNo=1252603&memberID=" + parm2;
+            divOn("ifrInner");
+            $("#divOuter")[0].style.width = "90%";
+            $("#divOuter")[0].style.height = 800 + "px";
+            break;
+          case "MultiSCO":                                                                                                                                                       // session multisco report
+            $("iframe")[0].src = "/Gold/vuclientreporting/Reportexport.aspx?AccountID=1124&reportfile=repLearnerMultiSCODetailsExport.frx&Type=CSV&SessionID=" + parm2;
+            divOn("ifrInner");
+            $("#divOuter")[0].style.width = "90%";
+            $("#divOuter")[0].style.height = 800 + "px";
+            break;
+        }
+
+        $("#divOuter")[0].style.left = "50px";               // set left
+        $("#divOuter")[0].style.top = pageY + "px";          // set top to where last click occurred
+        $("#divOuter")[0].style.position = "absolute";       // make absolute
+
+        divOn("divOuter");
+      }
+
+      function closeWindow() {
+        divOff("divOuter");
+        divOff("divInner");
+        divOff("ifrInner");
+        divOn("flash");
+        underLineOff();
+      }
+
+    </script>
+    <script>
+
+      $(function () {
+        toggleSave("divNotes")
+      });
+      // save toggle state for when page reloads
+      function toggleSave(ele) {
+        $("#" + ele).toggle();
+        $.cookie("History_LAKE1124_divNotes_cssDisplay", $("#" + ele).css("display"));
+        if ($("#divNotes")[0].style.display == "block") {
+          $("#controlNotes").text("Hide Notes");
+        } else {
+          $("#controlNotes").text("Show Notes");
+        }
+      }
+
+      // renderText at beginning and when link is clicked (var expandable is the start state)
+      var expandable = true;
+      $(function () {
+        renderExpandable()
+      })
+      $("#expandable").click(function () {
+        renderExpandable()
+      })
+      function renderExpandable() {
+        $(".expandable").toggleClass("ellipsis", expandable);
+        if (expandable) {
+          $("#expandable").text("More Text");
+        } else {
+          $("#expandable").text("Less Text");
+        }
+        expandable = !expandable;
+      }
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="10" valign="top" background="//localhost/v5/Images/Shell/HolderLeft_Spacer.gif">&nbsp;</td>
+        <td width="100%" align="center">
+          <br>
+          <div style="max-width: 100%">
+            <table width="100%" style="border: 1px solid #00FFFF; border-collapse: collapse" cellspacing="0" bgcolor="#FFFFFF">
+              <tr>
+                <td valign="top" colspan="20">
+                  <h1 align="center">Learner Report Card&nbsp; 
+          <span style="font-weight: 300; font-size: 12px;">[ <a href="#" class="green" onclick="toggleSave('divNotes')" id="controlNotes">Details On/Off</a> ] 
+            [ <a href="#" class="green" onclick="renderExpandable()" id="expandable"></a>&nbsp;] 
+          </span>
+                  </h1>
+                </td>
+              </tr>
+              <tr>
+                <th bgcolor="#F2F9FD" height="30" align="left">
+                Row
+                </th>
+                <th bgcolor="#F2F9FD" height="30" align="left">
+                Group
+                </th>
+                <th bgcolor="#F2F9FD" height="30" align="left">
+                Name
+                </th>
+                <th bgcolor="#F2F9FD" height="30" align="left">
+                Password
+                </th>
+                <th bgcolor="#F2F9FD" height="30">
+                Active
+                </th>
+                <th bgcolor="#F2F9FD" height="30">
+                Program
+                </th>
+                <th bgcolor="#F2F9FD" height="30" align="left">
+                Title
+                </th>
+                <th bgcolor="#F2F9FD" height="30" align="left" class="auto-style1">
+                Module
+                </th>
+                <th bgcolor="#F2F9FD" height="30" align="left">
+                Title
+                </th>
+                <th bgcolor="#F2F9FD" height="30" nowrap>
+                Time<br>Spent
+                </th>
+                <th bgcolor="#F2F9FD" height="30" nowrap>
+                Score
+                </th>
+                <th bgcolor="#F2F9FD" height="30" nowrap>
+                Date
+                </th>
+                <th bgcolor="#F2F9FD" height="30" nowrap>
+                Completed
+                </th>
+                <th bgcolor="#F2F9FD" height="30" nowrap>
+                Closed
+                </th>
+                <th bgcolor="#F2F9FD" height="30" nowrap colspan="6">
+                Action
+                <span id="actionAlert" class="bgYellow" style="padding: 10px; display: none;"><input type="button" onclick="jRestart()" class="button200" style="color: red; font-weight: 600;" value="Restart to view changes!" name="bRestart"></span>
+                </th>
+              </tr>
+
+              <tr id="R_0">
+                <td valign="top" nowrap align="left">0</td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" align="left">
+                  <div class="expandable">Sam Spade</div>
+                </td>
+                <td valign="top" nowrap align="left"><a href='UserGroup.asp?vMembNo=1406267&vNext=RTE%5FHistory%5FF%2Easp%3FvCurN%3D0'>123456</a></td>
+                <td valign="top" nowrap align="center">Yes</td>
+                <td valign="top" nowrap align="center">P1109EN</td>
+                <td valign="top" align="left">
+                  <div class="expandable">Health and Safety for Managers and Supervisors (CCOHS)</div>
+                </td>
+                <td valign="top" nowrap align="left" d>0160EN FX</td>
+                <td valign="top" align="left">
+                  <div class="expandable">Introduction</div>
+                </td>
+                <td valign="top" nowrap align="center">1</td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center">May 16, 2012</td>
+                <td valign="top" nowrap align="center">No</td>
+                <td valign="top" nowrap align="center">na</td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Full Editor for the Learner" type="button" onclick="openWindow(0, 'Hist', 1406267)" value="Hist"> 
+           
+                </td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Mini Editor for this Assessment Attempt" type="button" onclick="openWindow(0, 'Edit', '1998657', 1406267, 279, 411)" value="Edit"> 
+           
+                </td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Sync this RTE session data with LMS session data" type="button" onclick="openWindow(0, 'Sync', 1998657, '123456', 'P1109EN', '0160EN')" value="Sync"> 
+           
+                </td>
+                <td valign="top" nowrap align="center"></td>
+              </tr>
+
+              <tr id="R_1">
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left">1</td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left" d>0161EN FX</td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable">Module 1: Safety Principles and Risk Management</div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">
+
+                  <input class="button040" title="Mini Editor for this Assessment Attempt" type="button" onclick="openWindow(1, 'Edit', '', 1406267, 281, 411)" value="Edit"> 
+           
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+              </tr>
+
+              <tr id="R_2">
+                <td valign="top" nowrap align="left">2</td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" nowrap align="left"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" nowrap align="left" d>0162EN FX</td>
+                <td valign="top" align="left">
+                  <div class="expandable">Module 2: Legislation</div>
+                </td>
+                <td valign="top" nowrap align="center">4</td>
+                <td valign="top" nowrap align="center">20</td>
+                <td valign="top" nowrap align="center">Jul 03, 2012</td>
+                <td valign="top" nowrap align="center">Yes</td>
+                <td valign="top" nowrap align="center">na</td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Mini Editor for this Assessment Attempt" type="button" onclick="openWindow(2, 'Edit', '2061936', 1406267, 283, 411)" value="Edit"> 
+           
+                </td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Sync this RTE session data with LMS session data" type="button" onclick="openWindow(2, 'Sync', 2061936, '123456', 'P1109EN', '0162EN')" value="Sync"> 
+           
+                </td>
+                <td valign="top" nowrap align="center"></td>
+              </tr>
+
+              <tr id="R_3">
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left">3</td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left" d></td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">40</td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">Jul 03, 2012</td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+              </tr>
+
+              <tr id="R_10">
+                <td valign="top" nowrap align="left">10</td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" nowrap align="left"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td valign="top" nowrap align="left" d>1020EN FX</td>
+                <td valign="top" align="left">
+                  <div class="expandable">Exam - Health and Safety for Managers and Supervisors</div>
+                </td>
+                <td valign="top" nowrap align="center">1</td>
+                <td valign="top" nowrap align="center">85</td>
+                <td valign="top" nowrap align="center">Jun 30, 2012</td>
+                <td valign="top" nowrap align="center">Yes</td>
+                <td valign="top" nowrap align="center">na</td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Certificate for the Assessment" type="button" onclick="openWindow(10, 'Cert', '/CertService/Default.aspx?format=PDF&vParms=JnZGaXJzdE5hbWU9U2FtJnZMYXN0TmFtZT1TcGFkZSZ2U2NvcmU9ODUmdkRhdGU9SnVuIDMwLCAyMDEyJnZNb2RzSWQ9MTAyMEVOJnZUaXRsZT1FeGFtIC0gSGVhbHRoIGFuZCBTYWZldHkgZm9yIE1hbmFnZXJzIGFuZCBTdXBlcnZpc29ycyZ2TGFuZz1FTiZ2Q3VzdD1MQUtFJnZBY2N0SWQ9MTEyNCZ2UHJvZ0lkPVAxMTA5JnZMb2dvPUxBS0UuanBnJnZNZW1vPTB8fDk=')" value="Cert"> 
+       
+                </td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center"></td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Mini Editor for this Assessment Attempt" type="button" onclick="openWindow(10, 'Edit', '2061731', 1406267, 1325, 411)" value="Edit"> 
+           
+                </td>
+                <td valign="top" nowrap align="center">
+
+                  <input class="button040" title="Sync this RTE session data with LMS session data" type="button" onclick="openWindow(10, 'Sync', 2061731, '123456', 'P1109EN', '1020EN')" value="Sync"> 
+           
+                </td>
+                <td valign="top" nowrap align="center"></td>
+              </tr>
+
+              <tr id="R_11">
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left">11</td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable"></div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">P2486EN</td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable">AODA Accessible Customer Service Regulation E-training [45 minutes]</div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="left" d>4598EN FX</td>
+                <td style='background-color: #ACD8F2' valign="top" align="left">
+                  <div class="expandable">AODA Accessible Customer Service Regulation E-training</div>
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">1</td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">Apr 08, 2013</td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">Yes</td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">na</td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">
+
+                  <input class="button040" title="Certificate for the Assessment" type="button" onclick="openWindow(11, 'Cert', '/CertService/Default.aspx?format=PDF&vParms=JnZGaXJzdE5hbWU9U2FtJnZMYXN0TmFtZT1TcGFkZSZ2U2NvcmU9JnZEYXRlPUFwciAwOCwgMjAxMyZ2TW9kc0lkPTQ1OThFTiZ2VGl0bGU9QU9EQSBBY2Nlc3NpYmxlIEN1c3RvbWVyIFNlcnZpY2UgUmVndWxhdGlvbiBFLXRyYWluaW5nJnZMYW5nPUVOJnZDdXN0PUxBS0UmdkFjY3RJZD0xMTI0JnZQcm9nSWQ9UDI0ODYmdkxvZ289TEFLRS5qcGcmdk1lbW89MHx8MC43NQ==')" value="Cert"> 
+       
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">
+
+                  <input class="button040" title="Mini Editor for this Assessment Attempt" type="button" onclick="openWindow(11, 'Edit', '1998656', 1406267, 9258, 3924)" value="Edit"> 
+           
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center">
+
+                  <input class="button040" title="Sync this RTE session data with LMS session data" type="button" onclick="openWindow(11, 'Sync', 1998656, '123456', 'P2486EN', '4598EN')" value="Sync"> 
+           
+                </td>
+                <td style='background-color: #ACD8F2' valign="top" nowrap align="center"></td>
+              </tr>
+
+            </table>
+          </div>
+
+        </td>
+        <td width="10" valign="top" background="//localhost/v5/Images/Shell/HolderRight_Spacer.gif">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><img src="//localhost/v5/Images/Shell/HolderBottom_Left.gif" width="23" height="23"></td>
+        <td align="center" background="//localhost/v5/Images/Shell/HolderBottom_Bg.gif">&nbsp;</td>
+        <td valign="top"><img src="//localhost/v5/Images/Shell/HolderBottom_Right.gif" width="23" height="23"></td>
+      </tr>
+    </table>
+
+
+
+
+  </body>
+
+</html>
+
+

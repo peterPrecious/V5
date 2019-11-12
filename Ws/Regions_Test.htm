@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Language" content="en-us">
+  <script language="JavaScript" src="/V5/Inc/Functions.js"></script>
+  <script>
+    function Validate(theForm)
+    {
+      var vWs, vParam
+      vParam = 'vFunction=Regions&vId=' + escape(theForm.vId.value) + '&vPassword=' + escape(theForm.vPassword.value) 
+      vWs = WebService('/V5/Ws/wsRegions.asp', vParam)
+
+      if (vWs == 'error')
+      {
+        alert("We are unable to access this service, please contact us.");
+        theForm.vPassword.focus();
+        return (false);
+      }
+
+      if (vWs == 'password')
+      {
+        alert("Please enter the correct Regions Password.");
+        theForm.vPassword.focus();
+        return (false);
+      }
+
+      if (vWs == 'eof')
+      {
+        alert("Please enter your First and Last Name.");
+        theForm.vId.focus();
+        return (false);
+      }
+
+
+      return (true);
+    }
+  </script>
+</head>
+
+<body>
+
+  <form method="POST" action="http://cnn.com" onsubmit="return Validate(this)" name="fForm" target="_blank">
+    <p>
+    Password: <input type="text" id="vName" name="vPassword" size="20" value="regions1"><br>
+    ID:       <input type="text" id="vName" name="vId" size="20" value="121212"><br>
+              <input type="submit" value="Submit" name="B1">
+    </p>
+  </form>
+
+</body>
+
+</html>
