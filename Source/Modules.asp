@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -70,7 +70,7 @@
 
 <head>
   <title>Modules</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -259,7 +259,18 @@ modified May 7, 2015 to clear field onclick
         <td>
           <input type="button" onclick="<%=fLaunchUrl%>" value="View" name="bView" class="button070">
         </td>
-        <td><% If Instr(vMods_Langs, "EN") = 0 Or Instr(vMods_Langs, "FR") = 0 Or Instr(vMods_Langs, "ES") = 0 Or Instr(vMods_Langs, "PT") = 0 Then %><input type="button" onclick="location.href='Module.asp?vCloneThis=<%=vMods_Id%>'" value="Clone This" name="bCloneThis" class="button070"><% End If %> </td>
+        <td>
+          <% 
+          '  stop
+            if (vMods_Id = "10007EN") Then Stop
+
+            If Instr(vMods_Langs, "EN") = 0 Or Instr(vMods_Langs, "FR") = 0 Or Instr(vMods_Langs, "ES") = 0 Or Instr(vMods_Langs, "PT") = 0 Then 
+          %>
+              <input type="button" onclick="location.href='Module.asp?vCloneThis=<%=vMods_Id%>'" value="Clone This" name="bCloneThis" class="button070">
+          <% 
+            End If 
+          %> 
+        </td>
         <td>
           <input type="button" onclick="location.href='Module.asp?vCloneNew=<%=vMods_Id%>'" value="Clone New" name="bCloneNew" class="button070">
         </td>
@@ -268,6 +279,7 @@ modified May 7, 2015 to clear field onclick
     <%  
         oRsBase.MoveNext
       Loop
+
       Set oRsBase = Nothing
       sCloseDbBase    
     %>

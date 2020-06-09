@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vJobs_AcctId, vJobs_Id, vJobs_Level, vJobs_Type, vJobs_Title, vJobs_Mods, vJobs_Ratings, vJobs_SkillMods, vJobs_Active
   Dim vJobs_Eof, vJobsListCnt, vJobsListMax
 

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -103,7 +103,7 @@
 
 <head>
 	<title>::Info</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<meta charset="UTF-8">
 	<script type="text/javascript" src="/V5/Inc/jQuery.js"></script>
 	<link href="/V5/Inc/Vubi2.css" rel="stylesheet" />
 	<script type="text/javascript" src="/V5/Inc/Functions.js"></script>
@@ -169,9 +169,9 @@
 
 		<div style="background-color: yellow; padding: 10px;">
 			<% If svLang = "FR" Then %>
-				 Ce service sera interrompu pour fin d’amélioration et ne sera pas disponible le samedi 23 mai de 6h00 à 9h00 HNE. Nous nous excusons des inconvénients causés.
+				 Ce service sera interrompu pour fin dâ€™amÃ©lioration et ne sera pas disponible le samedi 23 mai de 6h00 Ã  9h00 HNE. Nous nous excusons des inconvÃ©nients causÃ©s.
 			<% ElseIf svLang = "ES" Then %>        
-				 Este servicio estará en mantenimiento de rutina y no estará disponible el sábado 23 de mayo 06 a.m.-09 a.m. EST. Nos disculpamos por cualquier inconveniente.
+				 Este servicio estarÃ¡ en mantenimiento de rutina y no estarÃ¡ disponible el sÃ¡bado 23 de mayo 06 a.m.-09 a.m. EST. Nos disculpamos por cualquier inconveniente.
 			<% Else %>
 				 This service will be undergoing routine maintenance and will not be available on Saturday May 23rd from 6 am to 9 am EST. We apologize for any inconvenience.
 			<% End If %>
@@ -203,8 +203,8 @@
 		<% End If %>
 
 		<% If svLang = "FR" Then %>
-		<p class="c2">::&nbsp; Problèmes liés aux navigateurs?</p>
-		<p><a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de réglage de votre navigateur Web</p>
+		<p class="c2">::&nbsp; ProblÃ¨mes liÃ©s aux navigateurs?</p>
+		<p><a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de rÃ©glage de votre navigateur Web</p>
 		<% End If %>
 -->
 
@@ -312,7 +312,7 @@
 						return (false);
 					}
 			
-					var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ0123456789-_-@.";
+					var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÆ’Å Å’Å½Å¡Å“Å¾Å¸Ã€ÃÃ‚ÃƒÃ„Ã…Ã†Ã‡ÃˆÃ‰ÃŠÃ‹ÃŒÃÃŽÃÃÃ‘Ã’Ã“Ã”Ã•Ã–Ã˜Ã™ÃšÃ›ÃœÃÃžÃŸÃ Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã¸Ã¹ÃºÃ»Ã¼Ã½Ã¾Ã¿0123456789-_-@.";
 					var checkStr = theForm.vMemb_Pwd.value;
 					var allValid = true;
 					for (i = 0;  i < checkStr.length;  i++)

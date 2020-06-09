@@ -6,7 +6,7 @@
 
 <head>
   <title>:: Vubiz</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="Home/css/css.css" rel="stylesheet" type="text/css" />
   <style type="text/css">
     .style2 {color: #2167B8}

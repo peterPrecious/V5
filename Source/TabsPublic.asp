@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
@@ -7,7 +7,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="<%=svDomain%>/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <link href="/V5/Inc/<%=Left(svCustId, 4)%>.css" type="text/css" rel="stylesheet">
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>

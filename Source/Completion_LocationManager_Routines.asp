@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vScript, vCnt, vPrev_L1, vPrev_L0, vPrev_HO, vNewTitle, vAction, aL1, vSelectNo, vRoleCnt, vMsg, vTitle, bOk, vRole , vJobs
 
   '...store roles in arrays plus an empty array for jobs   

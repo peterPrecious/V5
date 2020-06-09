@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vActv_Id, vActv_No, vActv_AccessOk, vActv_AccessNo, vActv_Title, vActv_Desc, vActv_Active, vActv_Length, vActv_AlteredOn, vActv_AlteredBy
   Dim vActv_Eof
   

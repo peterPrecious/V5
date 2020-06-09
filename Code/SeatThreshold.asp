@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
 <%
@@ -78,7 +78,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <title></title>
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">

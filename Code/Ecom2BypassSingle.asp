@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <base href="//localhost/v5/Root/Ecom2BypassSingle.asp" fptype="TRUE">
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->

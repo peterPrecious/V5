@@ -1,13 +1,10 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Ecom.asp"-->
 
-
-
-
 <% 
   '...Excel variables
-  Dim oWs, oCell, oStyle, vRow, vCol, vStrDate, vEndDate, vChannels
+  Dim oWs, oCell, oStyle, oStyleL, vRow, vCol, vStrDate, vEndDate, vChannels
   Dim vQuantity, vProgsSold, vProgsRefs, vLastProg, vOk
 
   vStrDate  = Request("vStrDate")
@@ -17,7 +14,7 @@
   sExcelInit '...initialize 
 
   vSql = "SELECT " _
-       & "  Ecom.Ecom_CustId, Ecom.Ecom_Id, Ecom.Ecom_Organization, Ecom.Ecom_Programs, Ecom.Ecom_Quantity, Ecom.Ecom_NewAcctId, Ecom.Ecom_Media, Ecom.Ecom_Source, Ecom.Ecom_Issued, V5_Base.dbo.Prog.Prog_Title1, Ecom.Ecom_Prices, Ecom_MembNo, Ecom.Ecom_FirstName, Ecom.Ecom_LastName, Ecom.Ecom_CardName, Ecom.Ecom_Adjustment " _
+       & "  Ecom.Ecom_CustId, Ecom.Ecom_Id, Ecom.Ecom_Organization, Ecom.Ecom_Programs, Ecom.Ecom_Quantity, Ecom.Ecom_NewAcctId, Ecom.Ecom_Media, Ecom.Ecom_Source, Ecom.Ecom_Issued, V5_Base.dbo.Prog.Prog_Title1, Ecom.Ecom_Prices, Ecom_MembNo, Ecom.Ecom_FirstName, Ecom.Ecom_LastName, Ecom.Ecom_CardName, Ecom.Ecom_Adjustment, Ecom.Ecom_OrderId " _
        & "FROM "_
        & "  Ecom LEFT OUTER JOIN " _ 
        & "  Cust ON Ecom.Ecom_CustId = Cust.Cust_Id LEFT OUTER JOIN "_
@@ -36,17 +33,7 @@
   sOpenDb
   Set oRs = oDb.Execute(vSql)
   Do While Not oRs.Eof
-
-
-
-
-
     sExcelRow  '...write out worksheet line
-
-
-
-
-
     oRs.MoveNext	        
   Loop
   sCloseDB
@@ -58,25 +45,28 @@
     Set oWs                      = Server.CreateObject("SoftArtisans.ExcelWriter")
     Set oCell                    = oWs.Worksheets(1).Cells
     Set oStyle                   = oWs.CreateStyle
+    Set oStyleL                  = oWs.CreateStyle
     oStyle.Number      				   = 14    '...format date m/d/yy
     oStyle.HorizontalAlignment   = 3     '...right justify
+    oStyleL.HorizontalAlignment  = 1     '...left justify
 
     vRow = 1
     oCell.RowHeight(vRow) = 50
 
-    oCell(vRow, 09).Style = oStyle
+'    oCell(vRow, 09).Style = oStyle
 
-    oCell(vRow, 01) = "Channel"       : oCell(vRow, 01).Format.Font.Bold = True : oCell.ColumnWidth(01) = 12
+    oCell(vRow, 01) = "Channel Id"    : oCell(vRow, 01).Format.Font.Bold = True : oCell.ColumnWidth(01) = 12
     oCell(vRow, 02) = "Learner"       : oCell(vRow, 02).Format.Font.Bold = True : oCell.ColumnWidth(02) = 24
-    oCell(vRow, 03) = "CardHolder"    : oCell(vRow, 02).Format.Font.Bold = True : oCell.ColumnWidth(03) = 24
-    oCell(vRow, 04) = "Organization"  : oCell(vRow, 03).Format.Font.Bold = True : oCell.ColumnWidth(04) = 24
-    oCell(vRow, 05) = "Program "      : oCell(vRow, 04).Format.Font.Bold = True : oCell.ColumnWidth(05) = 12
-    oCell(vRow, 06) = "Quantity"      : oCell(vRow, 05).Format.Font.Bold = True : oCell.ColumnWidth(06) = 08
-    oCell(vRow, 07) = "New Channel Id": oCell(vRow, 06).Format.Font.Bold = True : oCell.ColumnWidth(07) = 12
-    oCell(vRow, 08) = "Type"          : oCell(vRow, 07).Format.Font.Bold = True : oCell.ColumnWidth(08) = 12
-    oCell(vRow, 09) = "Source"        : oCell(vRow, 08).Format.Font.Bold = True : oCell.ColumnWidth(09) = 08
-    oCell(vRow, 10) = "Issued "       : oCell(vRow, 09).Format.Font.Bold = True : oCell.ColumnWidth(10) = 12 
-    oCell(vRow, 11) = "Title"         : oCell(vRow, 10).Format.Font.Bold = True : oCell.ColumnWidth(11) = 48
+    oCell(vRow, 03) = "CardHolder"    : oCell(vRow, 03).Format.Font.Bold = True : oCell.ColumnWidth(03) = 24
+    oCell(vRow, 04) = "Organization"  : oCell(vRow, 04).Format.Font.Bold = True : oCell.ColumnWidth(04) = 24
+    oCell(vRow, 05) = "Program "      : oCell(vRow, 05).Format.Font.Bold = True : oCell.ColumnWidth(05) = 12
+    oCell(vRow, 06) = "Quantity"      : oCell(vRow, 06).Format.Font.Bold = True : oCell.ColumnWidth(06) = 08
+    oCell(vRow, 07) = "New Id"        : oCell(vRow, 07).Format.Font.Bold = True : oCell.ColumnWidth(07) = 12
+    oCell(vRow, 08) = "Type"          : oCell(vRow, 08).Format.Font.Bold = True : oCell.ColumnWidth(08) = 12
+    oCell(vRow, 09) = "Source"        : oCell(vRow, 09).Format.Font.Bold = True : oCell.ColumnWidth(09) = 08
+    oCell(vRow, 10) = "Issued "       : oCell(vRow, 10).Format.Font.Bold = True : oCell.ColumnWidth(10) = 12 
+    oCell(vRow, 11) = "Title"         : oCell(vRow, 11).Format.Font.Bold = True : oCell.ColumnWidth(11) = 48
+    oCell(vRow, 12) = "Order Id"      : oCell(vRow, 12).Format.Font.Bold = True : oCell.ColumnWidth(12) = 16
   End Sub
 
 
@@ -119,6 +109,7 @@ vOk = True
       oCell(vRow, 09) = oRs("Ecom_Source").Value
       oCell(vRow, 10) = vDate : oCell(vRow, 10).Style = oStyle
       oCell(vRow, 11) = fClean(oRs("Prog_Title1"))
+      oCell(vRow, 12) = oRs("Ecom_OrderId").Value : oCell(vRow, 12).Style = oStyleL
     End If
   End Sub
 
@@ -126,7 +117,7 @@ vOk = True
  '...output spreadsheet if there are any rows
   Sub sExcelClose
     Response.ContentType = "application/vnd.ms-excel"
-    oWs.Save "Assess Report as " & fFormatDate(Now) & ".xls", 1
+    oWs.Save "Program Sales Report as " & fFormatDate(Now) & ".xls", 1
     Response.End
   End Sub
   

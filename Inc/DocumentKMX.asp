@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...similiar to Certificate.asp/Document.asp - variant for KMX
 
   '...this creates a complete URL for a document by encoding the parameters sent then sending it to the document web service

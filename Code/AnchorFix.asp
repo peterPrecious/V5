@@ -1,4 +1,4 @@
-<script>
+﻿<script>
 
   function getParameter(name) {
     // Parses the querystring

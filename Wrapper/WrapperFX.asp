@@ -1,6 +1,6 @@
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta charset="UTF-8">
     <script>
       function getParameter(name) {
         var pair=location.search.substring(1).split("&");    

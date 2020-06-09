@@ -1,11 +1,11 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -19,10 +19,10 @@
   <table border="0" width="90%" id="table1" cellspacing="0" cellpadding="0">
     <tr>
       <td>
-      <h1>Bienvenue à &quot;Mes études&quot;</h1>
-      <p class="c2">Cette fonction offerte par Vubiz permet à des collègues de travailler en étroite collaboration. La zone d&#39;apprentissage peut être configurée pour refléter la structure de l&#39;organisation cliente. Les apprenants et apprenantes peuvent ainsi être regroupés en fonction de leurs tâches, de leur région ou de leur langue. La zone consacrée à la gestion de projets vous permet de créer des tâches ou des processus qui permettront aux membres de l&#39;équipe de travailler ensemble.<br><br>Les fonctions propres à Mes études sont généralement installées par Vubiz en fonction des besoins des clients. Toutefois, avec une certaine formation, les clients peuvent définir eux-mêmes les tâches à accomplir. Les clients peuvent ainsi assigner les éléments d&#39;actif numériques (par exemple, les modules d&#39;apprentissage) aux tâches appropriées. </p>
+      <h1>Bienvenue Ã  &quot;Mes Ã©tudes&quot;</h1>
+      <p class="c2">Cette fonction offerte par Vubiz permet Ã  des collÃ¨gues de travailler en Ã©troite collaboration. La zone d&#39;apprentissage peut Ãªtre configurÃ©e pour reflÃ©ter la structure de l&#39;organisation cliente. Les apprenants et apprenantes peuvent ainsi Ãªtre regroupÃ©s en fonction de leurs tÃ¢ches, de leur rÃ©gion ou de leur langue. La zone consacrÃ©e Ã  la gestion de projets vous permet de crÃ©er des tÃ¢ches ou des processus qui permettront aux membres de l&#39;Ã©quipe de travailler ensemble.<br><br>Les fonctions propres Ã  Mes Ã©tudes sont gÃ©nÃ©ralement installÃ©es par Vubiz en fonction des besoins des clients. Toutefois, avec une certaine formation, les clients peuvent dÃ©finir eux-mÃªmes les tÃ¢ches Ã  accomplir. Les clients peuvent ainsi assigner les Ã©lÃ©ments d&#39;actif numÃ©riques (par exemple, les modules d&#39;apprentissage) aux tÃ¢ches appropriÃ©es. </p>
       <h1>Services</h1>
-      <p class="c2">L&#39;utilisateur ou l&#39;utilisatrice du service Mes études dispose de cinq fonctions principales conviviales. Pour y accéder, il suffit de cliquer sur les icônes qui se retrouvent à droite. L&#39;absence d&#39;icônes indique que les fonctions ne sont pas pertinentes pour l&#39;exercice en question. Voici une brève description des cinq fonctions :</p>
+      <p class="c2">L&#39;utilisateur ou l&#39;utilisatrice du service Mes Ã©tudes dispose de cinq fonctions principales conviviales. Pour y accÃ©der, il suffit de cliquer sur les icÃ´nes qui se retrouvent Ã  droite. L&#39;absence d&#39;icÃ´nes indique que les fonctions ne sont pas pertinentes pour l&#39;exercice en question. Voici une brÃ¨ve description des cinq fonctions :</p>
       <div align="center">
         <table border="1" style="border-collapse: collapse" bordercolor="#DDEEF9" width="80%" id="AutoNumber1">
           <tr>
@@ -30,68 +30,68 @@
             <td valign="top" class="c2" nowrap>
             <h1>Avis par courriel</h1>
             </td>
-            <td valign="top" class="c2">Il s&#39;agit d&#39;un outil puissant qui vous permet d&#39;aviser les membres de votre équipe lorsque vous participez aux activités de formation. Vous n&#39;avez qu&#39;à indiquer les personnes que vous désirez aviser et leur laisser un court message expliquant les modifications que vous avez apportées. Ensuite, envoyez le message. Les autres utilisateurs seront avisés d&#39;un ajout sur le site. Il leur suffira de cliquer sur un lien spécial qui les amènera directement dans la section Mes études. Notez bien: ce service devrait être utilisé avec circonspection pour éviter les abus.&nbsp; </td>
+            <td valign="top" class="c2">Il s&#39;agit d&#39;un outil puissant qui vous permet d&#39;aviser les membres de votre Ã©quipe lorsque vous participez aux activitÃ©s de formation. Vous n&#39;avez qu&#39;Ã  indiquer les personnes que vous dÃ©sirez aviser et leur laisser un court message expliquant les modifications que vous avez apportÃ©es. Ensuite, envoyez le message. Les autres utilisateurs seront avisÃ©s d&#39;un ajout sur le site. Il leur suffira de cliquer sur un lien spÃ©cial qui les amÃ¨nera directement dans la section Mes Ã©tudes. Notez bien: ce service devrait Ãªtre utilisÃ© avec circonspection pour Ã©viter les abus.&nbsp; </td>
           </tr>
           <tr>
             <td valign="top" width="30"><img border="0" src="../Images/Icons/dialogue.gif"></td>
             <td valign="top" class="c2" nowrap>
             <h1>Dialogue</h1>
             </td>
-            <td valign="top" class="c2">Vous êtes invité(e) à faire part de vos commentaires et opinions lorsque cet icône apparaît. Inscrivez un bref message. Il sera placé au sommet de la liste de messages déjà envoyés. Voilà! Plusieurs personnes se servent de l&#39;avis par courriel pour aviser les autres utilisateurs du dialogue en cours et les inviter à y participer.</td>
+            <td valign="top" class="c2">Vous Ãªtes invitÃ©(e) Ã  faire part de vos commentaires et opinions lorsque cet icÃ´ne apparaÃ®t. Inscrivez un bref message. Il sera placÃ© au sommet de la liste de messages dÃ©jÃ  envoyÃ©s. VoilÃ ! Plusieurs personnes se servent de l&#39;avis par courriel pour aviser les autres utilisateurs du dialogue en cours et les inviter Ã  y participer.</td>
           </tr>
           <tr>
             <td valign="top" width="30"><img border="0" src="../Images/Icons/Notepad.gif"></td>
             <td valign="top" class="c2" nowrap>
             <h1>Notes</h1>
             </td>
-            <td valign="top" class="c2">Les notes ressemblent au dialogue. Toutefois, vous êtes la seule personne à les voir. Elles vous permettent de noter vos idées jusqu&#39;à votre retour sur le site.</td>
+            <td valign="top" class="c2">Les notes ressemblent au dialogue. Toutefois, vous Ãªtes la seule personne Ã  les voir. Elles vous permettent de noter vos idÃ©es jusqu&#39;Ã  votre retour sur le site.</td>
           </tr>
           <tr>
             <td valign="top" width="30"><img border="0" src="../Images/Icons/Documents.gif"></td>
             <td valign="top" class="c2" nowrap>
             <h1>Documents</h1>
             </td>
-            <td valign="top" class="c2">Vous souhaiterez peut-être placer certains documents sur le serveur afin de permettre à vos collègues de les consulter. Le service de documents vous permet de le faire. Les documents sont entreposés et peuvent être téléchargés par les personnes qui désirent les consulter.</td>
+            <td valign="top" class="c2">Vous souhaiterez peut-Ãªtre placer certains documents sur le serveur afin de permettre Ã  vos collÃ¨gues de les consulter. Le service de documents vous permet de le faire. Les documents sont entreposÃ©s et peuvent Ãªtre tÃ©lÃ©chargÃ©s par les personnes qui dÃ©sirent les consulter.</td>
           </tr>
           <tr>
             <td valign="top" width="30"><img border="0" src="../Images/Icons/ActionItems.gif"></td>
             <td valign="top" class="c2" nowrap>
-            <h1>À faire</h1>
+            <h1>Ã€ faire</h1>
             </td>
-            <td valign="top" class="c2">Ce service est particulièrement utile dans le cadre de projets spéciaux ou d&#39;équipes de vente. Il vous permet &quot;d&#39;ordonner&quot; à un ou une collègue d&#39;effectuer une certaine tâche. Les demandes restent ouvertes jusqu&#39;à ce que la personne ayant fait la demande d&#39;action décide de les fermer lorsque la tâche est accomplie.</td>
+            <td valign="top" class="c2">Ce service est particuliÃ¨rement utile dans le cadre de projets spÃ©ciaux ou d&#39;Ã©quipes de vente. Il vous permet &quot;d&#39;ordonner&quot; Ã  un ou une collÃ¨gue d&#39;effectuer une certaine tÃ¢che. Les demandes restent ouvertes jusqu&#39;Ã  ce que la personne ayant fait la demande d&#39;action dÃ©cide de les fermer lorsque la tÃ¢che est accomplie.</td>
           </tr>
         </table>
       </div>
-      <h1>Le système d&#39;apprentissage en ligne comporte trois différents niveaux d&#39;utilisateurs.</h1>
+      <h1>Le systÃ¨me d&#39;apprentissage en ligne comporte trois diffÃ©rents niveaux d&#39;utilisateurs.</h1>
       <ul class="c2">
-        <li>Administrateurs : Les administrateurs et administratrices sont des employés de Vubiz. Ils et elles peuvent apporter des modifications au site pour répondre aux besoins des clients.<br>Les administrateurs et administratrices peuvent modifier certains paramètres de base ou les réactiver au besoin.</li>
-        <li>Gestionnaires: Les gestionnaires ont les mêmes fonctions que les animateurs-formateurs et animatrices-formatrices. Ils sont toutefois en mesure de créer et de gérer le site Mes études. <br>Le nombre de gestionnaires sera généralement moins important que le nombre d&#39;animateurs-formateurs ou animatrices-formatrices.</li>
-        <li>Animateurs-formateurs: Les animateurs-formateurs et animatrices-formatrices peuvent ajouter de nouvelles inscriptions au site et modifier toutes les informations, sauf l&#39;emplacement.<br>Les animateurs-formateurs et animatrices-formatrices peuvent créer certains rapports d&#39;utilisation en ligne.</li>
-        <li>Membres: Les membres peuvent modifier leur nom, leur mot de passe et leur adresse de courriel.&nbsp; Les membres peuvent suivre le cours en ligne et compléter les examens.</li>
+        <li>Administrateurs : Les administrateurs et administratrices sont des employÃ©s de Vubiz. Ils et elles peuvent apporter des modifications au site pour rÃ©pondre aux besoins des clients.<br>Les administrateurs et administratrices peuvent modifier certains paramÃ¨tres de base ou les rÃ©activer au besoin.</li>
+        <li>Gestionnaires: Les gestionnaires ont les mÃªmes fonctions que les animateurs-formateurs et animatrices-formatrices. Ils sont toutefois en mesure de crÃ©er et de gÃ©rer le site Mes Ã©tudes. <br>Le nombre de gestionnaires sera gÃ©nÃ©ralement moins important que le nombre d&#39;animateurs-formateurs ou animatrices-formatrices.</li>
+        <li>Animateurs-formateurs: Les animateurs-formateurs et animatrices-formatrices peuvent ajouter de nouvelles inscriptions au site et modifier toutes les informations, sauf l&#39;emplacement.<br>Les animateurs-formateurs et animatrices-formatrices peuvent crÃ©er certains rapports d&#39;utilisation en ligne.</li>
+        <li>Membres: Les membres peuvent modifier leur nom, leur mot de passe et leur adresse de courriel.&nbsp; Les membres peuvent suivre le cours en ligne et complÃ©ter les examens.</li>
       </ul>
       <h1>Pour commencer...</h1>
       <ul class="c2">
-        <li>Pour accéder au site d&#39;apprentissage électronique de Vubiz, inscrivez l&#39;adresse www.vubiz.com et sélectionnez la langue de votre choix. Inscrivez votre NIP, qui est composé de quatre lettres et de quatre chiffres (par exemple, ABCD1234) et inscrivez ensuite votre mot de passe. Votre session est maintenant commencée. Vous verrez un mot de bienvenue sur la première page ainsi que des informations sur votre utilisation du site. Vous pouvez modifier les informations en cliquant sur le bouton Édition, qui se retrouve sous &quot;mon profil&quot;. Nous vous suggérons de changer immédiatement votre mot de passe.</li>
-        <li>Le contenu du cours se trouvera au bas de la page. Cliquez sur le symbole plus (+) pour ouvrir un dossier. La plupart de ces dossiers comprendront des modules de formation. Pour y accéder, cliquez sur le livre bleu <img border="0" src="../Images/Icons/bookclosed.gif">.</li>
-        <li>Lorsque vous avez ouvert un module, vous pouvez vous servir des flèches au bas de l&#39;écran à droite pour naviguer d&#39;une page à l&#39;autre. Le menu déroulant vous permet également de sauter des sections ou de revenir sur vos pas.</li>
-        <li>Les modules peuvent comprendre un ou deux tests. Certains modules n&#39;en comprennent pas. La plupart des modules comprennent toutefois une auto-évaluation. Vous verrez un icône dans le coin supérieur droit du module si un test est disponible.<br>&nbsp;</li>
+        <li>Pour accÃ©der au site d&#39;apprentissage Ã©lectronique de Vubiz, inscrivez l&#39;adresse www.vubiz.com et sÃ©lectionnez la langue de votre choix. Inscrivez votre NIP, qui est composÃ© de quatre lettres et de quatre chiffres (par exemple, ABCD1234) et inscrivez ensuite votre mot de passe. Votre session est maintenant commencÃ©e. Vous verrez un mot de bienvenue sur la premiÃ¨re page ainsi que des informations sur votre utilisation du site. Vous pouvez modifier les informations en cliquant sur le bouton Ã‰dition, qui se retrouve sous &quot;mon profil&quot;. Nous vous suggÃ©rons de changer immÃ©diatement votre mot de passe.</li>
+        <li>Le contenu du cours se trouvera au bas de la page. Cliquez sur le symbole plus (+) pour ouvrir un dossier. La plupart de ces dossiers comprendront des modules de formation. Pour y accÃ©der, cliquez sur le livre bleu <img border="0" src="../Images/Icons/bookclosed.gif">.</li>
+        <li>Lorsque vous avez ouvert un module, vous pouvez vous servir des flÃ¨ches au bas de l&#39;Ã©cran Ã  droite pour naviguer d&#39;une page Ã  l&#39;autre. Le menu dÃ©roulant vous permet Ã©galement de sauter des sections ou de revenir sur vos pas.</li>
+        <li>Les modules peuvent comprendre un ou deux tests. Certains modules n&#39;en comprennent pas. La plupart des modules comprennent toutefois une auto-Ã©valuation. Vous verrez un icÃ´ne dans le coin supÃ©rieur droit du module si un test est disponible.<br>&nbsp;</li>
       </ul>
       <div align="center">
         <table border="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#111111" width="80%" id="AutoNumber2">
           <tr>
             <td width="100%">
             <ul class="c2">
-              <li><img border="0" src="../Images/Icons/Assessment_ON.gif"> Auto-évaluation – cette approche relativement informelle permet à l&#39;utilisateur ou à l&#39;utilisatrice de mettre ses connaissances à l&#39;épreuve.<br>&nbsp;</li>
-              <li><img border="0" src="../Images/Icons/Check.gif"> Examen – cette approche est plus formelle et elle est dotée de paramètres stricts qui visent à éviter toute manipulation du système. L&#39;examen comporte la matière du programme en entier. Par exemple, si un programme de certificat comporte huit modules, les questions d&#39;examen porteront sur les huit modules et seront présentées dans le désordre. Vous obtiendrez des précisions supplémentaires sur le site.<br>&nbsp;</li>
-              <li>Les résultats des examens seront enregistrés par le système et pourront être consultés par les animatrices-formatrices et animateurs-formateurs. Un certificat attestant que la participante ou le participant a complété le programme sera disponible pour être imprimé à la fin d&#39;un module ou d&#39;un programme de certificat.</li>
+              <li><img border="0" src="../Images/Icons/Assessment_ON.gif"> Auto-Ã©valuation â€“ cette approche relativement informelle permet Ã  l&#39;utilisateur ou Ã  l&#39;utilisatrice de mettre ses connaissances Ã  l&#39;Ã©preuve.<br>&nbsp;</li>
+              <li><img border="0" src="../Images/Icons/Check.gif"> Examen â€“ cette approche est plus formelle et elle est dotÃ©e de paramÃ¨tres stricts qui visent Ã  Ã©viter toute manipulation du systÃ¨me. L&#39;examen comporte la matiÃ¨re du programme en entier. Par exemple, si un programme de certificat comporte huit modules, les questions d&#39;examen porteront sur les huit modules et seront prÃ©sentÃ©es dans le dÃ©sordre. Vous obtiendrez des prÃ©cisions supplÃ©mentaires sur le site.<br>&nbsp;</li>
+              <li>Les rÃ©sultats des examens seront enregistrÃ©s par le systÃ¨me et pourront Ãªtre consultÃ©s par les animatrices-formatrices et animateurs-formateurs. Un certificat attestant que la participante ou le participant a complÃ©tÃ© le programme sera disponible pour Ãªtre imprimÃ© Ã  la fin d&#39;un module ou d&#39;un programme de certificat.</li>
             </ul>
             </td>
           </tr>
         </table>
       </div>
       <ul class="c2">
-        <li>Les membres et les animateurs-formateurs qui se trouvent dans le même emplacement peuvent s&#39;envoyer des courriels en cliquant sur l&#39;enveloppe <img border="0" src="../Images/Icons/Email.gif">qui se trouve à droite (le cas échéant).</li>
-        <li>Lorsque vous avez terminé votre visite sur le site, veuillez mettre fin à votre session en cliquant sur le lien approprié de la barre de menu supérieure.</li>
+        <li>Les membres et les animateurs-formateurs qui se trouvent dans le mÃªme emplacement peuvent s&#39;envoyer des courriels en cliquant sur l&#39;enveloppe <img border="0" src="../Images/Icons/Email.gif">qui se trouve Ã  droite (le cas Ã©chÃ©ant).</li>
+        <li>Lorsque vous avez terminÃ© votre visite sur le site, veuillez mettre fin Ã  votre session en cliquant sur le lien appropriÃ© de la barre de menu supÃ©rieure.</li>
       </ul>
       <p align="center"><a href="javascript:history.back(1)"><img border="0" src="../Images/Buttons/Return_FR.gif"></a></p></td>
     </tr>

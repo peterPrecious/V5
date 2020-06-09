@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -143,7 +143,7 @@
 
 <head>
   <title>Ecom3Basket</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -341,7 +341,10 @@
           </tr>
         </table>
 
-        <h3>* <!--webbot bot='PurpleText' PREVIEW='Applicable taxes extra for Canadian orders.&nbsp; <br>Products purchases outside Canada are payable in US funds.'--><%=fPhra(000330)%></h3>
+        <h3>* 
+          <!--webbot bot='PurpleText' PREVIEW='Applicable taxes extra for Canadian orders.&nbsp; <br>Products purchases outside Canada are payable in US funds.'--><%=fPhra(000330)%>&nbsp;&nbsp;  
+          <!--webbot bot='PurpleText' PREVIEW='This transaction will be processed through a Canadian financial institution. Please refer to your credit card agreement regarding fees, if any.'--><%=fPhra(001837)%>
+        </h3>
       </td>
     </tr>
     <% 

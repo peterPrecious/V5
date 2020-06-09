@@ -1,4 +1,4 @@
-
+﻿
 
 <%
   Dim vResT_No, vResT_AcctId, vResT_MembNo, vResT_Id, vResT_FromName, vResT_FromEmail, vResT_Subject_EN, vResT_Subject_FR, vResT_Body_EN, vResT_Body_FR, vResT_Note_EN, vResT_Note_FR

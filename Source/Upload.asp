@@ -1,4 +1,4 @@
-<!-- Note this upload routine can go into any web folder with iusr modify rights - no changes are required within script. -->
+﻿<!-- Note this upload routine can go into any web folder with iusr modify rights - no changes are required within script. -->
 
 <html>
 <head>

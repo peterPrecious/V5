@@ -1,6 +1,5 @@
-<%
+﻿<%
   '...similiar to Certificate.asp
-
   '...this creates a complete URL for a document by encoding the parameters sent then sending it to the document web service
   Function fDocumentUrl (vFileName, vModsId, vLang, vCust, vAcctId, vProgId, vMemo)
     Dim vUrl, vParms 
@@ -12,7 +11,7 @@
            & "&vAcctId="    & fDefault(vAcctId, svCustAcctId) _
            & "&vProgId="    & "" _
            & "&vMemo="      & ""
- '...if there's any URLencoding, remove it
+    '...if there's any URLencoding, remove it
     vParms = URLDecode(vParms)
     '...typical post
     '   vCust=ERGP&vFileName=SexuallHarrasment.pdf&vAcctId=1234&vProgId=&vLang=EN&vModsId=&vMemo=&anticache=1953356480

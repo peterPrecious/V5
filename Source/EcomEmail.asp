@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -46,17 +46,17 @@
   Function fFr (vPhrase)
     fFr = vPhrase
 
-    fFr = Replace(fFr, "à", "&#224;") 
-    fFr = Replace(fFr, "ç", "&#231;") 
-    fFr = Replace(fFr, "è", "&#232;") 
-    fFr = Replace(fFr, "é", "&#233;") 
-    fFr = Replace(fFr, "ê", "&#234;") 
+    fFr = Replace(fFr, "Ã ", "&#224;") 
+    fFr = Replace(fFr, "Ã§", "&#231;") 
+    fFr = Replace(fFr, "Ã¨", "&#232;") 
+    fFr = Replace(fFr, "Ã©", "&#233;") 
+    fFr = Replace(fFr, "Ãª", "&#234;") 
 
-    fFr = Replace(fFr, "À", "&#192;") 
-    fFr = Replace(fFr, "Ç", "&#199;") 
-    fFr = Replace(fFr, "È", "&#200;") 
-    fFr = Replace(fFr, "É", "&#201;") 
-    fFr = Replace(fFr, "Ê", "&#202;") 
+    fFr = Replace(fFr, "Ã€", "&#192;") 
+    fFr = Replace(fFr, "Ã‡", "&#199;") 
+    fFr = Replace(fFr, "Ãˆ", "&#200;") 
+    fFr = Replace(fFr, "Ã‰", "&#201;") 
+    fFr = Replace(fFr, "ÃŠ", "&#202;") 
   End Function
 
 
@@ -65,7 +65,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>

@@ -1,4 +1,4 @@
-<script>
+ï»¿<script>
     <% 
       Dim vAlert
   '   Session("Breach") = True
@@ -125,9 +125,9 @@
   <h1><font color="#FF0000">:: <!--webbot bot='PurpleText' PREVIEW='NOTICE!'--><%=fPhra(001384)%></font></h1>
   <p>
     <% If svLang = "FR" Then %>
-        Ce service sera en cours de maintenance de routine (y compris des améliorations pour nos clients) ne sera donc pas disponible le samedi 5 novembre à partir de 4 heures jusqu'à midi, HNE. Nous nous excusons pour tout inconvénient.
+        Ce service sera en cours de maintenance de routine (y compris des amÃ©liorations pour nos clients) ne sera donc pas disponible le samedi 5 novembre Ã  partir de 4 heures jusqu'Ã  midi, HNE. Nous nous excusons pour tout inconvÃ©nient.
       <% ElseIf svLang = "ES" Then %>        
-        Este servicio estará en mantenimiento de rutina (incluyendo mejoras para nuestros clientes), lo que no estará disponible el sábado 05 de noviembre desde las 4 hasta el mediodía hora del este. Nos disculpamos por cualquier inconveniente.
+        Este servicio estarÃ¡ en mantenimiento de rutina (incluyendo mejoras para nuestros clientes), lo que no estarÃ¡ disponible el sÃ¡bado 05 de noviembre desde las 4 hasta el mediodÃ­a hora del este. Nos disculpamos por cualquier inconveniente.
       <% Else %>
         This service will be undergoing routine maintenance (including enhancements for our customers) and will not be available on Saturday Nov 5th from 4am until noon EST. We apologize for any inconvenience.
       <% End If %>   
@@ -233,7 +233,7 @@
           return (false);
         }
       
-        var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒšœŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõöøùúûüışÿ0123456789-_-@.";
+        var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÆ’Å Å’Å½Å¡Å“Å¾Å¸Ã€ÃÃ‚ÃƒÃ„Ã…Ã†Ã‡ÃˆÃ‰ÃŠÃ‹ÃŒÃÃÃÃÃ‘Ã’Ã“Ã”Ã•Ã–Ã˜Ã™ÃšÃ›ÃœÃÃÃŸÃ Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã¸Ã¹ÃºÃ»Ã¼Ã½Ã¾Ã¿0123456789-_-@.";
         var checkStr = theForm.vMemb_Pwd.value;
         var allValid = true;
         for (i = 0;  i < checkStr.length;  i++)
@@ -513,8 +513,8 @@
   <% End If %>
 
   <% If svLang = "FR" Then %>
-  <h1><font color="#FF0000">::&nbsp;&nbsp; </font>Problèmes liés aux navigateurs?</h1>
-  <p><a href="../Public/BrowserIssues_FR.htm?vReturn=Y">Cliquez ici</a> pour options de réglage de votre navigateur Web</p>
+  <h1><font color="#FF0000">::&nbsp;&nbsp; </font>ProblÃ¨mes liÃ©s aux navigateurs?</h1>
+  <p><a href="../Public/BrowserIssues_FR.htm?vReturn=Y">Cliquez ici</a> pour options de rÃ©glage de votre navigateur Web</p>
   <% End If %>
 
   <br><br>

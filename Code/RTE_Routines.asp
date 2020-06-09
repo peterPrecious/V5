@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...delete an objective (from LMSsync.asp)
   Sub sRTEdelObj(sesObjId)    
   	If IsNumeric(sesObjId) Then	
@@ -60,7 +60,12 @@
 	    RTE_CompletedDate		= Null
 	    RTE_Failed				  = False
     Else
-		  RTE_BestScore				= oRsRTE("BestScore")	 : If Not IsNull(RTE_BestScore)         Then RTE_BestScore = fPureInt(RTE_BestScore)
+		  RTE_BestScore				= oRsRTE("BestScore")	 
+			If Not IsNull(RTE_BestScore) Then  '...this was modified Jul 23, 2018 when there was no bestscore but there was a lastscore (typically due to manual editting)
+				RTE_BestScore = fPureInt(RTE_BestScore)
+			Else
+				RTE_BestScore = fPureInt(oRsRTE("LastScore"))
+			End If
 		  RTE_NoAttempts			= oRsRTE("NoAttempts") : If IsNull(RTE_NoAttempts)            Then RTE_NoAttempts = 0
 		  RTE_AttemptNo 			= oRsRTE("AttemptNo")  : If IsNull(RTE_NoAttempts)            Then RTE_NoAttempts = 0
 		  RTE_LastDate				= oRsRTE("LastDate")   

@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...Sort an Array
   Function fSortArray(aArray)
     Dim vTemp, i, j

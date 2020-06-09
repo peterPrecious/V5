@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -171,7 +171,7 @@
 
 <head>
   <title>Ecom2Customer</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -259,7 +259,7 @@
         <td colspan="2" class="red" style="text-align:center; height:60px; vertical-align:middle;">
           <% If vEcom_Media = "Online" Then %> 
           <%   If svSecure Then %> 
-          <!--webbot bot='PurpleText' PREVIEW='You are signed into the profile of the Learner below and the courses you are currently purchasing are for this Learner�s profile.<br><br>To purchase a course for a Learner OTHER than the one named below, you must log in first as that Learner and then proceed to purchase.'--><%=fPhra(001343)%>
+          <!--webbot bot='PurpleText' PREVIEW='You are signed into the profile of the Learner below and the courses you are currently purchasing are for this Learner’s profile.<br><br>To purchase a course for a Learner OTHER than the one named below, you must log in first as that Learner and then proceed to purchase.'--><%=fPhra(001863)%>
           <%   Else %> 
           <!--webbot bot='PurpleText' PREVIEW='You MUST enter a Learner name below if it is different than the cardholder name above:'--><%=fPhra(001241)%>
           <%   End If %> 

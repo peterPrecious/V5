@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vParm_No, vParm_Value, vParm_Note
 
   '...Get Parm Record

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
 <!--#include virtual = "V5/Inc/Db_Catl.asp"-->
@@ -74,7 +74,7 @@
 
 <head>
 	<title>My Content</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta charset="UTF-8">
 	<link href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet">
 	<script src="/V5/Inc/jQuery.js"></script>
 	<script src="/V5/Inc/jQuery.draggable.js"></script>
@@ -235,32 +235,26 @@
 				<table>
 					<tr>
 						<th style="text-align: center; padding-bottom: 10px;" colspan="6">
-							<!--[[-->
-							Content Features<!--]]-->&nbsp; <span style="font-weight: 400">(<!--[[-->mouseover<!--]]-->)</span></th>
+							<!--[[-->Content Features<!--]]-->&nbsp; <span style="font-weight: 400">(<!--[[-->mouseover<!--]]-->)</span></th>
 					</tr>
 					<tr>
 						<td>&nbsp;<a href="#"><img border="0" src="../Images/RTE/ModsFeaAcc.png" title="<!--[[-->Includes compatibility with most screen readers and closed captioning (WCAG Level AA).<!--]]-->"></a> </td>
 						<td>
-							<!--[[-->
-							Accessible<!--]]--></td>
+							<!--[[-->Accessible<!--]]--></td>
 						<td>&nbsp;<a href="#"><img border="0" src="../Images/RTE/ModsFeaHyb.png" title="<!--[[-->Content available in Flash or HTML.<!--]]-->"></a> </td>
 						<td>
-							<!--[[-->
-							Hybrid<!--]]--></td>
+							<!--[[-->Hybrid<!--]]--></td>
 						<td>&nbsp;<a href="#"><img border="0" src="../Images/RTE/ModsFeaMob.png" title="<!--[[-->Tablet friendly.<!--]]-->"></a> </td>
 						<td>
-							<!--[[-->
-							Mobile<!--]]--></td>
+							<!--[[-->Mobile<!--]]--></td>
 					</tr>
 					<tr>
 						<td>&nbsp;<a href="#"><img border="0" src="../Images/RTE/ModsFeaAud.png" title="<!--[[-->Requires headphones or speaker to hear audio.<!--]]-->"></a> </td>
 						<td>
-							<!--[[-->
-							Audio<!--]]--></td>
+							<!--[[-->Audio<!--]]--></td>
 						<td>&nbsp;<a href="#"><img border="0" src="../Images/RTE/ModsFeaVid.png" title="<!--[[-->Contains or streams video content.<!--]]-->"></a> </td>
 						<td>
-							<!--[[-->
-							Video<!--]]--></td>
+							<!--[[-->Video<!--]]--></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 					</tr>
@@ -411,8 +405,7 @@
 						<td class="underline" style="width: 665px">
 							<%=vProg_Title%>
 							<a href="javascript:hiLiteRow($('#R_<%=vRow %>'), 'bgAlert'); openWindow('P', '<%=vProg_Id%>', '')">
-								<!--[[-->
-								Description<!--]]--></a>
+								<!--[[-->Description<!--]]--></a>
 							<% If vMode <> "All" Then %>|<!--[[-->Expires<!--]]-->: <%=fFormatDate(vExpires)%><% End If %>
 						</td>
 						<td class="underline" style="max-width: 255px;">&nbsp;</td>
@@ -452,12 +445,11 @@
 													vUrl = fCertificateUrl("", "", RTE_BestScore, RTE_CompletedDate, RTE_ModsId, RTE_ModsTitle, "", "", "", RTE_ProgId, "", RTE_SessionId, "")
 													vCertificate = "<input onclick=""hiLiteRow($('#R_" & vRow & "'), 'bgAlert'); openWindow('C', '" & vUrl & "')"" type=""button"" value=""" & cCertificate & """ name=""B5"" class=""button070"">"
 												End If                          
-																								
+stop																								
 									%>
 									<tr id="R_<%=vRow %>" onmouseover="hiLiteRow(this, 'bgOn')" onmouseout="hiLiteRow(this, 'bgOff')">
 										<td class="underline" style="width: 665px"><%=f5%><%=RTE_ModsTitle%> <a href="javascript:hiLiteRow($('#R_<%=vRow %>'), 'bgAlert'); openWindow('M', '<%=RTE_ProgId%>', '<%=RTE_ModsId%>')">
-											<!--[[-->
-											Description<!--]]--></a><% If svMembLevel > 4 Then %> <span class="green"><a class="green" target="_blank" href="Module.asp?vMods_Id=<%=RTE_ModsId%>"><%=RTE_ModsType%></a></span><% End If %><%=fFeatures%></td>
+											<!--[[-->Description<!--]]--></a><% If svMembLevel > 4 Then %> <span class="green"><a class="green" target="_blank" href="Module.asp?vMods_Id=<%=RTE_ModsId%>"><%=RTE_ModsType%></a></span><% End If %><%=fFeatures%></td>
 										<td class="underline" style="width: 175px; white-space: nowrap;"><a href="javascript:hiLiteRow($('#R_<%=vRow %>'), 'bgAlert'); openWindow('S', '<%=vProg_No%>',   '<%=RTE_ModsId%>', '<%=RTE_ProgId%>')"><%=RTE_Status%></a></td>
 										<td class="underline" style="width: 080px; white-space: nowrap; text-align: center"><%=vLaunch%></td>
 										<td class="underline" style="width: 080px; white-space: nowrap; text-align: center"><%=vCertificate%></td>

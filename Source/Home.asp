@@ -1,4 +1,4 @@
-
+ï»¿
 <script>
 
 //  this page is no longer used, see info.asp
@@ -90,9 +90,9 @@
   <h2 class="red">::&ensp;<!--[[-->NOTICEA!<!--]]--></h2>
 
   <% If svLang = "FR" Then %>
-       Ce service fera l'objet de l'entretien courant et les améliorations des applications et ne sera pas disponible samedi 13 Sep de 08 jusqu'à 10 h HNE. Nous nous excusons pour tout inconvénient.
+       Ce service fera l'objet de l'entretien courant et les amÃ©liorations des applications et ne sera pas disponible samedi 13 Sep de 08 jusqu'Ã  10 h HNE. Nous nous excusons pour tout inconvÃ©nient.
     <% ElseIf svLang = "ES" Then %>        
-       Este servicio va a ser sometido a mantenimiento de rutina y mejoras a las aplicaciones y no estará disponible el sábado 13 de Sep de 8 hasta 10 am EST. Nos disculpamos por cualquier inconveniente.
+       Este servicio va a ser sometido a mantenimiento de rutina y mejoras a las aplicaciones y no estarÃ¡ disponible el sÃ¡bado 13 de Sep de 8 hasta 10 am EST. Nos disculpamos por cualquier inconveniente.
     <% Else %>
        This service will be undergoing routine maintenance and application enhancements and will not be available on Saturday Sep 13th from 8am until 10am EST. We apologize for any inconvenience.
     <% End If %>
@@ -175,7 +175,7 @@
             return (false);
           }
       
-          var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒšœŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõöøùúûüışÿ0123456789-_-@.";
+          var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÆ’Å Å’Å½Å¡Å“Å¾Å¸Ã€ÃÃ‚ÃƒÃ„Ã…Ã†Ã‡ÃˆÃ‰ÃŠÃ‹ÃŒÃÃÃÃÃ‘Ã’Ã“Ã”Ã•Ã–Ã˜Ã™ÃšÃ›ÃœÃÃÃŸÃ Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã¸Ã¹ÃºÃ»Ã¼Ã½Ã¾Ã¿0123456789-_-@.";
           var checkStr = theForm.vMemb_Pwd.value;
           var allValid = true;
           for (i = 0;  i < checkStr.length;  i++)
@@ -432,8 +432,8 @@
   <% End If %>
 
   <% If svLang = "FR" Then %>
-  <h2 class="green">::&nbsp; Problèmes liés aux navigateurs?</h2>
-  <p><a href="../Public/BrowserIssues_FR.htm?vReturn=Y">&nbsp;Cliquez ici</a> pour options de réglage de votre navigateur Web</p>
+  <h2 class="green">::&nbsp; ProblÃ¨mes liÃ©s aux navigateurs?</h2>
+  <p><a href="../Public/BrowserIssues_FR.htm?vReturn=Y">&nbsp;Cliquez ici</a> pour options de rÃ©glage de votre navigateur Web</p>
   <% End If %>
 
   <br><br>

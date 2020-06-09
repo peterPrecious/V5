@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vResc_No, vResc_AcctId, vResc_MembNo, vResc_ResTNo, vResc_ToName, vResc_ToEmail, vResc_Intro, vResc_Mods, vResc_Date, vResc_DateSent, vResc_LastDate, vResc_NoVisits, vResc_Active
   Dim vResc_FromName, vResc_FromEmail, vResc_Subject, vResc_Body, vResc_Note '...these are extracted from the Template fields
 

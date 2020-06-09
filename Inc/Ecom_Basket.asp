@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...current basket pointer (Prod_no) And no of items in basket (Prod_max)
   Dim svProd_no, svProd_max
 

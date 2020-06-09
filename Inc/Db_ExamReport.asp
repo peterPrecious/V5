@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vLogs_No, vLogs_AcctId, vLogs_Type, vLogs_Item, vLogs_Posted, vLogs_MembNo
   Dim vLogs_Module, vLogs_Grade, vDetails, vCurList, vMaxList, vLogs_Assess
   

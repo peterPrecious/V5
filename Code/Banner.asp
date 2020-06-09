@@ -1,8 +1,8 @@
-<html>
+﻿<html>
 
 <head>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <base target="_self">
 </head>
 

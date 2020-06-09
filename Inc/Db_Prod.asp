@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vProd_Id, vProd_CatTitle, vProd_Title, vProd_Desc, vProd_Price
   Dim vProd_Eof, vProd_Ok
 

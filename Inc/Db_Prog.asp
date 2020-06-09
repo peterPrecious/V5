@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...the vProg_US_Memo, CA_ and _Duration_Memo are only memo fields used to send partners who want to do their own Ecommerce
 
   Dim vProg_Id, vProg_No, vProg_Mods, vProg_Scos, vProg_Title1, vProg_Title2, vProg_Promo, vProg_US_Memo, vProg_CA_Memo, vProg_Length, vProg_Duration_Memo, vProg_Desc, vProg_GrouId, vProg_Memo, vProg_Bookmark, vProg_CompletedButton, vProg_Test, vProg_LogTestResults, vProg_ResetStatus, vProg_Exam, vProg_Retired 

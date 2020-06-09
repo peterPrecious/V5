@@ -1,4 +1,4 @@
-            <option value="XX" <%=fChecks(vConf_Region, "xx")%>>Select
+﻿            <option value="XX" <%=fChecks(vConf_Region, "xx")%>>Select
 
             <option value="AB" <%=fChecks(vConf_Region, "ab")%>>Alberta
             <option value="BC" <%=fChecks(vConf_Region, "bc")%>>British Columbia

@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vTskH_No, vTskH_AcctId, vTskH_Id, vTskH_OrderL0, vTskH_Order, vTskH_Level, vTskH_Child, vTskH_Locked, vTskH_Title, vTskH_Desc, vTskH_Active, vTskH_Password, vTskH_Collapse, vTskH_Lang
   Dim vTskH_AccessLevel, vTskH_AccessIds, vTskH_Criteria, vTskH_Group2, vTskH_CustIds, vTskH_DateStart, vTskH_DateEnd
   Dim vTskH_Notes, vTskH_Dialogue, vTskH_ActionItems, vTskH_Repository, vTskH_EmailAlert, vTskH_Calendar

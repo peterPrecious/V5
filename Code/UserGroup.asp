@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Memb.asp"-->
@@ -85,7 +85,7 @@
 
 <head>
   <title>UserGroup</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
@@ -137,7 +137,7 @@
 
         <p class="red" style="text-align:left;">
 <!--      Are your Learners not receiving emails?  Please refer to page 18 of the Facilitator manual for details on how to proceed. If necessary, <a target="_blank" href="/gold/vuReporting/AccountTaskedit.aspx?AccountID=<%=svCustAcctId%>">click here to edit the email address from which your email alerts are sent</a> (defaults to using the Facilitator email address).&ensp;-->
-          Are your Learners not receiving emails?  Please refer to page 18 of the Facilitator manual for details on how to proceed. If necessary and you require changes to be made to the default sender (Facilitator�s Email), <a target="_blank" href="/gold/vuReporting/AccountTaskedit.aspx?AccountID=<%=svCustAcctId%>">click here to edit the email address from which your email alerts are sent</a>.  Click Edit, insert support@vubiz.com in the Sender field, then click Update.&ensp;        
+          Are your Learners not receiving emails?  Please refer to page 18 of the Facilitator manual for details on how to proceed. If necessary and you require changes to be made to the default sender (Facilitator’s Email), <a target="_blank" href="/gold/vuReporting/AccountTaskedit.aspx?AccountID=<%=svCustAcctId%>">click here to edit the email address from which your email alerts are sent</a>.  Click Edit, insert support@vubiz.com in the Sender field, then click Update.&ensp;        
           NOTE: In order for our system to send emails using your email address, your internal IT department may need to add *.vubiz.com (or IPs 104.45.154.149 & 104.41.147.19 & 191.237.26.225) to your whitelist and to your SPF records. An SPF - 'Sender Policy Framework' - is setup so that specified external systems can send email on your behalf. If your IT people need to speak to someone technical regarding this issue, please have them contact <a href="mailto:support@vubiz.com?subject=Email Alert Editor (<%=svCustId%>)">support@vubiz.com</a>.
         </p>
 
@@ -364,10 +364,11 @@
             <input type="hidden" name="vMemb_Programs" value="<%=vMemb_Programs%>">
             <span style="background-color: #FFFF00"><%=fIf (Len(vMemb_Programs) = 0, fPhraH(001718), vMemb_Programs)%></span>
             <% Else %>
-            <input type="text" name="vMemb_Programs" value="<%=vMemb_Programs%>" style="width: 100%"><br>Only editable by administrators 
+            <input type="text" name="vMemb_Programs" value="<%=vMemb_Programs%>" style="width: 100%"><br>Only editable by administrators. Separate programs with a single space. Do not embed a comma. 
             <% End If %>
 
             <% 
+              stop
           i = fEcomGroupProgs(vMemb_Programs)
           If i <> "" Then 
             %>

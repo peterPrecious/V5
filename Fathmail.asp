@@ -1,4 +1,4 @@
-<%
+﻿<%
   Option Explicit
 
   Server.ScriptTimeout = 60 * 00

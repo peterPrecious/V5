@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...functions for the Mods and Tests
 
   Sub sDeleteTest (vModId)

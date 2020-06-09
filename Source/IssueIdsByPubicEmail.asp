@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity= True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -29,7 +29,7 @@
     If Len(vMemb_Id) > 0 Then
   
       vBody = "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>"
-      vBody = vBody & "<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><meta http-equiv='Content-Language' content='en-us'>  <meta http-equiv="Cache-Control" content="no-cache">
+      vBody = vBody & "<html><head><meta charset="UTF-8"><meta http-equiv='Content-Language' content='en-us'>  <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="-1"><base target='_self'></head><body leftmargin='0' topmargin='0' bgcolor='#FFFFFF' text='#000080' link='#000080' vlink='#000080' alink='#000080'><div align='center'>  <center>  <table border='0' width='97%' cellspacing='0' cellpadding='0'>    <tr>      <td width='100%' align='right' colspan='3' valign='bottom'><img border='0' src='/V5/Images/Shell/1x1TransparentSpacer.gif' width='50' height='15'></td>    </tr>    <tr>      <td width='100%' align='right' colspan='3' valign='bottom' background='/V5/Images/Shell/HolderTop_Bg.gif'><img border='0' src='/V5/Images/Shell/HolderTop_Right.gif' width='114' height='25'></td>    </tr>    <tr>      <td width='1%' valign='bottom' background='/V5/Images/Shell/HolderLeft_Spacer.gif'><img border='0' src='/V5/Images/Shell/HolderLeft_Spacer.gif' width='25' height='54'></td>      <td width='98%' align='center' valign='middle'>      <table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#111111' width='100%' id='AutoNumber1'>        <tr>          <td width='100%' align='center'><img border='0' src='/V5/Images/VuBizLogo.gif' width='200' height='76'></td>        </tr>        <tr>          <td width='100%' align='center'>          <font face='Verdana' size='1'><br><br><br>Thank you ^frs^.&nbsp; You are now registered.<br><br>You can access your content at: <a href='//^url^'>//^url^</a>, using: </font><br>&nbsp;          <table border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#111111' width='100%'>            <tr>              <td width='50%' align='right'><font face='Verdana' size='1'>Id&nbsp;:&nbsp;&nbsp;</font> </td>              <td width='50%'><font face='Courier New' size='2'>&nbsp;^cid^</font></td>            </tr>            <tr>              <td width='50%' align='right'><font face='Verdana' size='1'>Password&nbsp;:&nbsp;&nbsp;</font></td>              <td width='50%'><font face='Courier New' size='2'>&nbsp;^mid^</font></td>            </tr>          </table>          </td>        </tr>      </table>      <p>&nbsp;</p>      </td>      <td width='1%' valign='bottom' background='/V5/Images/Shell/HolderRight_Spacer.gif'><img border='0' src='/V5/Images/Shell/HolderRight_Spacer.gif' width='25' height='54'></td>    </tr>    <tr>      <td width='100%' align='right' colspan='3' valign='top' background='/V5/Images/Shell/HolderBottom_Bg.gif'><img border='0' src='/V5/Images/Shell/HolderBottom_Right.gif' width='114' height='25'></td>    </tr>  </table>  </center></div><p>&nbsp;</p></body></html>"
 
@@ -62,7 +62,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <base target="_self">
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">

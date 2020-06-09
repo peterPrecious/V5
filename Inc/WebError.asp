@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
@@ -9,9 +9,9 @@
   
   Select Case vLang
     Case "EN" : vMsg = "The document you requested does not seem to be available.<br>If you know you have the correct URL, please email <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Thank you."
-    Case "FR" : vMsg = "Le document que vous avez demandé ne semble pas être disponible.<br> Si vous savez que vous avez l’URL correct, veuillez envoyer un courriel à <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Merci."
-    Case "ES" : vMsg = "El documento que usted solicitó no parece estar disponible.<br> Si sabe que tiene el URL correcto, sírvase enviar un mensaje por correo electrónico à <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Gracias."
-    Case "PT" : vMsg = "O documento que pediu não se encontra disponível.<br> Se tiver a certeza de ter o URL correcto, é favor enviar mensagem electrónica para: <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Obrigado."
+    Case "FR" : vMsg = "Le document que vous avez demandÃ© ne semble pas Ãªtre disponible.<br> Si vous savez que vous avez lâ€™URL correct, veuillez envoyer un courriel Ã  <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Merci."
+    Case "ES" : vMsg = "El documento que usted solicitÃ³ no parece estar disponible.<br> Si sabe que tiene el URL correcto, sÃ­rvase enviar un mensaje por correo electrÃ³nico Ã  <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Gracias."
+    Case "PT" : vMsg = "O documento que pediu nÃ£o se encontra disponÃ­vel.<br> Se tiver a certeza de ter o URL correcto, Ã© favor enviar mensagem electrÃ³nica para: <a href='mailto:support@vubiz.com'>support@vubiz.com</a>. Obrigado."
   End Select
 %>
 

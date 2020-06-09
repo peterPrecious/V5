@@ -1,4 +1,4 @@
-<%@  codepage="65001" %>
+﻿<%@  codepage="65001" %>
 
 <!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
@@ -9,7 +9,7 @@
 
 <head>
   <title>RTE_Ecom</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/jQuery.js"></script>

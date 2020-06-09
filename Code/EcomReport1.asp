@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Ecom.asp"-->
 
@@ -6,7 +6,7 @@
 
 <head>
   <title>EcomReport1</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <base target="_self">
@@ -15,7 +15,8 @@
   <script src="/V5/Inc/Launch.js"></script>
   <style>
     .table.main tr:nth-child(odd) { background-color: #eee; }
-    .table.main th { text-align: left; }
+    .table.main th,
+    .table.main td { text-align: left; width: 30px; }
   </style>
 </head>
 
@@ -94,7 +95,7 @@
       <th class="rowshade">Parent Account</th>
       <th class="rowshade">New Account</th>
       <th class="rowshade" style="white-space: nowrap;">Order/Expires</th>
-      <th class="rowshade">Agent</th>
+      <th class="rowshade">Order Id</th>
       <th class="rowshade">Source</th>
       <th class="rowshade">Name</th>
       <th class="rowshade">Organization</th>
@@ -127,7 +128,7 @@
       <td style="white-space: nowrap;"><%=fFormatDate(vEcom_Issued)%>
         <br />
         <%=fFormatDate(vEcom_Expires)%></td>
-      <td><%=vEcom_Agent%></td>
+      <td><%=vEcom_OrderId%></td>
       <td style="text-align: center"><%=vEcom_Source%></td>
       <td><%=fLeft(vName, 24)%></td>
       <td><%=vEcom_Organization%></td>

@@ -1,4 +1,4 @@
-<%
+﻿<%
 
   '...This page tries to read a Session variable set previously.  This is a popup window...and if the
   '   variable is NOT read, that means we have launched via "My Computer", Outlook, etc.

@@ -1,4 +1,4 @@
-<%
+﻿<%
   '____ Elog - used to log transactions that go through EcomPatience.asp (mainly from Ecom2Checkout.asp and Ecom3Checout.asp  ___________________________________________
 
   Dim vElog_No, vElog_CustId, vElog_Id, vElog_Posted, vElog_Data

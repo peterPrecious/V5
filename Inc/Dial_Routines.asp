@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...enable text to be formatted with lf/cf
   Function fHtmlList(vText)
     If fNoValue(vText) Then vText = ""

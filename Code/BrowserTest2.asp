@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -6,7 +6,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -202,7 +202,7 @@
             <tr>
               <td align="center" class="c5">
                 <% If svLang = "EN" Then %> 
-                  <a href="BrowserTest2.asp?vLang=FR">Fran�ais</a> 
+                  <a href="BrowserTest2.asp?vLang=FR">Français</a> 
                 <% Else %> 
                   <a href="BrowserTest2.asp?vLang=EN">English</a> 
                 <% End If %> 

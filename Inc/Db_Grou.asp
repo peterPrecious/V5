@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vGrou_Id, vGrou_Active, vGrou_Title, vGrou_Desc, vGrou_Requires, vGrou_Supplier, vGrou_Programs
   Dim vGrou_Eof
 

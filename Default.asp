@@ -1,3 +1,12 @@
+﻿<%@Language=VBScript CodePage = 65001%>
+
+<%
+  '... these top 9 lines were added Nov 12, 2019 because certain browsers (IE) were no longer handling accents, oddly Chrome was OK
+  Session.CodePage = 65001
+  Response.charset ="utf-8"
+  Session.LCID     = 1033 'en-US
+%>
+
 <html>
 
 <head>
@@ -37,7 +46,6 @@
       if (getParameter("vCust") == "NSRC2321" && getParameter("vAction") != "legacy") { 
           $("#membId")[0].value = getParameter("vID");
           $("#ibao").submit();
-
 
       /* Normal V5 Access */
       } else {   

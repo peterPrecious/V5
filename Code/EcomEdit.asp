@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Ecom.asp"-->
@@ -49,7 +49,7 @@
 
 <head>
   <title>EcomEdit</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <style>
@@ -205,6 +205,23 @@
       </tr>
 
       <tr>
+        <th>Order Id :</th>
+        <td>
+          <input class="c2" type="text" size="24" name="vEcom_OrderId" value="<%=vEcom_OrderId%>">
+          <br />
+          Field added Jun 2018 - formerly in the shipping field</td>
+
+      </tr>
+
+      <tr>
+        <th>Line Id :</th>
+        <td>
+          <input class="c2" type="text" size="24" name="vEcom_LineId" value="<%=vEcom_LineId%>">
+          <br />
+          Field added Jun 2018 - formerly in the shipping field</td>
+      </tr>
+
+      <tr>
         <th>Program Id :</th>
         <td>
           <input class="c2" type="text" size="10" name="vEcom_Programs" value="<%=vEcom_Programs%>"><br />
@@ -258,7 +275,12 @@
           <input class="c2" type="text" size="10" name="vEcom_Expires" value="<%=fFormatSqlDate(vEcom_Expires)%>"><br>
           Expires date is the issue date plus the duration in days
           <br>
-          from the customer program string - normally 90 days.</td>
+          from the customer program string - normally 90 days.<br />
+          If you want to keep this transaction but do NOT want it
+          <br />
+          to appear in My Content, then set the Expiry Date either
+          <br />
+          to the Issue Date or any date before today.</td>
       </tr>
       <tr>
         <th>Amount :</th>
@@ -281,9 +303,9 @@
         <td>
           <input class="c2" type="text" size="26" name="vEcom_Quantity" id="vEcom_Quantity" value="<%=vEcom_Quantity%>" onblur="isPositive(this)"><br>
           Can be zero for Group 1 License or 1+ seats.<br>
-          <span class="red">Quantity must NEVER be negative. To remove a specific Quantity of programs,
-            <br>
-            enter the Quantity as a positive number and enter negative amounts in the applicable dollar fields.</span></td>
+          <span class="red">Quantity must NEVER be negative.
+          <!--<br />To remove a specific Quantity of programs, enter the Quantity as a positive number and enter negative amounts in the applicable dollar fields.-->
+          </span></td>
       </tr>
       <tr>
         <th>New Account Id :</th>

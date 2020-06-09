@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 
@@ -10,7 +10,7 @@
 
 <head>
   <title>DocumentUpload</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -40,9 +40,18 @@
             </tr>
             <tr>
               <th>For Customer Id : </th>
-              <td><% If svMembLevel < 5 Then %> <%=svCustId%>
-                <input type="hidden" name="vCustId" value="<%=svCustId%>"><% Else %>
-                <input type="text" name="vCustId" value="<%=svCustId%>" style="width: 75px"><br>Note: to upload a Master for ALL accounts leave empty, for this account, or any other, just enter the 4 character ID (ie <%=Left(svCustId, 4)%>) otherwise leave as an 8 character ID which limits access to this document to this account. <% End If %> </td>
+              <td>
+                <% If svMembLevel < 5 Then %> 
+                  <%=svCustId%>
+                  <input type="hidden" name="vCustId" value="<%=svCustId%>">
+                <% Else %>
+                  <input type="text" name="vCustId" value="<%=svCustId%>" style="width: 75px"><br>
+                    Note: to upload a Master 
+                      for ALL accounts leave empty, 
+                      for this account, or any other, just enter the 4 character ID (ie <%=Left(svCustId, 4)%>) 
+                      otherwise leave as an 8 character ID which limits access to this document to this account. 
+                <% End If %> 
+              </td>
             </tr>
             <tr>
               <th>Language :</th>

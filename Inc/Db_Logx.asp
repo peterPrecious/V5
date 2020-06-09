@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vLogx_No, vLogx_MembNo, vLogx_ProgNo, vLogx_ModsNo, vLogx_Expires, vLogx_BestDate, vLogx_BestScore, vLogx_NoAttempts, vLogx_TimeSpent, vLogx_Bookmark, vLogx_Status, vLogx_LastDate, vLogx_SessionId
   Dim vLogx_Eof
 

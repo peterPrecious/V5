@@ -1,5 +1,5 @@
-<%
-  Option Explicit
+﻿<%
+  'Option Explicit
 
   Dim i, j, k, l, vBypassSecurity 
   Dim vCurrency, vClose, vGstRate, vHstRate, vPstRate

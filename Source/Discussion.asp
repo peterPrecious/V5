@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
 <%
@@ -23,7 +23,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -39,9 +39,9 @@
     2
     3
     
-    1 – System Administrator
-    2 – Administrator
-    3 – User (any user with role level less then “Administrator”)
+    1 â€“ System Administrator
+    2 â€“ Administrator
+    3 â€“ User (any user with role level less then â€œAdministratorâ€)
     
     Example: //74.213.175.110/lz/VubizForum/index.html?vUserID=100&vRole=1&vFirstName=Peter&vLastName=Bulloch
   -->

@@ -1,4 +1,4 @@
-<%
+﻿<%
 	'...use these for current session
 	Dim RTE_Expires, RTE_Closed, RTE_ProgNo, RTE_ProgId, RTE_SessionId, RTE_BestScore, RTE_LastDate, RTE_Completed, RTE_CompletedDate, RTE_Failed, RTE_Bookmark, RTE_TimeSpent, RTE_Status, RTE_IsLaunchModule
 	Dim RTE_ModsNo, RTE_ModsId, RTE_ModsTitle, RTE_ModsType, RTE_ModsScript, RTE_ModsFullScreen, RTE_ModsFeaAcc, RTE_ModsFeaAud, RTE_ModsFeaVid, RTE_ModsFeaMob, RTE_ModsFeaHyb, RTE_ModsVuCert   

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -6,7 +6,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <link href="../V5/Inc/<%=Left(svCustId, 4)%>.css" type="text/css" rel="stylesheet">
   <% If vRightClickOff Then %><script language="JavaScript" src="Inc/RightClick.js"></script><% End If %>
@@ -229,7 +229,7 @@
             <tr>
               <td align="center" class="black">
               <% If svLang = "EN" Then %> 
-                <a class="black" href="BrowserTest2.asp?vLang=FR">Fran�ais</a> 
+                <a class="black" href="BrowserTest2.asp?vLang=FR">Français</a> 
               <% Else %> 
                 <a href="BrowserTest2.asp?vLang=EN">English</a> 
               <% End If %> 

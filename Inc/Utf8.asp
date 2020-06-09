@@ -1,4 +1,4 @@
-<%
+﻿<%
   
   ' Simple functions to convert the first 256 characters 
   ' of the Windows character set from and to UTF-8.

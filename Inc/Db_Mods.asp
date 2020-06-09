@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vMods_Id, vMods_No, vMods_Format, vMods_Title, vMods_Active, vMods_VuCert, vMods_Desc, vMods_Outline, vMods_Goals, vMods_Length, vMods_Url, vMods_Script, vMods_AssessmentUrl, vMods_AssessmentScript, vMods_SkillSet, vMods_PreviewMax
   Dim vMods_AccessOk, vMods_AccessNo, vMods_Type, vMods_Player, vMods_Width, vMods_Height, vMods_FullScreen, vMods_Fluid, vMods_Memo, vMods_ParentId, vMods_Competency, vMods_Completion
   Dim vMods_Reviewed, vMods_FeaAcc, vMods_FeaAud, vMods_FeaMob, vMods_FeaHyb, vMods_FeaVid 
@@ -103,7 +103,8 @@
     vMods_FullScreen       = oRsBase("Mods_FullScreen")
     vMods_Fluid            = oRsBase("Mods_Fluid")
 
-    sModsLangs (Left(vMods_Id, 4)) '...grab the languages available for this mod    
+'   sModsLangs (Left(vMods_Id, 4))                  '...grab the languages available for this mod    
+    sModsLangs (LEFT(vMods_Id, LEN(vMods_Id) - 2))  '...grab the languages available for this mod    
     sModsFeatures
    
   End Sub

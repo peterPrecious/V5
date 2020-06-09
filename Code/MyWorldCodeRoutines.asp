@@ -1,8 +1,12 @@
-<%
+﻿<%
 
   Function fVuAssessLink (vModId, vLinkTitle, vCertTitle)
 
     Dim i, j, k, vAssessmentScore, vBestScore, vFolder
+
+
+  if vModId = "40374EN" Then Stop
+ ' stop
 
     '...get VuAssess Title
     fVuAssessLink = vLinkTitle

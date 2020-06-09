@@ -1,9 +1,9 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = true %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html><head><meta charset="UTF-8">
 <meta http-equiv="Content-Language" content="en-us">
 <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
 

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Memb.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -117,7 +117,7 @@
 
 <head>
   <title>RTE_History_O</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
   <script src="/V5/Inc/jQuery.draggable.js"></script>

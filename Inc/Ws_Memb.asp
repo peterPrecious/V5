@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vMemb_AcctId, vMemb_Id, vMemb_No, vMemb_FirstName, vMemb_LastName, vMemb_Email 
   Dim vMemb_Eof, vMemb_Level, vMemb_Auth
   '____ Memb  ________________________________________________________________________

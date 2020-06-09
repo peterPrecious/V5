@@ -1,4 +1,4 @@
-<!--#include virtual = "V5\MailServer\MailServer.asp"-->
+ï»¿<!--#include virtual = "V5\MailServer\MailServer.asp"-->
 <% 
   Dim svMailServer
   sMailServer
@@ -46,17 +46,17 @@
 
   Function fFr (vPhrase)
     fFr = vPhrase
-    fFr = Replace(fFr, "à", "&#224;") 
-    fFr = Replace(fFr, "ç", "&#231;") 
-    fFr = Replace(fFr, "è", "&#232;") 
-    fFr = Replace(fFr, "é", "&#233;") 
-    fFr = Replace(fFr, "ê", "&#234;") 
+    fFr = Replace(fFr, "Ã ", "&#224;") 
+    fFr = Replace(fFr, "Ã§", "&#231;") 
+    fFr = Replace(fFr, "Ã¨", "&#232;") 
+    fFr = Replace(fFr, "Ã©", "&#233;") 
+    fFr = Replace(fFr, "Ãª", "&#234;") 
 
-    fFr = Replace(fFr, "À", "&#192;") 
-    fFr = Replace(fFr, "Ç", "&#199;") 
-    fFr = Replace(fFr, "È", "&#200;") 
-    fFr = Replace(fFr, "É", "&#201;") 
-    fFr = Replace(fFr, "Ê", "&#202;") 
+    fFr = Replace(fFr, "Ã€", "&#192;") 
+    fFr = Replace(fFr, "Ã‡", "&#199;") 
+    fFr = Replace(fFr, "Ãˆ", "&#200;") 
+    fFr = Replace(fFr, "Ã‰", "&#201;") 
+    fFr = Replace(fFr, "ÃŠ", "&#202;") 
   End Function
 
 
@@ -73,10 +73,10 @@
 
   <p align="center">&nbsp;</p><p align="center">&nbsp;</p><p align="center">&nbsp;</p><%
     If uCase(Request.QueryString("vLang")) = "FR" then
-      vButMsg = "Fermez la fenêtre"
+      vButMsg = "Fermez la fenÃªtre"
   %> <%  
       If Not vError Then
-  %> <p align="center"><font face="Arial" color="#800000"><b>Merci de votre collaboration. Vos commentaires nous sont précieux.</b></font></p><%Else%> <p align="center"><font face="Arial" color="#800000"><b>Une erreur nous empêche de traiter votre sondage. Veuillez avertir VUBIZ.<br>Please email <a href="<%=Request.Form("Recipient")%>"><%=Request.Form("Recipient")%></a><br>Merci</b></font></p><%  
+  %> <p align="center"><font face="Arial" color="#800000"><b>Merci de votre collaboration. Vos commentaires nous sont prÃ©cieux.</b></font></p><%Else%> <p align="center"><font face="Arial" color="#800000"><b>Une erreur nous empÃªche de traiter votre sondage. Veuillez avertir VUBIZ.<br>Please email <a href="<%=Request.Form("Recipient")%>"><%=Request.Form("Recipient")%></a><br>Merci</b></font></p><%  
       End If 
   
     Else

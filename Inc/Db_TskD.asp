@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vTskD_Key, vTskD_No, vTskD_Order, vTskD_Type, vTskD_Id, vTskD_Title, vTskD_Active, vTskD_Window
   Dim vTskD_Eof
 

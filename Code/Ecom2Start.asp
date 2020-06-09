@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -39,7 +39,7 @@
 
 <head>
   <title>Ecom2Start</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -142,7 +142,7 @@
 
 
         <p class="c3" style="text-align: left">
-          <!--webbot bot='PurpleText' PREVIEW='If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted priced for purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.'--><%=fPhra(001587)%></p>
+          <!--webbot bot='PurpleText' PREVIEW='If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted pricingfor purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.'--><%=fPhra(001862)%></p>
 
           <input onclick="location.href = '<%=vUrl%>'" type="button" value="<%=bContinue%>" name="bContinue0" class="button">
 <!--                TEMPORARILY SUSPENDED-->
@@ -166,7 +166,7 @@
 -->
 
         <p class="c3" style="text-align: left">
-          <!--webbot bot='PurpleText' PREVIEW='If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted priced for purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.'--><%=fPhra(001587)%></p>
+          <!--webbot bot='PurpleText' PREVIEW='If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted pricing for purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.'--><%=fPhra(000954)%></p>
         <input onclick="location.href = '<%=vUrl%>'" type="button" value="<%=bContinue%>" name="bContinue3" class="button">
 <!--        TEMPORARILY SUSPENDED-->
 
@@ -189,7 +189,7 @@
 
 
         <p class="c3" style="text-align: left">
-          <!--webbot bot='PurpleText' PREVIEW='If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted priced for purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.'--><%=fPhra(001587)%></p>
+          <!--webbot bot='PurpleText' PREVIEW='If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted pricing for purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.'--><%=fPhra(000954)%></p>
         <input onclick="location.href = '<%=vUrl%>'" type="button" value="<%=bContinue%>" name="bContinue3" class="button">
 <!--                TEMPORARILY SUSPENDED-->
 

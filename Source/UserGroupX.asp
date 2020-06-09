@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Memb.asp"-->
@@ -84,7 +84,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <title>User Profiles</title>
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
@@ -147,7 +147,7 @@
               </p>
 
               <% If vCust_ParentId = "2962" Then  %>
-              <p align="left">Are your Learners not receiving emails?  Please refer to page 18 of the Facilitator manual for details on how to proceed. If necessary, <a target="_blank" href="/gold/vuReporting/AccountTaskedit.aspx?AccountID=<%=svCustAcctId%>">click here to edit the email address from which your email alerts are sent</a> (defaults to using the Facilitator email address).&ensp;NOTE: In order for our system to send emails using your email address, your IT department may need to add the domain vubiz.com to your organization's SPF records.  An SPF - “Sender Policy Framework” - is setup so that specified external systems can send email on your behalf.  If your IT people need to speak to someone technical regarding this issue, please have them contact <a href="mailto:support@vubiz.com?subject=Email Alert Editor (<%=svCustId%>)">support@vubiz.com</a>.</p>
+              <p align="left">Are your Learners not receiving emails?  Please refer to page 18 of the Facilitator manual for details on how to proceed. If necessary, <a target="_blank" href="/gold/vuReporting/AccountTaskedit.aspx?AccountID=<%=svCustAcctId%>">click here to edit the email address from which your email alerts are sent</a> (defaults to using the Facilitator email address).&ensp;NOTE: In order for our system to send emails using your email address, your IT department may need to add the domain vubiz.com to your organization's SPF records.  An SPF - â€œSender Policy Frameworkâ€ - is setup so that specified external systems can send email on your behalf.  If your IT people need to speak to someone technical regarding this issue, please have them contact <a href="mailto:support@vubiz.com?subject=Email Alert Editor (<%=svCustId%>)">support@vubiz.com</a>.</p>
               <% End If %>
 
               <% Else %>

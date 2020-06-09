@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...build the status link for My Content and My World
   Function fModStatusLink (vMembNo, vProgId, vModId)
     Dim vTitle   

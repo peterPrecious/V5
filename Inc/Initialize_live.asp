@@ -1,4 +1,4 @@
-<%
+ï»¿<%
   '...stop if not secure and no bypass then timeout (note long url in case called from repository)
   If Not Session("Secure") And Not vBypassSecurity Then 
     Response.Redirect "/V5/Code/TimeOut.asp"
@@ -515,10 +515,10 @@
     Else
       fUnquote = vTemp
       
-      fUnquote = Replace(fUnquote, "“", "'")
-      fUnquote = Replace(fUnquote, "”", "'")
-      fUnquote = Replace(fUnquote, "‘", "'")
-      fUnquote = Replace(fUnquote, "’", "'")
+      fUnquote = Replace(fUnquote, "â€œ", "'")
+      fUnquote = Replace(fUnquote, "â€", "'")
+      fUnquote = Replace(fUnquote, "â€˜", "'")
+      fUnquote = Replace(fUnquote, "â€™", "'")
       fUnquote = Replace(fUnquote, """", "'")
       fUnquote = Replace(fUnquote, "''", "'")
 
@@ -649,7 +649,7 @@
     If Not IsDate (i) Then Exit Function
     If Year(i) < 2000 Then Exit Function
     Select Case svLang
-      Case "FR" : aMonth = Split ("janv. févr. mars avril mai juin juillet août sept. oct. nov. déc.", " ") : fFormatDate = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)                 
+      Case "FR" : aMonth = Split ("janv. fÃ©vr. mars avril mai juin juillet aoÃ»t sept. oct. nov. dÃ©c.", " ") : fFormatDate = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)                 
       Case "ES" : aMonth = Split ("ene. feb. mar. abr. may. jun. jul. ago. sept. oct. nov. dic.", " ")      : fFormatDate = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)
       Case Else : aMonth = Split ("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", " ")                   : fFormatDate = aMonth(Month(i) -1) & " " & Right("00" & Day(i), 2) & ", " & Year(i)
     End Select
@@ -662,7 +662,7 @@
     If Not IsDate (i) Then Exit Function
     If Year(i) < 2000 Then Exit Function
     Select Case svLang
-      Case "FR" : aMonth = Split ("janv. févr. mars avril mai juin juillet août sept. oct. nov. déc.", " ") : fFormatDateTime = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)                 
+      Case "FR" : aMonth = Split ("janv. fÃ©vr. mars avril mai juin juillet aoÃ»t sept. oct. nov. dÃ©c.", " ") : fFormatDateTime = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)                 
       Case "ES" : aMonth = Split ("ene. feb. mar. abr. may. jun. jul. ago. sept. oct. nov. dic.", " ")      : fFormatDateTime = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)
       Case Else : aMonth = Split ("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", " ")                   : fFormatDateTime = aMonth(Month(i) -1) & " " & Right("00" & Day(i), 2) & ", " & Year(i)
     End Select
@@ -701,7 +701,7 @@
     If Not IsNumeric(i) Then Exit Function
     If i < 1 or i > 12 Then Exit Function
     Select Case svLang
-      Case "FR" : aMonth = Split ("janv. fév. mars avr. mai juin juill. août sept. oct. nov. déc.", " ") : fFormatMonth = aMonth(i -1)
+      Case "FR" : aMonth = Split ("janv. fÃ©v. mars avr. mai juin juill. aoÃ»t sept. oct. nov. dÃ©c.", " ") : fFormatMonth = aMonth(i -1)
       Case "ES" : aMonth = Split ("ene. feb. mar. abr. may. jun. jul. ago. sept. oct. nov. dic.", " ")   : fFormatMonth = aMonth(i -1)
       Case Else : aMonth = Split ("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", " ")                : fFormatMonth = aMonth(i -1)
     End Select
@@ -1014,13 +1014,13 @@
   Function fYN (i)
     If fBooleanPlus (i) Then 
       Select Case svLang
-        Case "ES"  fYn = "sí"
+        Case "ES"  fYn = "sÃ­"
         Case "FR"  fYn = "oui"
         Case Else  fYn = "Yes"
       End Select
     Else
       Select Case svLang
-        Case "ES"  fYn = "¡no"
+        Case "ES"  fYn = "Â¡no"
         Case "FR"  fYn = "non"
         Case Else  fYn = "No"
       End Select

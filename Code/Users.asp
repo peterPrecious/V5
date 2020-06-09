@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -58,7 +58,7 @@
 
 <head>
   <title>Users</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  <meta charset="UTF-8">
   <% If vRightClickOff Then %><script type="text/javascript" src="/V5/Inc/RightClick.js"></script><% End If %>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="/V5/Inc/jQuery.js"></script>
@@ -102,6 +102,7 @@
           <% If vCust_MaxSponsor > 0 Then %><br />
           <input type="checkbox" name="vLearners" value="s" <%=fchecks(vLearners, "s")%> /><!--webbot bot='PurpleText' PREVIEW='Sponsored Learners'--><%=fPhra(000490)%>
           <% End If %>
+
         </td>
       </tr>
 

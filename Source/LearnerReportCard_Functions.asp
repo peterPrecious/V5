@@ -1,4 +1,4 @@
-  <%
+﻿  <%
     '...these are similiar to other functions available in ModuleStatusRoutines, etc.
 
     Function fMembName (vMembNo)

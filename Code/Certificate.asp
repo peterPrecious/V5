@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Querystring.asp"-->
@@ -11,7 +11,7 @@
     Dim vCertType, vCertLogo1, vCertLogo2, vCertLogos, vCertId, vCertTitle, vCertMark, vCertName, vCertDate, vCertTimeSpent, vOk, vFolder
   
     '...if guest learner change name
-    If svMembLevel = 1 Then Session("CertName") = fIf(svLang = "FR", "** Certificat �chantillon **", "** Sample Certificate **") 
+    If svMembLevel = 1 Then Session("CertName") = fIf(svLang = "FR", "** Certificat échantillon **", "** Sample Certificate **") 
   
     '...Unless this is a sample, display the print alert ...................... do not use, migrating to new certificate
     If svMembLevel = 99 And Session("CertSample") <> "y" Then    

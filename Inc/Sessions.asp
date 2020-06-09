@@ -1,4 +1,4 @@
-<% 
+﻿<% 
   Dim vTest
   vTest = True
   vTest = False

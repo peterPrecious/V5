@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vDial_No, vDial_AcctId, vDial_TskHNo, vDial_Posted, vDial_Message, vDial_MembNo, vDial_Type
   Dim vDial_Eof
   

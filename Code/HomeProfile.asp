@@ -1,4 +1,4 @@
-<%
+﻿<%
    sGetCust svCustId
    If vCust_InfoEditProfile Then
 %>

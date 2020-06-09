@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vCatl_No, vCatl_ParentNo, vCatl_CustId, vCatl_Title, vCatl_Promo, vCatl_Order, vCatl_Active, vCatl_Programs, vCatl_TileColor, vCatl_TileIcon, vCatl_JITNo
   Dim vCatl_Eof
 

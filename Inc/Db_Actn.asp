@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vActn_No, vActn_AcctId, vActn_TskHNo, vActn_Item, vActn_Completed, vActn_Due, vActn_Posted, vActn_Owner
   Dim vActn_Eof
 

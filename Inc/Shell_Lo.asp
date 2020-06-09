@@ -1,4 +1,4 @@
-          <!--content precedes-->
+ï»¿          <!--content precedes-->
           <p style="text-align:left">
 
       </td>
@@ -117,7 +117,7 @@
       <tr>
         <td class="c5" style="text-align:center">
           <% If svLang = "FR" Then %>
-            Votre session expirera <span id="dTimeRemaining">.</span><br><br>Toute donnée non-sauvegardée sera perdu.<br>Si vous avez besoin de plus de temps cliquez ici.<br><br>
+            Votre session expirera <span id="dTimeRemaining">.</span><br><br>Toute donnÃ©e non-sauvegardÃ©e sera perdu.<br>Si vous avez besoin de plus de temps cliquez ici.<br><br>
           <input onclick="sessionRefresh();" type="button" value="Continuez" name="bContinue" class="button">
           <% Else %>
             Your session will expire in <span id="dTimeRemaining"></span>.<br>Any any unsaved data will be lost.<br><br>If you need more time click here.<br><br>
@@ -132,7 +132,7 @@
       <tr>
         <td class="c5" style="text-align:center">
           <% If svLang = "FR" Then %>
-            Votre session a expiré.<br><br>Toute donnée non-sauvegardée a été perdue.
+            Votre session a expirÃ©.<br><br>Toute donnÃ©e non-sauvegardÃ©e a Ã©tÃ© perdue.
             <% Else %>
             Your session has expired.<br><br>Any unsaved data has been lost.
             <% End If %>

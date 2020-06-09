@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...functions/subs for Program Status report
 
   '...find total Time Spent in a Module (by a given user)

@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim oMsg, oMail 
   Set oMsg  = Server.CreateObject("FathMail.Message")
   Set oMail = Server.CreateObject("FathMail.SMTP")

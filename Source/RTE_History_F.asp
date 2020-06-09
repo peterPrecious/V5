@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Memb.asp"-->
@@ -155,7 +155,7 @@
 	<title>RTE_History_F</title>
 
 <!--	
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">-->
+  <meta charset="UTF-8">-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 
 	<link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
@@ -364,7 +364,8 @@
 		<% End If %>
 
 
-		<form method="POST" action="RTE_History_F.asp" id="fHistory" accept-charset="utf-8">
+<!--<form method="POST" action="RTE_History_F.asp" id="fHistory" accept-charset="utf-8">-->
+		<form method="POST" action="RTE_History_F.asp" id="fHistory">
 			<input type="hidden" value="<%=Request("vParmNo")%>" name="vParmNo">
 			<input type="hidden" name="vFeat" id="vFeat" value="Y">
 			<table class="table">
@@ -404,8 +405,8 @@
 					</th>
 					<td id="cellProgList" colspan="2">
 						<!--[[-->To list specific Programs, select available Programs by&nbsp; Id or Title at left.<!--]]--><br />
-						<!--[[-->Note: this list only shows Programs that have been accessed.<!--]]-->
-					</td>
+						<!--[[-->Note: this list only shows Programs that have been accessed.<!--]]--><br />
+						<!--[[-->Be patient as this can take a few moments.<!--]]--></td>
 				</tr>
 				<tr id="modsList" class="advanced">
 					<th>
@@ -415,8 +416,8 @@
 					</th>
 					<td id="cellModsList" colspan="2">
 						<!--[[-->To list specific Modules, select available Modules by&nbsp; Id or Title at left.<!--]]--><br />
-						<!--[[-->Note: this list only shows Modules that have been accessed.<!--]]-->
-					</td>
+						<!--[[-->Note: this list only shows Modules that have been accessed.<!--]]--><br />
+						<!--[[-->Be patient as this can take a few moments.<!--]]--></td>
 				</tr>
 				<tr>
 					<th>

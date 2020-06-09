@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vAction, vContent, aTskHs, aTskHList, vAccess, vIcon, vAlt, vTitle, vLink, vAlert, vAdmin, vUrl, vTarget, aProg, aMods, vMods, vRepository, vLocked, vPrereqId, vPrereq, vFolder, vAttempts, vUrlTitle1, vUrlTitle2
   Dim bLinkOk '...use this to bypass normal links and use advanced DIVs
   Dim bWs : bWs = True '...use to get program data from web service

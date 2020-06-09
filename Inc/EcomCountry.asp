@@ -1,4 +1,4 @@
-<%
+﻿<%
 
   Function sp5countryCodesDD (xxxCountry) '...dropdown for Ecom2Customer.asp
     sOpenCmdApp

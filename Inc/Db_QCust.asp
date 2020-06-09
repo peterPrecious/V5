@@ -1,4 +1,4 @@
-<%
+﻿<%
   '____ Cust  ________________________________________________________________________
 
   Dim vCust_Id, vCust_AcctId, vCust_Title, vCust_Lang, vCust_Catalogue, vCust_Banner, vCust_Url

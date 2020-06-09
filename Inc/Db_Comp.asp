@@ -1,4 +1,4 @@
-<%
+ï»¿<%
   Dim vComp_No, vComp_AcctId, vComp_Number, vComp_Lang, vComp_Title, vComp_Active, vComp_BO1, vComp_BO2, vComp_BO3, vComp_BO4
   Dim vComp_AlteredOn, vComp_AlteredBy
   
@@ -172,7 +172,7 @@
 
   '...this creates a highlighted {Selected] value to help hight the selected value when printing
   Function fHighLight
-    fHighLight = fIf(IsNull(oRs("Selected")), "", fIf(svLang = "FR", "&nbsp;[Sélectionné]", "&nbsp;[Selected]"))
+    fHighLight = fIf(IsNull(oRs("Selected")), "", fIf(svLang = "FR", "&nbsp;[SÃ©lectionnÃ©]", "&nbsp;[Selected]"))
   End Function
 
 %>

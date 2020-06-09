@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 
@@ -22,16 +22,16 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="<%=svDomain%>/Inc/Vubiz.css" type="text/css" rel="stylesheet">
-  <% If vRightClickOff Then %><script language="JavaScript" src="/V5/Inc/RightClick.js"></script><% End If %>
+  <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <title>:: Translate</title>
 </head>
 
 <body>
 
   <% Server.Execute vShellHi %>
-  <!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript" Type="text/javascript"><!--
+  <!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Type="text/javascript"><!--
 function FrontPage_Form1_Validator(theForm)
 {
 

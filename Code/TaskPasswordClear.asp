@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...clear password sessions
   Session("MyWorld_Password") = ""
   Session("MyWorld_PasswordAttemps") = ""

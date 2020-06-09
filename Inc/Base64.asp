@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...this assumes that the code for creating base64 is loaded (documents/certificates, etc)
   Function fBase64(vParms)
     vParms = URLDecode(vParms)                                    '...if there's any URLencoding, remove it

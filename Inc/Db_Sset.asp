@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vSset_Group, vSset_Lang, vSset_Id, vSset_ModIds
   Dim vSset_Eof
 

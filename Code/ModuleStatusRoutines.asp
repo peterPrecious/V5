@@ -1,7 +1,7 @@
-<%
+﻿<%
   '...build the status link for My Content and My World
   Function fModStatusLink (vMembNo, vProgId, vModId)
-    Dim vTitle   
+    Dim vTitle  
     sGetProg (vProg_Id)  '...get prog info as it was probably NOT retrieved in MyWorld
     vTitle = Server.HtmlEncode(fPhraH(001357)) & ": " & fModStatus (vMembNo, vModId) '...Status
     vTitle = "<span class='green'>" & vTitle & "</span>"  
@@ -24,7 +24,8 @@
   '...return date module was either flagged as completed by V5 or status = "complete" by Scorm or assessment >= 80 over past x days
   Function fCompleted (vMembNo, vModId)
 
-  ' If vMembNo = 2339117 And vModId = "4768EN" Then Stop
+   'If vMembNo = 2339117 And vModId = "4768EN" Then Stop
+   'If vModId = "40374EN" Then Stop
 
     '...check v5 for completion status
     sOpenDb3
@@ -140,7 +141,10 @@
   '...get first score of module assessment - this is when only 1 attempt is permitted
   Function fFirstScore (vMembNo, vModId)
     vSql = "SELECT TOP 1 CAST(Right(Logs.Logs_Item, 3) AS FLOAT) AS Logs_Grade FROM Logs"
-    vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, 6) = '" & vModId & "')"
+'   vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, 6) = '" & vModId & "')"
+    vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, LEN(Logs_Item) - 4) = '" & vModId & "')"
+
+
     '...added to ensure status reflects only activity within last x days as defined in the customer table
     If vProg_ResetStatus > 0 Then     
       vSql = vSql & " AND (Logs_Posted > '" & fFormatSqlDate(DateAdd("d", vProg_ResetStatus * -1, Now)) & "')"
@@ -161,13 +165,17 @@
   End Function
 
 
-  '...get date of last assessment attempt
+  '...get date of last assessment attempt (twigged Nov 8, 2018 to handle big mods)
   Function fLastScore (vMembNo, vModId)
     vSql = "SELECT MAX(Logs.Logs_Posted) AS Logs_Posted FROM Logs"
-    If Ucase(Right(vModId, 2)) = "XX" Then
-      vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, 4) = '" & Left(vModId, 4) & "')"
+    If Ucase(Right(vModId, 2)) = "XX" Then '... ignore language (EN, etc)
+ '    vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, 4) = '" & Left(vModId, 4) & "')"
+      vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, LEN(Logs_Item) - 6) = '" & Left(vModId, LEN(vModId) - 2) & "')"
     Else
-      vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, 6) = '" & vModId & "')"
+ '    vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, 6) = '" & vModId & "')"
+      vSql = vSql & " WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'T') AND (Left(Logs_Item, LEN(Logs_Item) - 4) = '" & vModId & "')"
+
+
     End If
     '...added to ensure status reflects only activity within last x days as defined in the customer table
     If vProg_ResetStatus > 0 Then     
@@ -192,7 +200,8 @@
   '...find total Time Spent in a Module - for MyWorld Status line and VuAssess.com
   Function fTimeSpent(vMembNo, vModId)
     sOpenDb3
-    vSql = "SELECT RIGHT(Logs_Item, 5) AS TimeSpent FROM Logs WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'P') AND (RIGHT(LEFT(Logs_Item, 14), 6) = '" & vModId & "')"
+'   vSql = "SELECT RIGHT(Logs_Item, 5) AS TimeSpent FROM Logs WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'P') AND (RIGHT(LEFT(Logs_Item, 14), 6) = '" & vModId & "')"
+    vSql = "SELECT RIGHT(Logs_Item, 5) AS TimeSpent FROM Logs WHERE (Logs_MembNo = " & vMembNo & ") AND (Logs_Type = 'P') AND (CHARINDEX('|" & vModId & "', Logs_Item) > 0)"
     '...added to ensure status reflects only activity within last x days as defined in the customer table
     If vProg_ResetStatus > 0 Then     
       vSql = vSql & " AND (Logs_Posted > '" & fFormatSqlDate(DateAdd("d", vProg_ResetStatus * -1, Now)) & "')"

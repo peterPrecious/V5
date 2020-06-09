@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -24,7 +24,7 @@
     
   Dim vAmount, vTotAmount_US, vTotAmount_CA, vGrandTotAmount_US, vGrandTotAmount_CA
   Dim vPrice, vTotPrice_US, vTotPrice_Ca, vGrandTotPrice_US, vGrandTotPrice_CA
-  Dim vProgram
+  Dim vProgram, vOrderId
 
   Dim vAddress, vMthStr, vMthEnd, vDate, vDateUrl, vOption1, vOption2, vDateMonth, vSelected, vExpires, vIssued, vCurrDate, vOwnerId, vSource
   Dim vTotPST, vTotGST, vTotHST, vTotTax
@@ -102,7 +102,7 @@
 
 <head>
   <title>EcomReport.asp</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -397,15 +397,19 @@
 
         '...if owner (until Apr 2004 we did not carry cardname, so use first/last
         If Len(fOkValue(vEcom_CardName)) = 0 Then vEcom_CardName = vEcom_FirstName & " " & vEcom_LastName
+
+        '...include Order Id, if it exists - Jul 2018
+        If Len(vEcom_OrderId) = 0 Then vOrderId = "" Else vOrderId = "&nbsp(" & vEcom_OrderId & ")" End If 
+
         If svMembLevel < 5 Then
           If Left(svCustId, 4) = Left(vCust_Id, 4) Then
-            vNameInfo = "<a " & fStatX & " href='User" & fGroup & ".asp?vMembNo=" & vMemb_No & "'>" & fLeft(vEcom_CardName, 16) & "</a>" & vAddressInfo
+            vNameInfo = "<a " & fStatX & " href='User" & fGroup & ".asp?vMembNo=" & vMemb_No & "'>" & fLeft(vEcom_CardName, 16) & vOrderId & "</a>" & vAddressInfo
           Else
             '...else do not display name info
             vNameInfo = ""
           End If
         Else
-          vNameInfo = "<a " & fStatX & " href='EcomEdit.asp?vEcom_No=" & vEcom_No & "'>" & fLeft(vEcom_CardName, 16) & "</a>" & vAddressInfo
+          vNameInfo = "<a " & fStatX & " href='EcomEdit.asp?vEcom_No=" & vEcom_No & "'>" & fLeft(vEcom_CardName, 16) & vOrderId & "</a>" & vAddressInfo
         End If
     
         vIssued    = ""

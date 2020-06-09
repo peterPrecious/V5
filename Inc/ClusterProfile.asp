@@ -1,4 +1,4 @@
-<% 
+﻿<% 
   sGetQueryString
   If Request.Form("fProfile") = "Y" Then
     vMemb_No        = svMembNo

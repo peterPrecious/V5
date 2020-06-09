@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
 <!--#include virtual = "V5/Inc/Db_Catl.asp"-->
@@ -180,7 +180,7 @@
 
 <head>
 	<title>My Content</title>  
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta charset="UTF-8">
 	<link href="<%=svDomain%>/Inc/Vubiz_Original.css" type="text/css" rel="stylesheet">
 	<% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
 	<script src="/V5/Inc/Functions.js"></script>

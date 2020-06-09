@@ -1,4 +1,4 @@
-<% 
+﻿<% 
 response.redirect "Excel.asp"
 %>
 

@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vMemb_AcctId, vMemb_Id, vMemb_Pwd, vMemb_No, vMemb_FirstName, vMemb_LastName, vMemb_Email, vMemb_Level,  vMemb_FirstVisit, vMemb_LastVisit, vMemb_NoVisits, vMemb_Cust, vMemb_Criteria, vMemb_Group2, vMemb_Group3, vMemb_JobsNo, vMemb_Skills, vMemb_Memo, vMemb_Organization, vMemb_NoHours, vMemb_Expires, vMemb_Online
   Dim vMemb_Active, vMemb_Internal, vMemb_Browser, vMemb_Programs, vMemb_ProgramsAdded, vMemb_EcomG2Alert, vMemb_Duration, vMemb_Jobs, vMemb_MaxSponsor, vMemb_Sponsor, vMemb_VuNews
   Dim vMemb_Auth, vMemb_MyWorld, vMemb_LCMS, vMemb_Ecom, vMemb_Channel, vMemb_VuBuild, vMemb_Manager, vMemb_AlteredOn, vMemb_AlteredBy
@@ -370,6 +370,7 @@
 
   Sub sUpdateMemb_Session
    '...update session and local variables if current user  
+
     If Clng(fOkValue(vMemb_No)) = svMembNo Then
       If Len(vMemb_FirstVisit) = 0 Then vMemb_FirstVisit = svMembFirstVisit '...edit on "home.asp" does not update this value
       Session("MembFirstName")  = vMemb_FirstName

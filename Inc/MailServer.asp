@@ -1,4 +1,4 @@
-<%
+﻿<%
   Sub sMailServer
 
     '...this gets the IP address of the router in front of this workstation

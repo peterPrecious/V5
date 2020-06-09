@@ -5,6 +5,7 @@
 
 <head>
   <title>Certificate_Test</title>
+  <meta charset="UTF-8">
   <meta http-equiv="Content-Language" content="en-us">
   <script src="/V5/Inc/Launch.js"></script>
 </head>
@@ -22,11 +23,7 @@
            & "&vProgId="    & vProgId _
            & "&vLogo="      & fDefault(vLogo, svCustBanner) _
            & "&vMemo="      & vMemo
-
-<p><a href="#" onclick="fullScreen('<%=fCertificateUrl("Péter", "Bulloch", 80, "Jan 10, 2010", "1234EN", "Test Assessment", "FR", "VUBZ", "2274", "P1234EN", "vubz.jpg", "Eat My Shorts", "")%>')">Certificate</a></p>
-<p><a href="#" onclick="fullScreen('<%=fCertificateUrl("Péter", "Bulloch", 80, "2010/1/10", "1234EN", "Test Assessment", "FR", "VUBZ", "2274", "P1234EN", "vubz.jpg", "Eat My Shorts", "")%>')">Certificate</a></p>
-
 -->
 
+<p><a href="#" onclick="fullScreen('<%=fCertificateUrl("PÃ©ter", "Bulloch", 80, "", "1234EN", "Test Assessment", "FR", "VUBZ", "2274", "P1234EN", "vubz.jpg", "PÃ©ter: Eat My Shorts", "1234567")%>')">Certificate</a></p>
 
-<p><a href="#" onclick="fullScreen('<%=fCertificateUrl("Péter", "Bulloch", 80, "", "1234EN", "Test Assessment", "FR", "VUBZ", "2274", "P1234EN", "vubz.jpg", "Eat My Shorts", "1234567")%>')">Certificate</a></p>

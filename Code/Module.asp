@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Prog.asp"-->
@@ -104,7 +104,7 @@
 
 <head>
   <title>Module</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -552,8 +552,8 @@ If ii = 1 Then %>
       <tr>
         <th class="auto-style1">Content Size : </th>
         <td>
-          <input type="text" name="vMods_Width" id="vMods_Width" size="2" value="<%=vMods_Width%>" onchange="check(this)">Width&nbsp;&nbsp;&nbsp;
-          <input type="text" name="vMods_Height" id="vMods_Height" size="2" value="<%=vMods_Height%>" onchange="check(this)">Height&nbsp;&nbsp;&nbsp; 
+          <input type="text" name="vMods_Width" id="vMods_Width" size="4" value="<%=vMods_Width%>" onchange="check(this)">Width&nbsp;&nbsp;&nbsp;
+          <input type="text" name="vMods_Height" id="vMods_Height" size="4" value="<%=vMods_Height%>" onchange="check(this)">Height&nbsp;&nbsp;&nbsp; 
           <%=f10%>OR Full Screen: 
 
           <input type="checkbox" name="vMods_FullScreen" id="vMods_FullScreen" value="1" <%=fcheck(fsqlboolean(vmods_fullscreen), 1)%> onclick="fSize(0,0); fClearScript(); fClearFluid();">Popup
@@ -642,7 +642,7 @@ If ii = 1 Then %>
       <tr>
         <th class="auto-style1">Length :</th>
         <td>
-          <input type="text" name="vMods_Length" size="2" value="<%=fDefault(vMods_Length, 1)%>">
+          <input type="text" name="vMods_Length" size="4" value="<%=fDefault(vMods_Length, 1)%>">
           Hours</td>
       </tr>
       <tr>

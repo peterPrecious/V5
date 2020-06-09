@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...these routines keep the basic parms needed to start the service
   '...they are held in a single session variable where you can get and put the values
   '...once the app is rolling (ie member signed in) this feature is not needed 

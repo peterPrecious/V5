@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -62,7 +62,7 @@
 
 <head>
 	<title>:: <%=vTitle%></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta charset="UTF-8">
 <!--	<script src="/V5/Inc/jQuery.js"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

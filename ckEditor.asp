@@ -1,4 +1,4 @@
-<%
+﻿<%
   If (Request.Form.Count > 0 ) Then
     a = Request("progDesc")
     response.write Server.HTMLEncode(a) & "<br><br><br><br>"
@@ -16,7 +16,7 @@ For licensing, see LICENSE.md or //ckeditor.com/license
 -->
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <title>CKEditor Sample</title>
   <script src="/V5/Inc/jQuery.js"></script>
   <script src="ckEditor/ckEditor.js"></script>

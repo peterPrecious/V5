@@ -8,7 +8,7 @@
 
 <head>
   <title>:: Vubiz</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <style type="text/css">
     .style2 {color: #2167B8}
     .style3 {font-size: 14px; font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif;}

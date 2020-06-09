@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...functions for the Mods and Tests
    
   Function GetStrBank (vModID, vBank, vRandom)

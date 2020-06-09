@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...delete an objective (from LMSsync.asp)
   Sub sRTEdelObj(sesObjId)    
   	If IsNumeric(sesObjId) Then	

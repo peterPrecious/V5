@@ -1,4 +1,4 @@
-<% 
+﻿<% 
   Sub sDebugByEmail_Old (vSubject, vBody)
     Dim vHtml, oMail
     Set oMail = Server.CreateObject("SMTPsvg.Mailer")  

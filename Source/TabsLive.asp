@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/QueryString.asp"-->
@@ -192,13 +192,14 @@
 
   <head>
     <title>TabsLive</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta charset="UTF-8">
     <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
     <style>
       html, body, div, table, tr, th, td, p   { font-family: "Segoe UI", Arial, Helvetica, sans-serif; font-size: 14px; }
       A                                       { text-decoration: none; }
       A:hover                                 { text-decoration: underline; }
     </style>
+    <link href="/V5/Inc/Vubiz.css" rel="stylesheet">
   </head>
 
   <body <%=vonloadscript%> leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#000080" vlink="#000080" alink="#000080" text="#000080">
@@ -259,11 +260,11 @@
             ' And svMembLevel = 5 
             Dim vAlert, vMsg
             If svLang = "FR" Then
-              vMsg = "ALERTE! S'il vous plaît cliquer."
-              vAlert = "Ce service sera interrompu pour fin d’amélioration et ne sera pas disponible le samedi 23 mai de 6h00 à 9h00 HNE. Nous nous excusons des inconvénients causés."
+              vMsg = "ALERTE! S'il vous plaÃ®t cliquer."
+              vAlert = "Ce service sera interrompu pour fin dâ€™amÃ©lioration et ne sera pas disponible le samedi 23 mai de 6h00 Ã  9h00 HNE. Nous nous excusons des inconvÃ©nients causÃ©s."
             ElseIf svLang = "ES" Then
               vMsg = "ALERTA! Por favor, haga clic en."
-              vAlert = "Este servicio estará en mantenimiento de rutina y no estará disponible el sábado 23 de mayo 06 a.m.-09 a.m. EST. Nos disculpamos por cualquier inconveniente."
+              vAlert = "Este servicio estarÃ¡ en mantenimiento de rutina y no estarÃ¡ disponible el sÃ¡bado 23 de mayo 06 a.m.-09 a.m. EST. Nos disculpamos por cualquier inconveniente."
             Else
               vMsg = "ALERT! Please click."
               vAlert = "This service will be undergoing routine maintenance and will not be available on Saturday May 23rd from 6 am to 9 am EST. We apologize for any inconvenience."

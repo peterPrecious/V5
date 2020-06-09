@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim oDbClone, oRs_New, oRs_Old, vHit
 
  

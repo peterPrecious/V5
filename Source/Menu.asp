@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -38,7 +38,7 @@
 
 <head>
   <title>::Menu</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js" type="text/javascript"></script>
   <script src="/V5/Inc/Functions.js" type="text/javascript"></script>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js" type="text/javascript"></script><% End If %>
@@ -71,8 +71,8 @@
     <% End If %>
 
     <% If svLang = "FR" Then %>
-    <p class="c2">::&nbsp; Problèmes liés aux navigateurs?</p>
-    &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de réglage de votre navigateur Web
+    <p class="c2">::&nbsp; ProblÃ¨mes liÃ©s aux navigateurs?</p>
+    &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de rÃ©glage de votre navigateur Web
     <% End If %>
 
     <% If svLang = "FR" Then %>

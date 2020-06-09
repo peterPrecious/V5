@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...define site info and database info
   Session("Site")        = "VuImport"
   Session("Domain")      = Lcase(Request.ServerVariables("HTTP_HOST")) 

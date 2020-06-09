@@ -1,4 +1,4 @@
-<% 
+﻿<% 
   Sub sEmailAlert (vEmail_Notify, vSubject, vEmail_Note, vEmail_Type)
     
     vErr = ""

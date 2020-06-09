@@ -1,4 +1,4 @@
-            <option value="None" <%=fprov("None")%>>None
+﻿            <option value="None" <%=fprov("None")%>>None
 
             <option value="AB" <%=fprov("ab")%>>Alberta
             <option value="BC" <%=fprov("bc")%>>British Columbia

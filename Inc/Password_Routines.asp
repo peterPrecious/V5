@@ -1,4 +1,4 @@
-<%
+﻿<%
 ' response.write fEncode("governance") & "<br>" & fDecode(fEncode("governance"))
 
   '____ Passwords for MyWorld ______________________________________________

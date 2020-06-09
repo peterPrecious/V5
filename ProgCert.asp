@@ -1,4 +1,4 @@
-<%        
+ï»¿<%        
 
     '...for CAAM only, get vMemo from Scorm
 
@@ -220,7 +220,7 @@
     If Not IsDate (i) Then Exit Function
     If Year(i) < 2000 Then Exit Function
     Select Case svLang
-      Case "FR" : aMonth = Split ("janv. févr. mars avril mai juin juillet août sept. oct. nov. déc.", " ") : fFormatDate = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)                 
+      Case "FR" : aMonth = Split ("janv. fÃ©vr. mars avril mai juin juillet aoÃ»t sept. oct. nov. dÃ©c.", " ") : fFormatDate = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)                 
       Case "ES" : aMonth = Split ("ene. feb. mar. abr. may. jun. jul. ago. sept. oct. nov. dic.", " ")      : fFormatDate = Day(i) & " " & aMonth(Month(i) -1) & " " & Year(i)
       Case Else : aMonth = Split ("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", " ")                   : fFormatDate = aMonth(Month(i) -1) & " " & Right("00" & Day(i), 2) & ", " & Year(i)
     End Select

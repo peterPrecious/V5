@@ -154,7 +154,7 @@
 
 <head>
   <title>UGRC1464_Ok</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <script src="/V5/Inc/Functions.js"></script>

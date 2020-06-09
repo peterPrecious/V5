@@ -15,7 +15,7 @@
 
 <head>
   <title>:: Vubiz</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="http://vubiz.com/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <script language="JavaScript" src="/V5/Inc/Functions.js"></script>
   <script>

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
 <!--#include virtual = "V5/Inc/Db_Ecom.asp"-->
@@ -232,7 +232,7 @@
     oStyleC.Number      				 = 2     '...currency
 
     vRow = 1
-    oCell.RowHeight(vRow) = 50
+    oCell.RowHeight(vRow) = 30
 
     oCell(vRow, 08).Style = oStyleR
     oCell(vRow, 11).Style = oStyleR
@@ -264,6 +264,7 @@
     oCell(vRow, 20) = "Email"  	     			: oCell(vRow, 20).Format.Font.Bold = True   : oCell.ColumnWidth(20) = 32
     End If    
     oCell(vRow, 21) = "Memo"  	     			: oCell(vRow, 21).Format.Font.Bold = True   : oCell.ColumnWidth(21) = 64
+    oCell(vRow, 22) = "Order Id"     			: oCell(vRow, 22).Format.Font.Bold = True   : oCell.ColumnWidth(22) = 16
     
   End Sub
 
@@ -279,6 +280,7 @@
     oCell(vRow, 13).Style = oStyleC
     oCell(vRow, 14).Style = oStyleC
     oCell(vRow, 15).Style = oStyleC
+    oCell(vRow, 22).Style = oStyleL
 
     oCell(vRow, 01) = vEcom_CustId
     oCell(vRow, 02) = vEcom_Id
@@ -303,6 +305,7 @@
     oCell(vRow, 20) = vAddressInfo4
     End If    
     oCell(vRow, 21) = vEcom_Memo
+    oCell(vRow, 22) = vEcom_OrderId
 
   End Sub
 

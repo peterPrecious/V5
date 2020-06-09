@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vChan_Id, vChan_Title
   Dim vChan_2004e, vChan_2005e, vChan_2006e, vChan_2007e, vChan_2008e, vChan_2009e, vChan_2010e, vChan_2011e, vChan_2012e
   Dim vChan_2004m, vChan_2005m, vChan_2006m, vChan_2007m, vChan_2008m, vChan_2009m, vChan_2010m, vChan_2011m, vChan_2012m

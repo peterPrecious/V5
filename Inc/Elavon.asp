@@ -1,4 +1,4 @@
-
+﻿
 <% 
   Dim ssl_merchant_id, ssl_user_id, ssl_pin, ssl_test_mode, ssl_transaction_currency, ssl_receipt_link_url, ssl_amount, ssl_invoice_number, ssl_company, ssl_first_name, ssl_last_name, ssl_avs_address, ssl_city, ssl_state, ssl_avs_zip, ssl_country, ssl_phone, ssl_email
   Dim order_no, order_guid

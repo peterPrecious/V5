@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...display the product session variables if Debug
   Dim i, j
   saProd = Session("Prod")

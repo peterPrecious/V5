@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -49,9 +49,9 @@
 
         vUrl = vProgId & "|" & vMods_Id  & "|" & vProg_Test & "|" & vProg_Bookmark & "|" & vProg_CompletedButton
   
-        If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z") And Not vMods_FullScreen Then
+        If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z" Or Ucase(vMods_Type) = "H") And Not vMods_FullScreen Then
           vUrl   = "/V5/LaunchObjects.asp?vModId=" & vUrl & "&vNext=MyWorld.asp"  
-        ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z") And vMods_FullScreen Then
+        ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z" Or Ucase(vMods_Type) = "H") And vMods_FullScreen Then
           vUrl   = "javascript:fullScreen('" & vUrl & "')"
         Else
           vUrl   = "javascript:" & vMods_Script & "('" & vUrl & "')"

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -8,7 +8,7 @@
 <html>
 
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta charset="UTF-8">
     <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
     <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
     <title>Vubiz Inactive Session</title>
@@ -38,21 +38,21 @@
           <h1 align="center">Vous avez perdu la connexion avec le service Vubiz </h1>
           <p>Voici quelques-unes des raisons : </p>
           <ul>
-            <li>vous avez laissé le service sans assistance pendant 20 minutes ou plus. </li>
+            <li>vous avez laissÃ© le service sans assistance pendant 20 minutes ou plus. </li>
             <li>vous avez temporairement perdu votre connexion Internet. </li>
-            <li>vous ont accès à ce service dans deux fenêtres distinctes et signé Off dans l'un d'entre eux. </li>
+            <li>vous ont accÃ¨s Ã  ce service dans deux fenÃªtres distinctes et signÃ© Off dans l'un d'entre eux. </li>
           </ul>
-          <p>S'il vous plaît connecter à ce service à nouveau pour reprendre votre apprentissage.<br /><br /></p>
+          <p>S'il vous plaÃ®t connecter Ã  ce service Ã  nouveau pour reprendre votre apprentissage.<br /><br /></p>
         </td>
       </tr>
 
       <tr>
         <td class="section">
-          <h1 align="center">Han perdido conexión con el servicio de Vubiz </h1>
-          <p>Aquí es algunas de las razones: </p>
+          <h1 align="center">Han perdido conexiÃ³n con el servicio de Vubiz </h1>
+          <p>AquÃ­ es algunas de las razones: </p>
           <ul>
-            <li>se dejó el servicio desatendido durante 20 minutos o más. </li>
-            <li>has perdido temporalmente su conexión de Internet. </li>
+            <li>se dejÃ³ el servicio desatendido durante 20 minutos o mÃ¡s. </li>
+            <li>has perdido temporalmente su conexiÃ³n de Internet. </li>
             <li>que fueron accediendo a este servicio en dos ventanas separadas y firmado fuera en uno de ellos. </li>
           </ul>
           <p>Por favor signo-en este servicio otra vez para reanudar su de aprendizaje.<br /><br /></p>

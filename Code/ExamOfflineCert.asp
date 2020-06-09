@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vClose = "Y" %>
 
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
@@ -54,7 +54,7 @@
       <head>
         <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
 
-        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta charset="UTF-8">
         <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
         <title>Display the Certificate</title>
       </head>
@@ -87,7 +87,7 @@
       <head>
         <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
 
-        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta charset="UTF-8">
         <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
         <title>Retrieve Certificate</title>
       </head>

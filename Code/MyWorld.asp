@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -25,7 +25,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -112,6 +112,7 @@
     <%
       vBorder = 0 '...if we use collaborative tools set vBorder=1 to show border lines else vBorder = 0 then no border
       '...build grid and get the value of vBorder in MyWorld.htm
+
       vGrid = fMyWorld (svCustAcctId, vTskH_Id, "live")
     %>
 

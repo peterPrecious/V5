@@ -1,4 +1,4 @@
-<% 
+﻿<% 
   '...used after July 1, 2010 to handle complex taxes across Canada
   '   before we just used the setup.asp file
   

@@ -1,9 +1,9 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Ecom.asp"-->
 
 <%
-  Dim oWs, oCell, vRow, vCol, oStyle_1, oStyle_2, oStyle_3
+  Dim oWs, oCell, vRow, vCol, oStyle_1, oStyle_2, oStyle_3, oStyle_4
   Dim vStrDate, vEndDate, vTitle, vZero
   
   Set oWs                      = Server.CreateObject("SoftArtisans.ExcelWriter")
@@ -12,20 +12,22 @@
   Set oStyle_1                 = oWs.CreateStyle
   Set oStyle_2                 = oWs.CreateStyle
   Set oStyle_3                 = oWs.CreateStyle
+  Set oStyle_4     	 		  		 = oWs.CreateStyle
 
   oStyle_1.HorizontalAlignment = 3
   oStyle_2.Number              = 14
   oStyle_3.Number              = 44
+  oStyle_4.HorizontalAlignment = 1    '...left justified
 
-  oCell("O3").Style            = oStyle_1
-  oCell("P3").Style            = oStyle_1
+'  oCell("O3").Style            = oStyle_1
+'  oCell("P3").Style            = oStyle_1
 
   vRow = 1
   oCell(vRow, 1) = "Ecommerce Summary Report" : oCell(vRow, 01).Format.Font.Bold = True
 
   vRow = 3
-  oCell(vRow, 01) = "Parent Account"					: oCell(vRow, 01).Format.Font.Bold = True   : oCell.ColumnWidth(01) = 12
-  oCell(vRow, 02) = "New Account"						  : oCell(vRow, 02).Format.Font.Bold = True   : oCell.ColumnWidth(02) = 12
+  oCell(vRow, 01) = "Parent Account"					: oCell(vRow, 01).Format.Font.Bold = True   : oCell.ColumnWidth(01) = 14
+  oCell(vRow, 02) = "New Account"						  : oCell(vRow, 02).Format.Font.Bold = True   : oCell.ColumnWidth(02) = 14
   oCell(vRow, 03) = "Order Date"							: oCell(vRow, 03).Format.Font.Bold = True   : oCell.ColumnWidth(03) = 12
   oCell(vRow, 04) = "Expires"							    : oCell(vRow, 04).Format.Font.Bold = True   : oCell.ColumnWidth(04) = 12
   oCell(vRow, 05) = "Agent"     							: oCell(vRow, 05).Format.Font.Bold = True   : oCell.ColumnWidth(05) = 08
@@ -42,6 +44,7 @@
   oCell(vRow, 16) = "Programs"								: oCell(vRow, 16).Format.Font.Bold = True   : oCell.ColumnWidth(16) = 10
   oCell(vRow, 17) = "Quantity"								: oCell(vRow, 17).Format.Font.Bold = True   : oCell.ColumnWidth(17) = 10
   oCell(vRow, 18) = "Price"							  		: oCell(vRow, 18).Format.Font.Bold = True   : oCell.ColumnWidth(18) = 15
+  oCell(vRow, 19) = "Order Id"		  		  		: oCell(vRow, 19).Format.Font.Bold = True   : oCell.ColumnWidth(19) = 15
 
   vRow = 4
    
@@ -69,6 +72,7 @@
     oCell(vRow, 04).Style = oStyle_2
 '   oCell(vRow, 16).Style = oStyle_3
     oCell(vRow, 18).Style = oStyle_3
+    oCell(vRow, 19).Style = oStyle_4
 
     oCell(vRow, 01) = vEcom_CustId
     oCell(vRow, 02) = fIf(Len(Trim(vEcom_NewAcctid)) > 0 , Left(vEcom_CustId, 4), "") & vEcom_NewAcctId
@@ -88,6 +92,7 @@
     oCell(vRow, 16) = vEcom_Programs
     oCell(vRow, 17) = vEcom_Quantity
     oCell(vRow, 18) = vEcom_Prices 
+    oCell(vRow, 19) = vEcom_OrderId
      
     oRs.MoveNext	  
   Loop

@@ -1,10 +1,10 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script language="JavaScript" src="/V5/Inc/Functions.js"></script>
   <link href="<%=svDomain%>/Inc/Vubiz.css" type="text/css" rel="stylesheet">
 

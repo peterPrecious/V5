@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -38,7 +38,7 @@
 
 <head>
   <title>::Menu</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js" type="text/javascript"></script>
   <script src="/V5/Inc/Functions.js" type="text/javascript"></script>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js" type="text/javascript"></script><% End If %>
@@ -71,8 +71,8 @@
     <% End If %>
 
     <% If svLang = "FR" Then %>
-    <p class="c2">::&nbsp; Problèmes liés aux navigateurs?</p>
-    &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de réglage de votre navigateur Web
+    <p class="c2">::&nbsp; ProblÃ¨mes liÃ©s aux navigateurs?</p>
+    &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de rÃ©glage de votre navigateur Web
     <% End If %>
 
     <% If svLang = "FR" Then %>
@@ -83,7 +83,7 @@
     &ensp;&ensp;&ensp;&ensp;<span style="text-align: center; margin-top: 20px;"><%=fContactUs%></span>
     <% End If%>
 
-    <% If svMembLevel = 5 Then     '...get a temp guid for Portal
+    <% If svMembLevel > 3 Then     '...get a temp guid for Portal
       Dim membGuid : membGuid = sp5getMembGuidTemp (vMemb_Guid)    
     %>
     <p class="c2">::&nbsp; New Admin Portal coming soon! Check it out...</p>
@@ -170,7 +170,7 @@
           <% If fIsCorporate Then %>
           <tr>
             <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/AssReportFilter.aspx?AccountID=<%=svCustAcctId%>&MembNo=<%=svMembNo%>&reportId=3&vLang=<%=svLang%>"><!--webbot bot='PurpleText' PREVIEW='Completion Report Basic'--><%=fPhra(001701)%></a></td>
-            <td>New&nbsp;</td>
+            <td></td>
           </tr>
           <% End If %>
 
@@ -179,10 +179,10 @@
             <td>&nbsp;</td>
           </tr>          
           
-          <% If Left(svCustId, 4) = "ERGP" Then %>
+          <% If Left(svCustId, 4) = "ERGP" Or Left(svCustId, 4) = "EVHR" Then %>
           <tr>
-            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/CertReportFilter.aspx?AccountID=<%=svCustAcctId%>&MembNo=<%=svMembNo%>&reportId=3&vLang=<%=svLang%>">ERGP Certificate Report (PDF)</a></td>
-            <td>New&nbsp;</td>
+            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/CertReportFilter.aspx?AccountID=<%=svCustAcctId%>&MembNo=<%=svMembNo%>&reportId=3&vLang=<%=svLang%>">Certificate Report (PDF)</a></td>
+            <td></td>
           </tr>
           <% End If %>
 
@@ -236,6 +236,15 @@
                 <!--webbot bot='PurpleText' PREVIEW='Creates a CSV file of programs that have not been completed<br />for all programs assigned to your Learners'--><%=fPhra(001774)%>
               </div>
             </td>
+          </tr>
+
+          <tr>
+            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReporting/AssReportFilter03.aspx?AccountID=<%=svCustAcctId%>">Assessment Response Report (Details)</a></td>
+            <td>New&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/AssReportFilter02.aspx?AccountID=<%=svCustAcctId%>">Assessment Response Report (Summary)</a></td>
+            <td>New&nbsp;</td>
           </tr>
 
           <%   If svMembLevel = 5 Then %>
@@ -343,11 +352,6 @@
           </tr>
           <% End If  %>
 
-
-
-
-
-
           <tr>
             <td colspan="2">&nbsp; <a <%=fstatx%> href="EcomReport1.asp">Ecommerce Sales Summary Report</a></td>
           </tr>
@@ -362,7 +366,7 @@
           <%    If svMembId = "VUV5_MGR" Or svMembLevel = 5 Then %>
           <tr>
             <td>&nbsp; <a <%=fstatx%> href="SeatThreshold.asp">Seat Threshold Report</a></td>
-            <td>New</td>
+            <td></td>
           </tr>
           <%    End If %>
           <%    If fIsCorporate Then %>
@@ -391,7 +395,7 @@
           <% If fIsParent Then %>
           <tr>
             <td>&nbsp; <a <%=fstatx%> href="CustomerExpiryReport.asp">Channel Expiry Report</a></td>
-            <td>New</td>
+            <td></td>
           </tr>
           <% End If %>
 

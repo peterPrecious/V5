@@ -1,4 +1,4 @@
-<%
+﻿<%
   '____ Cust  ________________________________________________________________________
 
   Dim vCust_No, vCust_Placeholder, vCust_Id, vCust_AcctId, vCust_ParentId, vCust_Title, vCust_Lang, vCust_Agent, vCust_MaxSponsor, vCust_IssueIds, vCust_ResetStatus, vCust_IssueIdsTemplate, vCust_IssueIdsMemo, vCust_ActivateIds, vCust_IdsSize, vCust_FreeHours, vCust_FreeDays

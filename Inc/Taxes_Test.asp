@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Ecom_Routines.asp"-->
@@ -15,7 +15,7 @@
 
 <head>
   <meta http-equiv="Content-Language" content="en-us">
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <title>VUBIZ Tax Calculator</title>
 </head>

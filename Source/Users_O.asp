@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -145,7 +145,7 @@
 
 <head>
 	<title>Users_O</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta charset="UTF-8">
 	<% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
 	<script src="/V5/Inc/jQuery.js"></script>
 	<link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
@@ -154,8 +154,8 @@
 	<script src="/V5/Inc/Launch.js"></script>
 	<script>
 		function resendEmails(vMembNo, vLang) {
-			var vAlert01  = (vLang == "EN") ?"Thank you. This learner's Welcome Email\nwill be resent within the next two hours." : "Merci. Le courriel de Bienvenue de l’apprenant sera renvoyé dans les deux prochaines heures."
-			var vAlert02  = (vLang == "EN") ?"We are unable to provide this service, please notify support@vubiz.com." : "Nous sommes incapables de fournir ce service, s'il vous plaît aviser support@vubiz.com."
+			var vAlert01  = (vLang == "EN") ?"Thank you. This learner's Welcome Email\nwill be resent within the next two hours." : "Merci. Le courriel de Bienvenue de lâ€™apprenant sera renvoyÃ© dans les deux prochaines heures."
+			var vAlert02  = (vLang == "EN") ?"We are unable to provide this service, please notify support@vubiz.com." : "Nous sommes incapables de fournir ce service, s'il vous plaÃ®t aviser support@vubiz.com."
 			var vParam    = "vFunction=ResendEmail&vMemberID =" + vMembNo;
 			var vWs       = WebService("Users_ws.asp", vParam);  
 			if (vWs == "ok") {

@@ -1,4 +1,4 @@
-
+﻿
 
 
 
@@ -102,7 +102,7 @@
           return (false);
         }
       
-        var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz����������������������������������������������������������������������0123456789-_-@.";
+        var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ0123456789-_-@.";
         var checkStr = theForm.vMemb_Pwd.value;
         var allValid = true;
         for (i = 0;  i < checkStr.length;  i++)

@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
@@ -271,7 +271,7 @@
 
 <head>
   <title>:: Translation Engine 2/2</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="Inc/jQuery.js"></script>
   <link href="Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="Inc/Functions.js"></script>

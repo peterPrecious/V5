@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/QueryString.asp"-->
@@ -28,6 +28,8 @@
   vGoTo       = Trim(Request.QueryString("vGoTo"))                    : If fNoValue(vGoTo)       Then vGoTo       = ""
   v8          = Trim(Request.QueryString("v8"))                       : If fNoValue(v8)          Then v8          = "n"
   vBrowser    = Request.QueryString("vBrowser")
+
+'stop
 
 	'... values should arrive urlEncoded then we need to twig to get past our querystring routine
   vSource = fNoQuote(Trim(Request.QueryString("vSource"))) 

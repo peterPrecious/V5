@@ -8,7 +8,7 @@ var reEmail = new RegExp( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/ ); // 
 
 function isWhitespace(charToCheck) {
   var whitespaceChars = " \t\n\r\f";
-  return (whitespaceChars.indexOf(charToCheck) != -1);
+  return (whitespaceChars.indexOf(charToCheck) !== -1);
 }
 function ltrim(str) {
   for (var k = 0; k < str.length && isWhitespace(str.charAt(k)) ; k++);
@@ -28,7 +28,7 @@ function left(str, n) {
     return str;
   else
     return String(str).substring(0, n);
-};
+}
 function right(str, n) {
   if (n <= 0)
     return "";
@@ -37,8 +37,8 @@ function right(str, n) {
   else {
     var iLen = String(str).length;
     return String(str).substring(iLen, iLen - n);
-  };
-};
+  }
+}
 
 /* end of V5/V7 functions */
 
@@ -48,8 +48,8 @@ function isNumber( n ) { // returns true if numeric
 function fMax( lang, theElement, maxLength ) {
 	if ( theElement.value.length > maxLength ) {
 		var message = "You cannot enter more than " + maxLength + " characters."
-		if ( lang == "FR" ) message = "Vous ne pouvez pas entrer plus de " + maxLength + " caractères.";
-		if ( lang == "ES" ) message = "Usted no puede entrar más de " + maxLength + " caracteres.";
+		if ( lang === "FR" ) message = "Vous ne pouvez pas entrer plus de " + maxLength + " caractères.";
+		if ( lang === "ES" ) message = "Usted no puede entrar más de " + maxLength + " caracteres.";
 		alert( message );
 		theElement.value = ( theElement.value.substr( 0, maxLength ) );
 		return false;
@@ -59,8 +59,8 @@ function fMax( lang, theElement, maxLength ) {
 function fMin( lang, theElement, minLength ) {
 	if ( theElement.value.length < minLength ) {
 		var message = "You must enter at least " + minLength + " characters."
-		if ( lang == "FR" ) message = "Vous devez entrer au moinse " + minLength + " caractères.";
-		if ( lang == "ES" ) message = "Debe introducir al menos " + minLength + " caracteres.";
+		if ( lang === "FR" ) message = "Vous devez entrer au moinse " + minLength + " caractères.";
+		if ( lang === "ES" ) message = "Debe introducir al menos " + minLength + " caracteres.";
 		alert( message );
 		theElement.focus;
 		return false;
@@ -71,8 +71,8 @@ function fMinO( lang, theElement, minLength ) {// if you enter anything then it 
 
 	if ( theElement.value.length < minLength && theElement.value.length > 0 ) {
 		var message = "You must enter at least " + minLength + " characters."
-		if ( lang == "FR" ) message = "Vous devez entrer au moinse " + minLength + " caractères.";
-		if ( lang == "ES" ) message = "Debe introducir al menos " + minLength + " caracteres.";
+		if ( lang === "FR" ) message = "Vous devez entrer au moinse " + minLength + " caractères.";
+		if ( lang === "ES" ) message = "Debe introducir al menos " + minLength + " caracteres.";
 		alert( message );
 		theElement.focus;
 		return false;
@@ -97,7 +97,7 @@ function bconfirm( msg ) {
 }
 function toggle( theDiv ) {
 	var divStyle = document.getElementById( theDiv ).style;
-	if ( divStyle.display != 'block' ) {
+	if ( divStyle.display !== 'block' ) {
 		divStyle.display = 'block';
 	}
 	else {
@@ -106,11 +106,11 @@ function toggle( theDiv ) {
 }
 function divOn( theDiv ) {
 	var theElement = document.getElementById( theDiv );
-	if ( theElement != null ) theElement.style.display = "block";
+	if ( theElement !== null ) theElement.style.display = "block";
 }
 function divOff( theDiv ) {
 	var theElement = document.getElementById( theDiv );
-	if ( theElement != null ) theElement.style.display = "none";
+	if ( theElement !== null ) theElement.style.display = "none";
 }
 function disable( theElement ) {
 	document.getElementById( theElement ).disabled = true;
@@ -122,7 +122,7 @@ function jPrint() {
 	// hide any buttons
 	var theButtons = document.getElementsByTagName( "input" );
 	for ( var i = 0; i < theButtons.length; i++ ) {
-		if ( theButtons[i].type == "button" || theButtons[i].type == "submit" ) {
+		if ( theButtons[i].type === "button" || theButtons[i].type === "submit" ) {
 			theButtons[i].style.visibility = 'hidden';
 		}
 	}
@@ -138,26 +138,26 @@ function jPrint() {
 	// re-disable any disabled fields so they will print better
 	document.getElementsByTagName( "body" )[0].innerHTML = document.getElementsByTagName( "body" )[0].innerHTML.replace( /pooh-disabled/g, "disabled" );
 	// return any buttons
-	var theButtons = document.getElementsByTagName( "input" );
-	for ( var i = 0; i < theButtons.length; i++ ) {
-		if ( theButtons[i].type == "button" || theButtons[i].type == "submit" ) {
+	theButtons = document.getElementsByTagName( "input" );
+	for ( i = 0; i < theButtons.length; i++ ) {
+		if ( theButtons[i].type === "button" || theButtons[i].type === "submit" ) {
 			theButtons[i].style.visibility = 'visible';
 		}
 	}
 }
 function hideElement( theElementId ) {
 	var theElement = document.getElementById( theElementId );
-	if ( theElement != null ) theElement.style.visibility = 'hidden';
+	if ( theElement !== null ) theElement.style.visibility = 'hidden';
 }
 function showElement( theElementId ) {
 	var theElement = document.getElementById( theElementId );
-	if ( theElement != null ) theElement.style.visibility = 'visible';
+	if ( theElement !== null ) theElement.style.visibility = 'visible';
 }
 function openDivs( divId ) {
 	var divs = document.getElementsByTagName( "div" );
 	var j = divs.length;
 	for ( i = 0; i < j; i++ ) {
-		if ( divs[i].id.substring( 0, divId.length ) == divId ) {
+		if ( divs[i].id.substring( 0, divId.length ) === divId ) {
 			document.getElementById( divs[i].id ).style.display = "block";
 		}
 	}
@@ -166,7 +166,7 @@ function hideDivs( divId ) {
 	var divs = document.getElementsByTagName( "div" );
 	var j = divs.length;
 	for ( i = 0; i < j; i++ ) {
-		if ( divs[i].id.substring( 0, divId.length ) == divId ) {
+		if ( divs[i].id.substring( 0, divId.length ) === divId ) {
 			document.getElementById( divs[i].id ).style.display = "none";
 		}
 	}
@@ -178,13 +178,13 @@ function fillField( theElement, theValue ) {
 	document.getElementById( theElement ).value = theValue;
 }
 function refillField( theElement, theValue ) {
-	if ( document.getElementById( theElement ).value == "" ) {
+	if ( document.getElementById( theElement ).value === "" ) {
 		fillField( theElement, theValue )
 	}
 }
-function WebService( vUrl, vMsg ) {
+function WebService(vUrl, vMsg) {
 	var agt = navigator.userAgent.toLowerCase();
-	var ie = ( agt.indexOf( "msie" ) != -1 );
+	var ie = ( agt.indexOf( "msie" ) !== -1 );
 	if ( ie )
 		oXmlHttp = new ActiveXObject( "Microsoft.XMLHTTP" );
 	else
@@ -202,7 +202,7 @@ function WebService( vUrl, vMsg ) {
 }
 function jsonWebService( vUrl, vMsg ) {
 	var agt = navigator.userAgent.toLowerCase();
-	var ie = ( agt.indexOf( "msie" ) != -1 );
+	var ie = ( agt.indexOf( "msie" ) !== -1 );
 	if ( ie )
 		oXmlHttp = new ActiveXObject( "Microsoft.XMLHTTP" );
 	else
@@ -260,23 +260,23 @@ function idOk( vId ) {//  this is used on landing pages or anywhere that we want
 	for ( i = 0; i < vId.length; i++ ) {
 		ch = vId.charAt( i );
 		for ( j = 0; j < charsOk.length; j++ ) {
-			if ( ch == charsOk.charAt( j ) ) break;
+			if ( ch === charsOk.charAt( j ) ) break;
 		}
-		if ( j == charsOk.length ) {
+		if ( j === charsOk.length ) {
 			allValid = false;
 			break;
 		}
 	}
 	return allValid;
 }
-function getParameter( name ) {//  this returns a querystring value and strips off any "+" representing spaces  
+function getParameter(name) {//  this returns a querystring value and strips off any "+" representing spaces  
 	var pair = location.search.substring( 1 ).split( "&" );
 	for ( var i = 0; i < pair.length; i++ ) {
 		var a = pair[i].split( "=" );
-		var i, n = "", v = "";
+		i, n = "", v = "";
 		if ( a.length > 0 ) {
 			n = a[0];
-			if ( n == name ) {
+			if ( n === name ) {
 				if ( a.length > 1 ) {
 					v = unescape( a[1] );
 					for ( i = 0; i < v.length; i++ ) {
@@ -291,9 +291,9 @@ function getParameter( name ) {//  this returns a querystring value and strips o
 function jYN( i, lang ) {// turns y/n into language values
 	var yn;
 	switch ( lang ) {
-		case "ES": yn = ( i == "y" ) ? "si" : "¡no"; break;
-		case "FR": yn = ( i == "y" ) ? "oui" : "non"; break;
-		default: yn = ( i == "y" ) ? "Yes" : "No"; break;
+		case "ES": yn = ( i === "y" ) ? "si" : "¡no"; break;
+		case "FR": yn = ( i === "y" ) ? "oui" : "non"; break;
+		default: yn = ( i === "y" ) ? "Yes" : "No"; break;
 	}
 	return yn
 }
@@ -327,33 +327,14 @@ function isDate( dateStr, lang ) {// month must be either empty or formatted as 
 	if ( yy < 2000 || yy > year + 1 ) return false;
 	if ( mm < 1 || mm > 12 ) return false;
 	if ( dd < 1 || dd > 31 ) return false;
-	if ( ( mm == 4 || mm == 6 || mm == 9 || mm == 11 ) && dd == 31 ) return false;
-	if ( mm == 2 ) {
-		var isleap = ( year % 4 == 0 && ( year % 100 != 0 || year % 400 == 0 ) );
-		if ( dd > 29 || ( day == 29 && !isleap ) ) {
+	if ( ( mm === 4 || mm === 6 || mm === 9 || mm === 11 ) && dd === 31 ) return false;
+	if ( mm === 2 ) {
+		var isleap = ( year % 4 === 0 && ( year % 100 !== 0 || year % 400 === 0 ) );
+		if ( dd > 29 || ( day === 29 && !isleap ) ) {
 			return false;
 		}
 	}
 	return true;
-}
-function getParameter( name ) {//  this returns a querystring value and strips off any "+" representing spaces
-	var pair = location.search.substring( 1 ).split( "&" );
-	for ( var i = 0; i < pair.length; i++ ) {
-		var a = pair[i].split( "=" );
-		var i, n = "", v = "";
-		if ( a.length > 0 ) {
-			n = a[0];
-			if ( n == name ) {
-				if ( a.length > 1 ) {
-					v = unescape( a[1] );
-					for ( i = 0; i < v.length; i++ ) {
-						v = v.replace( '+', ' ' );
-					}
-					return v;
-				}
-			}
-		}
-	}
 }
 function jSubmitPlus( formId, hideId, showId ) {// this will submit the form but first hide the submit button and show the Progress Bar
 	$( "#" + hideId ).hide();
@@ -361,7 +342,7 @@ function jSubmitPlus( formId, hideId, showId ) {// this will submit the form but
 	$( "#" + formId ).submit();
 }
 
-if (typeof $ != "undefined") {
+if (typeof $ !== "undefined") {
   $(document).ready(function () { // this is used to highlight a button (if jQuery is loaded)
     var elements = ".button, .button040, .button070, .button085, .button100, .button150, .button200, .shite";
     $(elements).bind('mouseenter', function () {

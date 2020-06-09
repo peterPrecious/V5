@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vAction, vContent, aTskHs, aTskHList, vAccess, vIcon, vAlt, vTitle, vLink, vAlert, vAdmin, vUrl, vTarget, aProg, aMods, vMods, vRepository, vLocked, vPrereqId, vPrereq, vFolder, vAttempts, vUrlTitle1, vUrlTitle2
   Dim bLinkOk '...use this to bypass normal links and use advanced DIVs
   Dim bWs : bWs = True '...use to get program data from web service
@@ -232,9 +232,12 @@
               End If
 
               '...vTskD_Id may contain full module address, ie: P1001EN|0002EN|N|Y
-              If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z") And Not vMods_FullScreen Then
+							'... H mods added Apr 18, 2018 
+'             If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z") And Not vMods_FullScreen Then
+              If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z" Or Ucase(vMods_Type) = "H") And Not vMods_FullScreen Then
                 vUrl   = "/V5/LaunchObjects.asp?vModId=" & vProg_Id & "|" & vMods_Id & "&vNext=" & svPage
-              ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z") And vMods_FullScreen Then
+ '            ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z") And vMods_FullScreen Then
+              ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z" Or Ucase(vMods_Type) = "H") And vMods_FullScreen Then
                 vUrl   = "javascript:fullScreen('" & vTskD_Id & "')"
               Else
                 vUrl   = "javascript:" & vMods_Script & "('" & vTskD_Id & "')"
@@ -564,9 +567,12 @@
 
       vUrl = vProgId & "|" & vMods_Id  & "|" & vProg_Test & "|" & vProg_Bookmark & "|" & vProg_CompletedButton
 
-      If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX") And Not vMods_FullScreen Then
+			'... H modules (plus Z) added Apr 18, 2018
+'     If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX") And Not vMods_FullScreen Then
+      If (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z" Or Ucase(vMods_Type) = "H") And Not vMods_FullScreen Then
         vUrl   = "/V5/LaunchObjects.asp?vModId=" & vUrl & "&vNext=" & svPage
-      ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX") And vMods_FullScreen Then
+'     ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX") And vMods_FullScreen Then
+      ElseIf (Ucase(vMods_Type) = "FX" Or Ucase(vMods_Type) = "XX" Or Ucase(vMods_Type) = "Z" Or Ucase(vMods_Type) = "H") And vMods_FullScreen Then
         vUrl   = "javascript:fullScreen('" & vUrl & "')"
       Else
         vUrl   = "javascript:" & vMods_Script & "('" & vUrl & "')"

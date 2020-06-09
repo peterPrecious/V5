@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vArts_No, vArts_Type, vArts_Title, vArts_Keywords, vArts_Desc, vArts_Author, vArts_Article
   Dim vArts_Eof
 

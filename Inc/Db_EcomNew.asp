@@ -1,4 +1,4 @@
-<%
+﻿<%
 
   Dim vEcom_No, vEcom_AcctId, vEcom_CustId, vEcom_Id, vEcom_MembNo, vEcom_CatlNo, vEcom_Programs, vEcom_Prices, vEcom_Taxes, vEcom_Issued, vEcom_Expires, vEcom_Amount, vEcom_Currency, vEcom_Lang, vEcom_FirstName, vEcom_LastName, vEcom_CardName, vEcom_Address, vEcom_City, vEcom_Postal, vEcom_Province, vEcom_Country, vEcom_Phone, vEcom_Email, vEcom_Quantity, vEcom_Seats, vEcom_NewAcctId, vEcom_Media, vEcom_Label, vEcom_OrderNo, vEcom_Shipping, vEcom_Memo, vEcom_Organization, vEcom_Source, vEcom_InternetSecure, vEcom_Adjustment, vEcom_Agent
   Dim vEcom_Eof, vEcom_Ok

@@ -53,3 +53,149 @@
 .butMail      {background-position: -380px  0 !important;}    
 .butFB        {background-position: -400px  0 !important;}    
 .butTwitter   {background-position: -420px  0 !important;}
+
+/* MIKES ADDITIONS AND STYLING */
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"], body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] {
+  background-color: #dedede;
+  background: url(https://vubiz.com/sampler/css/img/vubizdefault.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  letter-spacing: 2px;
+  color: #444444;
+  font-family: 'Helvetica', sans-serif !important;
+}
+
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin {
+    max-width: 100%;
+    height: 100%;
+    padding: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] table, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] p, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] a, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] a:hover, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] ul, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] li, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] input, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] table, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] p, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] a, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] a:hover, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] ul, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] li, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] input {
+  background: transparent;
+  color: #444444;
+  font-size: 16px;
+}
+
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"], body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 3px 1px -2px rgba(0, 0, 0, 0.22), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: rgba(255,255,255,0.96);
+  font-family: 'Helvetica', sans-serif !important;
+  padding: 15px;
+  max-width: 860px;
+}
+
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] img[src="logo.png"], body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] img[src='logo.png'] {
+  width: 225px;
+  height: 86px;
+}
+
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #txt01, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #txt01 {
+  color: #0178b8;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #txt02, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #txt03, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #txt02, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #txt03 {
+  padding: 0.75rem;
+    border: 1px solid #cacaca;
+    background: #e6e6e6;
+    color: #0a0a0a;
+    text-align: center;
+    white-space: nowrap;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Helvetica', sans-serif !important;
+    font-weight: bold;
+    letter-spacing: 0px;
+    margin: 5px 0px 5px 5px;
+    max-width: 100px;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #cust[name="vCust"], body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #id[name="vId"], body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #cust[name='vCust'], body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #id[name='vId'] {
+  display: block;
+    box-sizing: border-box;
+    width: 250px !important;
+    height: 2.75rem;
+    margin: 0px;
+    padding: 0.5rem;
+    border: 1px solid #cacaca;
+    border-radius: 0;
+    background-color: #fefefe !important;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-left: -5px;
+    min-width: 250px;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] table[width="100%"][cellpadding="5"] tr, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] table[width='100%'][cellpadding='5'] tr {
+  max-height: 54px;
+  display: inline-flex;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] .butIcon.butNext, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] .butIcon.butNext {
+  display: none;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #txt04[name="sNext"], body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #txt04[name='sNext']{
+    height: auto;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif !important;
+    padding: 0.85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 17px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1779ba;
+    color: #fefefe;
+    letter-spacing: 1px;
+    margin-right: -358px;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #txt04[name="sNext"]:hover, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] form#fSignin table[cellspacing="10"] #txt04[name="sNext"]:focus, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #txt04[name='sNext']:hover, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] form#fSignin table[cellspacing='10'] #txt04[name='sNext']:focus {
+    background-color: #14679e;
+    color: #fefefe;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] a, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] a {
+  color: #4186c0 !important;
+  letter-spacing: 1px;
+  font-weight: normal !important;
+  font-family: 'Helvetica', sans-serif !important;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] li, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] li {
+    line-height: 24px;
+}
+body[bgcolor="#FFFFFF"][onload="initRender('EN')"] li br, body[bgcolor='#FFFFFF'][onload='initRender(\'EN\')'] li br, body[bgcolor="#FFFFFF"][onload="initRender('EN')"] table td[width="50"] {
+    display: none;
+}

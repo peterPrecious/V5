@@ -1,4 +1,4 @@
-<%
+﻿<%
   Function fCustomCertOptions (vCustomCert)
     fCustomCertOptions = vbCrLf & "<option value=" & Chr(34) & Chr(34) & ">Not Used</option>"
     Dim oFs, oFolder, oSubFolders, vFolder, vFolderName, vSelected

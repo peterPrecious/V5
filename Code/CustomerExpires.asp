@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
@@ -25,7 +25,7 @@
 
 <head>
   <title>CustomerExpires</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <script src="/V5/Inc/jQuery.js"></script>
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
@@ -67,6 +67,7 @@
 
   <h1>Customer Expiry Date</h1>
   <h2>Edit/Modify the Expiry Date then click Update.</h2>
+  <p>&nbsp;</p>
   <% If Len(vMsg) > 0 Then %><h5><%=vMsg%></h5>
   <% End If %>
 
@@ -74,16 +75,16 @@
   <form method="POST" action="CustomerExpires.asp" onsubmit="return validate(this)">
     <table class="table">
       <tr>
-        <th style="width: 50%">Expiry Date :</th>
+        <th style="width: 50%"><%=svCustId%> Expiry Date :</th>
         <td style="width: 50%">
           <input type="text" size="14" name="vCust_Expires" value="<%=fFormatDate(vCust_Expires)%>" maxlength="12">
         </td>
       </tr>
       <tr>
-        <td colspan="2" style="text-align:center;">Use English date format only, ie Jan 15, 2008. Do NOT leave empty.</td>
+        <td colspan="2" style="text-align:center;"><br />Use English date format only, ie Jan 15, 2008. <br />If no valid date appears then there is no expiry date for this Account.</td>
       </tr>
     </table>
-    <div style="margin: 30px;">
+    <div style="margin: 30px; text-align:center;">
       <input type="submit" value="Update" name="bUpdate" class="button100">
     </div>
   </form>

@@ -1,4 +1,4 @@
-<%
+﻿<%
   '...reset from old LRC 
   Sub sAssessmentReset (vCustAcctId, vMembNo, vFirstName, vLastName, vModId) 
 

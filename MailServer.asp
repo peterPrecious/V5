@@ -1,4 +1,4 @@
-<%
+﻿<%
   Sub sMailServer
 
     '...this determines what mail server is active depending on where we are running

@@ -1,1 +1,1 @@
-<% Response.Redirect "MyWorld.asp?" & Request.ServerVariables("QUERY_STRING") %>
+﻿<% Response.Redirect "MyWorld.asp?" & Request.ServerVariables("QUERY_STRING") %>

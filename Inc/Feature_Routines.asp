@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vFeatureFolderA, vFeatureFolderR, aFeatures
 
   '...define the absolute/virtual folder for the text file object and the relative folder from the Root folder for the browser

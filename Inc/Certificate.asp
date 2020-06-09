@@ -2,9 +2,6 @@
   '...similiar to Document.asp
   '...this creates a complete URL for a certificate by encoding the parameters sent then sending it to the certificate web service
   Function fCertificateUrl (vFirstName, vLastName, vScore, vDate, vModsId, vTitle, vLang, vCust, vAcctId, vProgId, vLogo, vMemo, vEmail)
-
-
-
     Dim vUrl, vParms, vFormat
     vParms = "" _
            & "&vFirstName=" & fDefault(vFirstName, svMembFirstName) _
@@ -28,13 +25,59 @@
     '...if not UTF8 then convert it for the cert service to handle accents, etc
     '   but if it is already UTF8, leave - this is possible as a custom cert sometimes "calls itself" (don't ask)
     If Not IsValidUTF8(vParms) Then vParms = EncodeUTF8(vParms)
-    '...encode for security
-    vParms = Base64Encode(vParms)
-'   vFormat = fIf(svMembLevel = 5, "jpeg", "pdf")
+
+    '...encode for security (added in Server.URLEncode to handle accents)
+    vParms = base64Encode(vParms) 
+
     vFormat = "jpeg"
     vUrl   = "/CertService/Default.aspx?format=" & vFormat & "&vParms="
     fCertificateUrl = vUrl & vParms
+
   End Function    
+
+  '... Next two functions were added Jan 20, 2020 to improve base64encoding/decoding
+  '... call a web service in INC to actually do the work
+  '... key to accent handling was the Server.URLEncode(plainText)
+  Function base64Encode(plainText)
+    Dim xmlhttp, dataToSend, postUrl
+'   dataToSend = "plainText=" & plainText
+    dataToSend = "plainText=" & Server.URLEncode(plainText)
+    postUrl = "http://" & Request.ServerVariables("HTTP_HOST") & "/V5/Inc/base64.asmx/base64Encode"
+    Set xmlhttp = server.Createobject("MSXML2.XMLHTTP")
+    xmlhttp.Open "POST", postUrl, false
+    xmlhttp.setRequestHeader "Content-Type","application/x-www-form-urlencoded"
+    xmlhttp.send dataToSend
+    base64Encode = xmlhttp.responseXML.text
+  End Function
+
+  Function base64Decode(encodedText)
+    Dim xmlhttp, dataToSend, postUrl
+    dataToSend = "base64EncodedData=" & encodedText
+    postUrl = "http://" & Request.ServerVariables("HTTP_HOST") & "/V5/Inc/base64.asmx/base64Decode"
+    Set xmlhttp = server.Createobject("MSXML2.XMLHTTP")
+    xmlhttp.Open "POST", postUrl, false
+    xmlhttp.setRequestHeader "Content-Type","application/x-www-form-urlencoded"
+    xmlhttp.send dataToSend
+    base64Decode = xmlhttp.responseXML.text
+  End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
@@ -74,8 +117,6 @@
     Set oRs = Nothing
     sCloseDbBase    
   End Function
-
-
 
 
   Function URLDecode(sConvert)
@@ -210,9 +251,10 @@
       next
   END SUB
   
-  
+  '...these are the older functions, replaced by above
+
   '...encode base 64 encoded string
-  PUBLIC FUNCTION Base64Encode(plain)
+  PUBLIC FUNCTION xBase64Encode(plain)
   
       if len(plain) = 0 then
            base64Encode = ""
@@ -253,7 +295,7 @@
 
 
   '...decode base 64 encoded string
-  PUBLIC FUNCTION Base64Decode(scrambled)
+  PUBLIC FUNCTION xBase64Decode(scrambled)
   
       if len(scrambled) = 0 then
            base64Decode = ""

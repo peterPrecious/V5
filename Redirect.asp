@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+ï»¿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <% vBypassSecurity = True %>
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Utf8.asp"-->
@@ -7,8 +7,8 @@
   '...IIS comes here when this URL is not in the root of the web (like /V5), ie could be //vubiz.com/CFIB
   '   Check if this folder is in ChAccess
 
-'  vUrl = "404;//déléguéssyndicaux"
-' "//localhost/V5/Redirect.asp?404;//déléguéssyndicaux"
+'  vUrl = "404;//dÃ©lÃ©guÃ©ssyndicaux"
+' "//localhost/V5/Redirect.asp?404;//dÃ©lÃ©guÃ©ssyndicaux"
 
   Dim oFs, vUrl, vFrom, vFile
   bDebug = True
@@ -57,7 +57,7 @@
 <html>
 <head>
   <title>:: URL Redirect</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
   <!--    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
 </head>

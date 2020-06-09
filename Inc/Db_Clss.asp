@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vClss_Id, vClss_No, vClss_AccessOk, vClss_AccessNo, vClss_Title, vClss_Desc, vClss_Active, vClss_Length, vClss_AlteredOn, vClss_AlteredBy
   Dim vClss_Eof
   

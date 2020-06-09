@@ -1,4 +1,4 @@
-<%
+﻿<%
     '...Discount Routines
 
     Sub sCheckDiscounts

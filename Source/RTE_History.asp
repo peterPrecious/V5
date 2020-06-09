@@ -1,4 +1,4 @@
-<!--#include virtual = "V5/Inc/Setup.asp"-->
+﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 
 <%
@@ -12,7 +12,7 @@
 <html>
   <head>
     <title>RTE_History</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta charset="UTF-8">
     <script src="/V5/Inc/jQuery.js"></script>
     <script src="/V5/Inc/Functions.js"></script>
     <script src="/V5/Inc/jQueryC.js"></script>

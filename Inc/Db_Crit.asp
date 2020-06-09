@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim vCrit_AcctId, vCrit_No, vCrit_Id, vCrit_JobsId
   Dim vCrit_Eof, vCriteriaListCnt
 

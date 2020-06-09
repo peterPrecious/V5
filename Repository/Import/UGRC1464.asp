@@ -5,7 +5,7 @@
 
 <head>
   <title>UGRC1464</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta charset="UTF-8">
   <link href="/V5//Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/jQuery.js"></script>
   <script src="/V5/Inc/Functions.js"></script>

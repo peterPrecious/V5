@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 	<script src="/V5/Inc/jQuery.js"></script>
   <script>  

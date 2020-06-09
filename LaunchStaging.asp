@@ -1,4 +1,4 @@
-<%
+﻿<%
    Dim vHost
    vHost = "s2.vubiz.com:8080/v5"    '...this is the default
 '  vHost = "localhost/v5"            '...this is for testing

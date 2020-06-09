@@ -1,4 +1,4 @@
-<%
+﻿<%
   '____ Path - used to log transactions that go through Patience.asp (mainly from Ecom2Checkout.asp and Ecom3Checout.asp  ___________________________________________
 
   Dim vPath_No, vPath_AcctId, vPath_MembNo, vPath_CatlNo, vPath_ProgNo, vPath_ModsNo, vPath_Posted

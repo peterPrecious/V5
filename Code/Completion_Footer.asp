@@ -1,4 +1,4 @@
-  <% If Lcase(svHost) = "localhost/v5" Or svMembLevel = 5 Or Session("Completion_Level") > 4 Then %>
+﻿  <% If Lcase(svHost) = "localhost/v5" Or svMembLevel = 5 Or Session("Completion_Level") > 4 Then %>
 
     <div style="text-align:center">
       Debug: 

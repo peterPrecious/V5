@@ -1,4 +1,4 @@
-<%
+﻿<%
   Dim aFeatures(12)
   sRandomize 12
   sDisplay 12

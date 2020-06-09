@@ -1,4 +1,4 @@
-<%
+﻿<%
 
   Function fVuAssessLink (vModId, vLinkTitle, vCertTitle)
 
