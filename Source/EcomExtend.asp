@@ -9,12 +9,12 @@
   Dim vProgram, vOrdered '... Jun 4, 2020
   
   vLastName  = fDefault(Request("vLastName"), "")
-  vProgram  = fDefault(Request("vProgram"), "")
-  vOrdered  = fDefault(Request("vOrdered"), "")
+  vProgram   = fDefault(Request("vProgram"), "")
+  vOrdered   = fDefault(Request("vOrdered"), "")
 
-  vAction  = fDefault(Request("vAction"), 0)
-  vDays    = fDefault(Request("vDays"),0)
-  vEcomNos = Replace(fDefault(Request("vEcomNos"), ""), " ", "")
+  vAction    = fDefault(Request("vAction"), 0)
+  vDays      = fDefault(Request("vDays"),0)
+  vEcomNos   = Replace(fDefault(Request("vEcomNos"), ""), " ", "")
 
   If Request("bUpdate").Count > 0 Then
     If vAction <> 0 And vDays <> 0 And vEcomNos <> "" Then
@@ -51,18 +51,11 @@
       <tr>
         <td>
           <h1 align="center">Ecommerce Extension Report</h1>
-          <h2>This enables you to extend (or reduce) access for an ecommerce transaction.&nbsp; Enter all or part of the cardholder name / learner&#39;s last name then click <b>GO</b>.&nbsp;&nbsp; When you have identified the learner then select the Program(s) and the number of days of extension (or reduction) then click <b>Update</b>. <font color="#FF0000">&nbsp;Note that only the first 100 names are listed based on your selection.</font></h2>
+          <p style="text-align: left">This enables you to extend (or reduce) access for an ecommerce transaction.&nbsp; Enter all or part of the cardholder name / learner&#39;s last name then click <b>GO</b>.&nbsp;&nbsp; When you have identified the learner then select the Program(s) and the number of days of extension (or reduction) then click <b>Update</b>. Invalid Dates will be ignored - must be entered as Mmm dd, yyyy. <font color="#FF0000">&nbsp;Note that only the first 100 names are listed based on your selection.</font></p>
+          <br />
         </td>
       </tr>
       <tr>
-
-        <!--        
-        <th valign="top">Cardholder Name /Learner Surname (ie Smith, Sm) :&nbsp;
-          <input type="text" name="vLastName" size="15" value="<%=vLastName%>">
-          <input type="submit" value="Go" name="bGo" class="button"><p>&nbsp;</p>
-        </th>
--->
-
         <td>
           <div align="center">
             <table style="text-align: center">
@@ -94,7 +87,6 @@
                 <td style="text-align: left">...leave empty for all or enter Ordered (Date) like Jan 15, 2020</td>
               </tr>
 
-
               <tr>
                 <td></td>
                 <td></td>
@@ -109,6 +101,7 @@
 
       </tr>
     </table>
+
     <table border="1" cellpadding="2" cellspacing="0" bordercolor="#DDEEF9" id="table1" width="100%" style="border-collapse: collapse">
       <tr>
         <th align="left" bgcolor="#DDEEF9" height="30" bordercolor="#FFFFFF">Cardholder</th>
@@ -121,24 +114,26 @@
         <th bgcolor="#DDEEF9" height="30" bordercolor="#FFFFFF">Expires</th>
         <th bgcolor="#DDEEF9" bordercolor="#FFFFFF" height="30">Extend?</th>
       </tr>
-
-<!--             & "  (Ecom.Ecom_AcctId = '" & svCustAcctId & "') AND ((Ecom.Ecom_LastName LIKE '%" & vLastName & "%') OR (Ecom.Ecom_CardName LIKE '%" & vLastName & "%')) " _-->
-<!--      vSql = " SELECT TOP 100 Ecom.Ecom_No, Ecom.Ecom_CardName, Ecom.Ecom_FirstName, Ecom.Ecom_LastName, Ecom.Ecom_Programs, Ecom.Ecom_Issued, Ecom.Ecom_Prices, Ecom.Ecom_Expires, V5_Base.dbo.Prog.Prog_Title1 " _-->
-
       <% 
-        vProgram = ""
-
         Dim vTitle
-        vSql = " DECLARE @program varchar(7) SELECT TOP 100 Ecom.Ecom_No, Ecom.Ecom_CardName, Ecom.Ecom_FirstName, Ecom.Ecom_LastName, Ecom.Ecom_Programs, Ecom.Ecom_Issued, Ecom.Ecom_Prices, Ecom.Ecom_Expires, V5_Base.dbo.Prog.Prog_Title1 " _
+
+        vSql = " SELECT TOP 100 Ecom.Ecom_No, Ecom.Ecom_CardName, Ecom.Ecom_FirstName, Ecom.Ecom_LastName, Ecom.Ecom_Programs, Ecom.Ecom_Issued, Ecom.Ecom_Prices, Ecom.Ecom_Expires, V5_Base.dbo.Prog.Prog_Title1 " _
              & " FROM Ecom INNER JOIN V5_Base.dbo.Prog ON Ecom.Ecom_Programs = V5_Base.dbo.Prog.Prog_Id " _
              &  "WHERE " _
-             & "  (Ecom.Ecom_AcctId = '" & svCustAcctId & "') AND " _
-             & "  ((Ecom.Ecom_LastName LIKE '%" & vLastName & "%') OR (Ecom.Ecom_CardName LIKE '%" & vLastName & "%')) AND " _
-             & "  (Ecom.Ecom_Programs = '" & vProgram & "')" _
+             & "  (Ecom.Ecom_AcctId = '" & svCustAcctId & "') " _
+             & "  AND ((Ecom.Ecom_LastName LIKE '%" & vLastName & "%') OR (Ecom.Ecom_CardName LIKE '%" & vLastName & "%')) " 
 
+        If vProgram <> "" Then
+        vSql = vSql & "  AND (Ecom.Ecom_Programs = '" & vProgram & "')"
+        End If
 
-             & " ORDER BY Ecom.Ecom_LastName, Ecom.Ecom_Issued DESC"
-       sDebug     
+        If vOrdered <> "" AND isDate(vOrdered) Then
+        vSql = vSql & "  AND (Ecom.Ecom_Issued = '" & vOrdered & "')"
+        End If
+
+        vSql = vSql & " ORDER BY Ecom.Ecom_LastName, Ecom.Ecom_Issued DESC"
+
+'       sDebug     
         sOpenDb
         Set oRs = oDb.Execute(vsql)
         Do While Not oRs.Eof
@@ -154,8 +149,7 @@
         <td align="center"><%=FormatCurrency(oRs("Ecom_Prices"),2)%></td>
         <td align="center" nowrap><%=fFormatDate(oRs("Ecom_Issued"))%></td>
         <td align="center" nowrap><%=fFormatDate(oRs("Ecom_Expires"))%></td>
-        <td align="center" bgcolor="#DDEEF9" bordercolor="#FFFFFF">
-          <input type="checkbox" name="vEcomNos" value="<%=oRs("Ecom_No")%>"></td>
+        <td align="center" ><input type="checkbox" name="vEcomNos" value="<%=oRs("Ecom_No")%>"></td>
       </tr>
       <%
         oRs.MoveNext
@@ -164,7 +158,7 @@
       sCloseDb
       %>
     </table>
-    <div align="center">
+    <div align="center"><br />
       <h2 class="c6" style="text-align: center">Make a written note of the Expiry Date before you make any modifications, in case you need to reset your actions.<br>Once you click <b>Update</b> the list will re-appear with the modified dates.</h2>
       <table border="1" cellpadding="5" cellspacing="0" bordercolor="#DDEEF9" id="table2" style="border-collapse: collapse">
         <tr>
