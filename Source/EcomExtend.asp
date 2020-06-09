@@ -2,8 +2,6 @@
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
 <!--#include virtual = "V5/Inc/Db_Ecom.asp"-->
 
-<!--asdfasdfasd-->
-
 <% 
 	Response.Buffer = true
 

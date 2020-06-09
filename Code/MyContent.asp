@@ -63,8 +63,9 @@
 			vProg_Duration = aProg(4)
 		
 			vOk = False
+		
 
-'	stop
+	stop
 
 			'...if facilitator/manager/administrator show all programs that are chargeable except the inactive ones  
 '     If vMode = "All" And vProg_US > 0 And vProg_US <> 9999 Then
