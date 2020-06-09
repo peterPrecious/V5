@@ -54,7 +54,7 @@
   <title>:: Translation Engine 1/2</title>
   <meta charset="UTF-8">
   <script src="Inc/jQuery.js"></script>
-<!--  <link href="https://vubiz.com/v5/Inc/Vubi2.css" type="text/css" rel="stylesheet">-->
+  <link href="https://vubiz.com/v5/Inc/Vubi2.css" type="text/css" rel="stylesheet">
   <script src="Inc/Functions.js"></script>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
   <style>
@@ -89,7 +89,7 @@
         <td class="c2">This service will analyze all selected pages and convert tagged phrases into database function calls.&nbsp; It defaults to selecting translatable pages that were modified today.&nbsp; Click &quot;...all Pages&quot; for all or individually click one or more pages.&nbsp; Click <b>Go</b> when ready.<br /><br /></td>
       </tr>
       <tr>
-        <td class="c3" style="text-align: center"><%=vCntTr%> pages using translation tags. | <span style="color:#FFA500"><%=vCntNo%> pages without translation tags.</span></td>
+        <td class="c3" style="text-align: center"><%=vCntTr%> pages using translation tags. | <span style="color: #FFA500"><%=vCntNo%> pages without translation tags.</span></td>
       </tr>
       <tr>
         <td style="text-align: center">

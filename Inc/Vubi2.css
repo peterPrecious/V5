@@ -109,6 +109,8 @@ a { color: #0979bb; font-weight: normal; }
 .shellLeft { width: 10px; background: url('/V5/Images/Shell/HolderLeft_Spacer.gif'); background-repeat: repeat-y; }
 .shellRight { width: 10px; background: url('/V5/Images/Shell/Holderright_Spacer.gif'); background-repeat: repeat-y; } */
 
+/* hidden page: https://stagingweb.vubiz.com/V5/translationEngine1.asp */
+
 /* MIKES ADDITIONS BELOW */
 
 html {
@@ -232,6 +234,9 @@ select {
     color: #0a0a0a;
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 }
+form[action="TranslationEngine2.asp"] select[name="vSelectPages"] {
+    height: auto !important;
+}
 
 /* BUTTONS STYLIZED */
 .button, .button040, .button070, .button085, .button100, .button150, .button200 {
@@ -328,6 +333,15 @@ a[href="javascript:history.back(1)"], a[href="javascript:history.back(1)"]:hover
     text-align: left !important;
     min-width: 100px !important;
     border: none;
+}
+
+form[action="TranslationEngine2.asp"] input#bGo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    max-width: 120px;
+    margin-left: calc(50% - 60px);
 }
 
 /* IMAGE TITLE OVERRIDES */
