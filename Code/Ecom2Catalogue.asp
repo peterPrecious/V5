@@ -36,13 +36,12 @@
 
 <body>
 
-  <% Server.Execute vShellHi %>
+  <!--#include virtual = "V5/Inc/Shell_Hi2.asp"-->
 
   <table class="table">
     <tr>
       <td style="text-align:center">
         <img src="../Images/Ecom/Categories_<%=svLang %>.png" />
-<!--        <script>jTitle("<%=fPhraH(000086)%>", 'Categories.jpg')</script>-->
         <h1><!--webbot bot='PurpleText' PREVIEW='Categories'--><%=fPhra(000086)%></h1>
         <h3 class="c3"><!--webbot bot='PurpleText' PREVIEW='Click on any category title below and a list of learning programs available for purchase will appear on the right.'--><%=fPhra(000099)%>&nbsp;<!--webbot bot='PurpleText' PREVIEW='Sort by'--><%=fPhra(000243)%>...</h3>
         <p style="text-align:center">

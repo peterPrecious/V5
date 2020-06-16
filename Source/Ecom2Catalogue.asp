@@ -36,13 +36,12 @@
 
 <body>
 
-  <% Server.Execute vShellHi %>
+  <!--#include virtual = "V5/Inc/Shell_Hi2.asp"-->
 
   <table class="table">
     <tr>
       <td style="text-align:center">
         <img src="../Images/Ecom/Categories_<%=svLang %>.png" />
-<!--        <script>jTitle("/*--{[--*/Categories/*--]}--*/", 'Categories.jpg')</script>-->
         <h1><!--[[-->Categories<!--]]--></h1>
         <h3 class="c3"><!--[[-->Click on any category title below and a list of learning programs available for purchase will appear on the right.<!--]]-->&nbsp;<!--[[-->Sort by<!--]]-->...</h3>
         <p style="text-align:center">

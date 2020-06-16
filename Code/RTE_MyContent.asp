@@ -445,7 +445,7 @@
 													vUrl = fCertificateUrl("", "", RTE_BestScore, RTE_CompletedDate, RTE_ModsId, RTE_ModsTitle, "", "", "", RTE_ProgId, "", RTE_SessionId, "")
 													vCertificate = "<input onclick=""hiLiteRow($('#R_" & vRow & "'), 'bgAlert'); openWindow('C', '" & vUrl & "')"" type=""button"" value=""" & cCertificate & """ name=""B5"" class=""button070"">"
 												End If                          
-stop																								
+'stop																								
 									%>
 									<tr id="R_<%=vRow %>" onmouseover="hiLiteRow(this, 'bgOn')" onmouseout="hiLiteRow(this, 'bgOff')">
 										<td class="underline" style="width: 665px"><%=f5%><%=RTE_ModsTitle%> <a href="javascript:hiLiteRow($('#R_<%=vRow %>'), 'bgAlert'); openWindow('M', '<%=RTE_ProgId%>', '<%=RTE_ModsId%>')">

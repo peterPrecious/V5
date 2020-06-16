@@ -273,7 +273,7 @@
   <title>:: Translation Engine 2/2</title>
   <meta charset="UTF-8">
   <script src="Inc/jQuery.js"></script>
-  <link href="Inc/Vubi2.css" type="text/css" rel="stylesheet">
+  <link href="Inc/Vubi2.css" rel="stylesheet" />
   <script src="Inc/Functions.js"></script>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
 </head>

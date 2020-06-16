@@ -9,7 +9,7 @@
   '...values can be received by querystring or form but are forward only by querystring
   Dim vNext, vFilter, vParms, vElogs
 
-  stop
+  'stop
 
 
   '...If info received via a querystring (or form get)

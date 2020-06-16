@@ -38,7 +38,6 @@
   <link href="/V5/Inc/Vubiz.css" type="text/css" rel="stylesheet">
   <script src="/V5/Inc/Functions.js"></script>
   <% If vRightClickOff Then %><script src="/V5/Inc/RightClick.js"></script><% End If %>
-
   <title>Ecommerce Report</title>
 </head>
 
@@ -124,11 +123,11 @@
              & "  AND ((Ecom.Ecom_LastName LIKE '%" & vLastName & "%') OR (Ecom.Ecom_CardName LIKE '%" & vLastName & "%')) " 
 
         If vProgram <> "" Then
-        vSql = vSql & "  AND (Ecom.Ecom_Programs = '" & vProgram & "')"
+          vSql = vSql & "  AND (Ecom.Ecom_Programs = '" & vProgram & "')"
         End If
 
         If vOrdered <> "" AND isDate(vOrdered) Then
-        vSql = vSql & "  AND (Ecom.Ecom_Issued = '" & vOrdered & "')"
+          vSql = vSql & "  AND FORMAT(Ecom.Ecom_Issued, 'MMM dd, yyyy') = '" & vOrdered & "'"
         End If
 
         vSql = vSql & " ORDER BY Ecom.Ecom_LastName, Ecom.Ecom_Issued DESC"

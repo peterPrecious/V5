@@ -300,7 +300,6 @@
     <Content Include="Code\LogsTransferByNo.asp" />
     <Content Include="Code\ManageAdmins.asp" />
     <Content Include="Code\ManageAuthors.asp" />
-    <Content Include="Code\Menu-Peter-Main.asp" />
     <Content Include="Code\Menu.asp" />
     <Content Include="Code\Menu_disableLink.asp" />
     <Content Include="Code\ModSkillSet.asp" />
@@ -416,6 +415,7 @@
     <Content Include="CustomerDeleteAuthoring.asp" />
     <Content Include="Inc\Base64.asp" />
     <Content Include="Inc\browserFeatures.js" />
+    <Content Include="Inc\Shell_Hi2.asp" />
     <Content Include="Inc\Vubi2.css" />
     <Content Include="index.asp" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
@@ -657,7 +657,6 @@
     <Content Include="Source\LogsTransferByNo.asp" />
     <Content Include="Source\ManageAdmins.asp" />
     <Content Include="Source\ManageAuthors.asp" />
-    <Content Include="Source\Menu-Peter-Main.asp" />
     <Content Include="Source\Menu.asp" />
     <Content Include="Source\Menu_disableLink.asp" />
     <Content Include="Source\ModSkillSet.asp" />

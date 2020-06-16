@@ -87,10 +87,15 @@
             aTools = Split(Ucase(svBrowser), "|")
             vEcom    = aTools(6) 
 '           If vEcom = "N" Then
+            If vEcom = "NNNNNNNNN" Then
         %>
-
+        <h4 style="margin:20px auto; padding:20px; border:1px solid red; width:600px">
+          <!--[[-->NOTICE!<!--]]--><br /><br />
+          <!--[[-->For increased security and privacy, effective Oct 31, 2017 the payment processing industry will only support browser transactions encrypted with the TLS 1.2 standard.<!--]]--><br /> 
+          <!--[[-->While all of the latest browsers support this standard, your current browser does not.<!--]]-->
+        </h4>
         <%
-'            End If
+            End If
           End If
         %>
         

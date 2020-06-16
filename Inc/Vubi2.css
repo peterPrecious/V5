@@ -128,7 +128,6 @@ table.shell {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    max-width: 1264px;
     height: auto;
     min-height: 75vh;
     top: 20px;
@@ -151,7 +150,18 @@ table.shell td {
 }
 .shell .table:first-child tbody td {
     padding: 2px !important;
+    white-space: inherit;
+}
+.shell .table:first-child tbody td[style="width: 665px"] {
     white-space: nowrap;
+}
+table.shell.ecom2 {
+    width: auto !important;
+    box-shadow: none !important;
+}
+.ecom2 .table tbody td {
+    white-space: normal !important;
+    padding: 0px !important;
 }
 
 /* iframe FIXES */
@@ -220,7 +230,7 @@ table.shell td[height="100"][colspan="2"] {
 select {
 	display: inline-block;
     box-sizing: border-box;
-    height: 30px;
+    height: auto !important;
     margin: 8px;
     padding: 0px;
     border: 1px solid #cacaca;
@@ -525,6 +535,18 @@ form[action="Ecom3Basket.asp"] {
 }
 form[action="Ecom2Programs.asp"] td[style="text-align:center; width:70px;"] {
 	width: 100px !important;
+}
+
+/* FIX ON Programs Purchased and Assigned TABLE */
+table.shell .table[style*="width: 350px"] {
+    width: 100vw !important;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    margin-left: 0px;
+    overflow-x: auto;
 }
 
 /* CUSTOMIZED SCROLLBAR */

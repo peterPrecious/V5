@@ -368,7 +368,7 @@
             <% End If %>
 
             <% 
-              stop
+    '          stop
           i = fEcomGroupProgs(vMemb_Programs)
           If i <> "" Then 
             %>

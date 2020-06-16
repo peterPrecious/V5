@@ -86,16 +86,11 @@
           If Len(svBrowser) > 0 Then
             aTools = Split(Ucase(svBrowser), "|")
             vEcom    = aTools(6) 
-            If vEcom = "N" Then
+'           If vEcom = "N" Then
         %>
 
-        <h4 style="margin:20px auto; padding:20px; border:1px solid red; width:600px">
-          <!--webbot bot='PurpleText' PREVIEW='NOTICE!'--><%=fPhra(001384)%><br /><br />
-          <!--webbot bot='PurpleText' PREVIEW='For increased security and privacy, effective Oct 31, 2017 the payment processing industry will only support browser transactions encrypted with the TLS 1.2 standard.'--><%=fPhra(001811)%><br /> 
-          <!--webbot bot='PurpleText' PREVIEW='While all of the latest browsers support this standard, your current browser does not.'--><%=fPhra(001812)%>
-        </h4>
         <%
-            End If
+'            End If
           End If
         %>
         

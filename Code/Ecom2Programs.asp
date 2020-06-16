@@ -49,7 +49,7 @@
 
 <body>
 
-  <% Server.Execute vShellHi %>
+  <!--#include virtual = "V5/Inc/Shell_Hi2.asp"-->
 
   <table class="table">
     <tr>
@@ -58,10 +58,8 @@
           <tr>
             <td><% If Session("Ecom_Media") = "Online" Then  %>
               <img src="../Images/Ecom/SingleLearnerLicense_<%=svLang%>.png" />
-<!--              <script>jTitle("<%=fPhraH(000376)%>", 'SingleLicense.jpg')</script>-->
               <% Else %>
               <img src="../Images/Ecom/MultipleLearnerLicense_<%=svLang%>.png" />
-<!--              <script>jTitle("<%=fPhraH(000377)%>", 'MultiLicense.jpg')</script>-->
               <% End If %></td>
             <td>
               <table>
@@ -356,7 +354,6 @@
   <h3><a <%=fstatx%> href="Ecom2Basket.asp?vPage=Ecom2Programs.asp" class="c3"><!--webbot bot='PurpleText' PREVIEW='Show My Basket'--><%=fPhra(000239)%></a></h3>
   <h3>* <!--webbot bot='PurpleText' PREVIEW='Applicable taxes extra for Canadian orders.&nbsp; <br>Products purchases outside Canada are payable in US funds.'--><%=fPhra(000330)%></h3>
   <% End If %>
-
 
   <!--#include virtual = "V5/Inc/Shell_Lo.asp"-->
 
