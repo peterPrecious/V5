@@ -1,17 +1,19 @@
 ﻿<!--#include virtual = "V5/Inc/Setup.asp"-->
 <!--#include virtual = "V5/Inc/Initialize.asp"-->
-
 <!--#include virtual = "V5/Inc/Db_Phra.asp"-->
 <!--#include virtual = "V5/Inc/Db_Cust.asp"-->
 <!--#include virtual = "V5/Inc/Db_Memb.asp"-->
 <!--#include virtual = "V5/Inc/Document.asp"-->
 <!--#include virtual = "V5/Inc/Base64.asp"-->
 
+<!--#include virtual = "V5/Repository/Documents/EcomDocumentRoutines.asp"-->
+
+
 <% 
   sGetCust (svCustId) 
   sGetMemb (svMembNo)    
   Dim bCompletion : bCompletion = fIf((svMembManager OR svMembLevel = 5) AND Instr("CNPX HMVC INDG SAPU CAST UGRC", Left(svCustId, 4)) > 0, True, False) 
-  Dim parms, url
+  Dim parms, url, vDocUrl
 
  '...this will put either support@vubiz.com or the customers email address on the Contact Us link at the bottom
   Function fContactUs
@@ -33,7 +35,6 @@
 
 %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
 <head>
@@ -45,14 +46,21 @@
   <link href="/V5/Inc/Vubi2.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript">
     function docWindow(url) {
-      var docs = window.open(url,'Document','toolbar=no,width=600,height=800,left=10,top=10,status=no,scrollbars=no,resizable=yes')
+      var docs = window.open(url, 'Document', 'toolbar=no,width=600,height=800,left=10,top=10,status=no,scrollbars=no,resizable=yes')
     }
   </script>
   <style type="text/css">
-    .table tr:nth-child(even) { background-color: #DDEEF9; }
+    .table tr:nth-child(even) {
+      background-color: #DDEEF9;
+    }
 
-    .table td:nth-child(1) { width: 60%; }
-    .table td:nth-child(2) { width: 40%; }
+    .table td:nth-child(1) {
+      width: 60%;
+    }
+
+    .table td:nth-child(2) {
+      width: 40%;
+    }
   </style>
 </head>
 
@@ -60,23 +68,35 @@
 
   <% Server.Execute vShellHi %>
 
-  <h1>
-    <!--[[-->Learning Management System<!--]]--></h1>
+  <h1><!--[[-->Learning Management System<!--]]--></h1>
 
   <div style="width: 500px; margin: 25px auto; border: 1px solid navy; padding: 10px 20px 20px 20px;">
 
     <% If svLang = "EN" Then %>
-    <p class="c2">::&nbsp; Help using this service</p>
-    &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="../Public/21_FAQ.asp">Click here</a>&nbsp;if you have any questions about how this service works.
+    <p class="c2" style="border-top:none;">::&nbsp; Help using this service</p>
+    <%
+      vDocUrl = fGetDocument ("MultiUserManual")
+      If vDocUrl <> "" Then %>
+       &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="<%=vDocUrl%>">Click here</a> to download the Facilitator Manual for instructions on this service.
+    <% End If%>
     <% End If %>
 
-    <% If svLang = "FR" Then %>
-    <p class="c2">::&nbsp; Problèmes liés aux navigateurs?</p>
-    &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="../Public/BrowserIssues_FR.htm">Cliquez ici</a> pour options de réglage de votre navigateur Web
+
+    <!-- Manual is only in EN -->
+<!--    <% If svLang = "xFR" Then %>
+    <p class="c2" style="border-top:none;">::&nbsp; Problèmes liés aux navigateurs?</p>
+    <%
+      vDocUrl = fGetDocument ("MultiUserManual")
+      If vDocUrl <> "" Then %>
+      &ensp;&ensp;&ensp;&ensp;<a target="_blank" href="<%=vDocUrl%>">Cliquez ici</a> pour télécharger le manuel du facilitateur et accéder aux instructions sur ce service.                                                                              
     <% End If %>
+    <% End If %>-->
+
+
+
 
     <% If svLang = "FR" Then %>
-    <p class="c2">::&nbsp; Communiquez avec nous</p>
+    <p class="c2" style="border-top:none;">::&nbsp; Communiquez avec nous</p>
     &ensp;&ensp;&ensp;&ensp;<span style="text-align: center; margin-top: 20px;"><%=fContactUs%></span>
     <% Else %>
     <p class="c2">::&nbsp; Contact Us</p>
@@ -86,7 +106,7 @@
     <% If svMembLevel > 3 Then     '...get a temp guid for Portal
       Dim membGuid : membGuid = sp5getMembGuidTemp (vMemb_Guid)    
     %>
-    <p class="c2">::&nbsp; New Admin Portal coming soon! Check it out...</p>
+    <p class="c2">::&nbsp; New Admin Portal Service! Check it out...</p>
     &ensp;&ensp;&ensp;&ensp;<a target="_top" href="/Portal/v7/default.aspx?membGuid=<%=membGuid%>&source=v5">Click here</a> (Please report issues to support@vubiz.com).
     <% End If%>
   </div>
@@ -119,36 +139,6 @@
             <td>&nbsp;</td>
           </tr>
 
-          <!-- legacy corporate reports -->
-          <%  If (svMembLevel = 5) Then %>
-<!--          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp; <a <%=fstatx%> href="LearnerReportCard.asp">Learner Report Card</a></td>
-            <td>Legacy</td>
-          </tr>
-          <tr>
-            <td>&nbsp; <a <%=fstatx%> href="Activity.asp">Activity Report</a></td>
-            <td>Legacy</td>
-          </tr>
-          <tr>
-            <td>&nbsp; <a <%=fstatx%> href="LogReport5.asp">Assessment Report</a>&nbsp;</td>
-            <td>Legacy</td>
-
-          </tr>
-          <tr>
-            <td>&nbsp; <a <%=fstatx%> href="LogReport4.asp">Completion Report Basic</a></td>
-            <td>Legacy</td>
-
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>-->
-          <% End If %>
-
 
           <!-- new reports used by all with corporate note -->
           <tr>
@@ -169,7 +159,8 @@
 
           <% If fIsCorporate Then %>
           <tr>
-            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/AssReportFilter.aspx?AccountID=<%=svCustAcctId%>&MembNo=<%=svMembNo%>&reportId=3&vLang=<%=svLang%>"><!--[[-->Completion Report Basic<!--]]--></a></td>
+            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/AssReportFilter.aspx?AccountID=<%=svCustAcctId%>&MembNo=<%=svMembNo%>&reportId=3&vLang=<%=svLang%>">
+              <!--[[-->Completion Report Basic<!--]]--></a></td>
             <td></td>
           </tr>
           <% End If %>
@@ -177,8 +168,8 @@
           <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-          </tr>          
-          
+          </tr>
+
           <% If Left(svCustId, 4) = "ERGP" Or Left(svCustId, 4) = "EVHR" Then %>
           <tr>
             <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/CertReportFilter.aspx?AccountID=<%=svCustAcctId%>&MembNo=<%=svMembNo%>&reportId=3&vLang=<%=svLang%>">Certificate Report (PDF)</a></td>
@@ -229,7 +220,8 @@
           </tr>
 
           <tr>
-            <td>&nbsp; <a <%=fstatx%> target="_blank" href="/Gold/vuclientreporting/ReportExport.aspx?AccountID=<%=svCustAcctId%>&reportfile=repLearnerIncompleteCourseExport.frx&type=CSV"><!--[[-->InCompletion Report (CSV)<!--]]--></a></td>
+            <td>&nbsp; <a <%=fstatx%> target="_blank" href="/Gold/vuclientreporting/ReportExport.aspx?AccountID=<%=svCustAcctId%>&reportfile=repLearnerIncompleteCourseExport.frx&type=CSV">
+              <!--[[-->InCompletion Report (CSV)<!--]]--></a></td>
             <td style="text-align: left;">
               <a class="green" href="javascript:toggle('div_R3');">Description</a>
               <div style="text-align: left; margin-left: 20px" id="div_R3" class="div">
@@ -239,12 +231,12 @@
           </tr>
 
           <tr>
-            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReporting/AssReportFilter03.aspx?AccountID=<%=svCustAcctId%>">Assessment Response Report (Details)</a></td>
-            <td>New&nbsp;</td>
+            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReporting/AssReportFilter03_<%=svLang%>.aspx?AccountID=<%=svCustAcctId%>">Assessment Response Report (Details)</a></td>
+            <td>&nbsp;</td>
           </tr>
           <tr>
-            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReportingDev/AssReportFilter02.aspx?AccountID=<%=svCustAcctId%>">Assessment Response Report (Summary)</a></td>
-            <td>New&nbsp;</td>
+            <td>&nbsp; <a <%=fstatx%> href="/Gold/vuClientReporting/AssReportFilter02_<%=svLang%>.aspx?AccountID=<%=svCustAcctId%>">Assessment Response Report (Summary)</a></td>
+            <td>&nbsp;</td>
           </tr>
 
           <%   If svMembLevel = 5 Then %>

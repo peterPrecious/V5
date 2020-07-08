@@ -137,7 +137,8 @@
 
 
         <p class="c3" style="text-align: left">
-          <!--[[-->If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted pricingfor purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.<!--]]--></p>
+          <!--[[-->If you are purchasing 5 or more learner licenses and would like administrative tracking privileges, utilize this option. This option is ideal if the company would like to view trainee progress toward completion of training modules and offers discounted pricingfor purchasing multiple licenses.<br><br>Once you have received your password and Customer ID, 
+          utilize the Facilitator Manual for step-by-step directions on how to assign learners and access reports. You will receive your Facilitator password and customer ID onscreen at the end of your purchase transaction. With this purchase, you are given access to the learning for 365 days.<!--]]--></p>
 
           <input onclick="location.href = '<%=vUrl%>'" type="button" value="<%=bContinue%>" name="bContinue0" class="button">
 <!--                TEMPORARILY SUSPENDED-->

@@ -14,7 +14,9 @@
   <script src="/V5/Inc/jQuery.js"></script>
   <script src="/V5/Inc/Functions.js"></script>
 
-  <!-- check TLS status script (run even if not needed)-->
+<!-- check TLS status script (run even if not needed)
+     removed Jul 8, 2020 since script longer available
+  
   <script>
   var ecomOk = "n";
   window.parseTLSinfo = function (data) {
@@ -22,7 +24,9 @@
     ecomOk = version[0] != 'TLS' || version[1] < 1.2 ? "n" : "y";
   }
   </script>
-  <script src="https://www.howsmyssl.com/a/check?callback=parseTLSinfo"></script>
+  <script src="https://www.howsmyssl.com/a/check?callback=parseTLSinfo"></script> 
+
+-->
 
   <script src="/V5/Inc/browserFeatures.js"></script>
   <script src="/V5/Scripts/modernizr.js"></script>
