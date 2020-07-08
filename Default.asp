@@ -14,27 +14,6 @@
   <script src="/V5/Inc/jQuery.js"></script>
   <script src="/V5/Inc/Functions.js"></script>
 
-<!-- check TLS status script (run even if not needed)
-     removed Jul 8, 2020 since script longer available
-  
-  <!-- SH - 07/08/20 - Testing git push -->
-<!-- PB - 07/08/20 - Testing git push 2 -->
-
-  <!-- SH - 07/08/20 - Testing git push 3 -->
-
-
-  <!-- check TLS status script (run even if not needed)-->
-  <script>
-  var ecomOk = "n";
-  window.parseTLSinfo = function (data) {
-    var version = data.tls_version.split(' ');
-    ecomOk = version[0] != 'TLS' || version[1] < 1.2 ? "n" : "y";
-  }
-  </script>
-  <script src="https://www.howsmyssl.com/a/check?callback=parseTLSinfo"></script> 
-
--->
-
   <script src="/V5/Inc/browserFeatures.js"></script>
   <script src="/V5/Scripts/modernizr.js"></script>
   <script src="/V5/Scripts/swfobject.js"></script>
