@@ -17,6 +17,9 @@
 <!-- check TLS status script (run even if not needed)
      removed Jul 8, 2020 since script longer available
   
+  <!-- SH - 07/08/20 - Testing git push -->
+
+  <!-- check TLS status script (run even if not needed)-->
   <script>
   var ecomOk = "n";
   window.parseTLSinfo = function (data) {
