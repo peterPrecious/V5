@@ -1,6 +1,7 @@
 function browserFeatures() {
 
   var url, browser, flash, html5, touch, cookies, popups, dummy;
+  var ecomOk = ""
 
   try {
     html5 = Modernizr.canvas ? "y" : "n";
@@ -63,7 +64,8 @@ function browserFeatures() {
     }
   }
 
-  // note: ecomOk is derived in Default.asp head section
-  // alert(touch + "|" + browser + "|" + html5 + "|" + flash + "|" + cookies + "|" + popups + "|" + ecomOk + "|" + navigator.userAgent.toLowerCase());
+  // note: ecomOk is derived in Default.asp head section - no longer used
+
+//  alert(touch + "|" + browser + "|" + html5 + "|" + flash + "|" + cookies + "|" + popups + "|" + ecomOk + "|" + navigator.userAgent.toLowerCase());
   return (touch + "|" + browser + "|" + html5 + "|" + flash + "|" + cookies + "|" + popups + "|" + ecomOk + "|" + navigator.userAgent.toLowerCase());
 }

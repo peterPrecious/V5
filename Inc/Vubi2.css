@@ -152,7 +152,10 @@ table.shell td {
     padding: 2px !important;
     white-space: inherit;
 }
-.shell .table:first-child tbody td[style="width: 665px"] {
+.shell #menuTable[style*="max-width: 800px"] {
+    width: 100% !important;
+}
+.shell .table:first-child tbody td[style="width: 665px"], .shell #menuTable[style*="max-width: 800px"] .table tbody td {
     white-space: nowrap;
 }
 table.shell.ecom2 {
