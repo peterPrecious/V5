@@ -11,9 +11,11 @@
 
 <head>
   <title>V5 Redirector</title>
+
+<!-- removed the TLS scripts Jul 8, 2020  -->
+
   <script src="/V5/Inc/jQuery.js"></script>
   <script src="/V5/Inc/Functions.js"></script>
-
   <script src="/V5/Inc/browserFeatures.js"></script>
   <script src="/V5/Scripts/modernizr.js"></script>
   <script src="/V5/Scripts/swfobject.js"></script>
